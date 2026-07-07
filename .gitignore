@@ -1,0 +1,6 @@
+# Ignore large media files so GitHub pushes stay within limits
+fotos y videos/videos/
+*.mp4
+*.mov
+*.avi
+*.mkv

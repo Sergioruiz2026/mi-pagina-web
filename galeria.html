@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayekantún - Galería</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-improved.css">
+</head>
+<body>
+
+    <!-- MENU -->
+    <nav class="site-nav">
+        <div class="container nav-inner">
+            <h1>Ayekantún</h1>
+            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <button class="submenu-toggle" aria-expanded="false">Inicio</button>
+                    <ul class="submenu" aria-label="Submenú Inicio">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#historia">Historia</a></li>
+                        <li><a href="index.html#mision">Nuestra Misión</a></li>
+                        <li><a href="index.html#vision">Nuestra Visión</a></li>
+                        <li><a href="index.html#informacion">Información</a></li>
+                    </ul>
+                </li>
+                <li><a href="deportistas.html">Deportistas</a></li>
+                <li><a href="entrenadora.html">Entrenadora</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Galería de Ayekantún</h2>
+        <p>Explora nuestros mejores momentos en pista y competencia.</p>
+    </section>
+
+    <!-- IMÁGENES -->
+    <section class="contenido">
+        <div class="galeria">
+            <div class="foto">
+                <img src="fotos%20y%20videos/IMG_20260502_114214.jpg"
+                     alt="Clase de patinaje artístico"
+                     onclick="abrirImagen(this.src, this.alt)">
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">
+                    ❤️ <span>0</span>
+                </button>
+            </div>
+
+            <div class="foto">
+                <img src="fotos%20y%20videos/IMG-20260503-WA0008.jpg"
+                     alt="Alumnas en la pista de patinaje"
+                     onclick="abrirImagen(this.src, this.alt)">
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">
+                    ❤️ <span>0</span>
+                </button>
+            </div>
+
+            <div class="foto">
+                <img src="fotos%20y%20videos/IMG_20260502_135042.jpg"
+                     alt="Presentación de patinaje en Villa Alemana"
+                     onclick="abrirImagen(this.src, this.alt)">
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">
+                    ❤️ <span>0</span>
+                </button>
+            </div>
+
+            <div class="foto">
+                <img src="fotos%20y%20videos/IMG_20260502_114212.jpg"
+                     alt="Entrenamiento de patinaje"
+                     onclick="abrirImagen(this.src, this.alt)">
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">
+                    ❤️ <span>0</span>
+                </button>
+            </div>
+
+            <div class="foto">
+                <img src="fotos%20y%20videos/IMG_20260502_114241.jpg"
+                     alt="Patinaje en pista"
+                     onclick="abrirImagen(this.src, this.alt)">
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">
+                    ❤️ <span>0</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal" onclick="cerrarImagen(event)">
+        <button class="modal-cerrar" onclick="cerrarImagen(event)" aria-label="Cerrar">✕</button>
+        <img id="imagenGrande" src="" alt="">
+    </div>
+
+    <script src="main.js" defer></script>
+
+</body>
+</html>
