@@ -109,63 +109,70 @@
         </div>
     </section>
 
-    <section id="historia" class="contenido">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width: 1200px; margin: 0 auto;">
-            <div>
-                <h2>Nuestra Historia</h2>
-                <p>
-                    El Club de Patinaje Artístico Ayekantún nació en enero de 2017 en la comuna de Quilpué con el propósito de crear un espacio donde niñas, niños y jóvenes pudieran desarrollarse a través del deporte, formando no solo deportistas, sino también personas comprometidas, disciplinadas y apasionadas por el patinaje artístico. Durante estos años nos hemos consolidado como un referente en la formación de patinadoras y patinadores, siendo la cuna de destacados deportistas que han representado con orgullo a nuestra comuna, región y país en importantes competencias. A lo largo de nuestra trayectoria hemos participado en campeonatos organizados por la Federación, la Liga Interregional, la Liga del Pacífico y, actualmente, la Liga Nación Roller, obteniendo importantes resultados y acumulando valiosas experiencias deportivas. Nos llena de orgullo ser el único club de patinaje artístico de Quilpué y mantener vigente este hermoso deporte en nuestra comuna, promoviendo la actividad física, la vida saludable y el desarrollo integral de nuestros deportistas. Cada entrenamiento, competencia y actividad representa nuestro compromiso con la comunidad y con la formación de nuevas generaciones de patinadores. Porque en Ayekantún creemos que el patinaje es mucho más que un deporte: es una escuela de valores, esfuerzo, compañerismo y superación. 
-                </p>
-            </div>
-            <div>
-                <img src="fotos%20y%20videos/fotogrupal.jpg" alt="Nuestra Historia" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-            </div>
-        </div>
-    </section>
-
-    <!-- MISIÓN -->
-    <section id="mision" class="contenido" style="background-color: #f9f9f9;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width: 1200px; margin: 0 auto;">
-            <div>
-                <img src="fotos%20y%20videos/fotogrupal.jpg" alt="Nuestra Misión" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-            </div>
-            <div>
-                <h2>Nuestra Misión</h2>
-                <p>
-                    Formar deportistas y personas íntegras a través del patinaje artístico, promoviendo el desarrollo deportivo, personal y social en un ambiente basado en el respeto, la disciplina, el compañerismo y la pasión por este deporte. 
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- VISIÓN -->
-    <section id="vision" class="contenido">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width: 1200px; margin: 0 auto;">
-            <div>
-                <h2>Nuestra Visión</h2>
-                <p>
-                  Ser un club reconocido por la excelencia en la formación de deportistas, por el compromiso con nuestra comunidad y por contribuir al crecimiento del patinaje artístico en Quilpué y en la Región de Valparaíso, inspirando a nuevas generaciones a descubrir todo lo que este deporte puede entregar.   
-                </p>    
-            </div>
-            <div>
-                <img src="fotos%20y%20videos/fotogrupal.jpg" alt="Nuestra Visión" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-            </div>
-        </div>
-    </section>   
     
-    
-    <!-- INFORMACIÓN -->
-    <section id="informacion" class="contenido" style="background-color: #f9f9f9;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width: 1200px; margin: 0 auto;">
-            <div>
-                <img src="fotos%20y%20videos/fotogrupal.jpg" alt="Información" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <!-- SECCIONES EN LAYOUT VISUAL DINÁMICO -->
+    <section style="padding: 50px 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            
+            <!-- HISTORIA - GRANDE IZQUIERDA -->
+            <div id="historia" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; margin-bottom: 50px;">
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; padding: 40px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <h2 style="font-size: 36px; margin-top: 0;">📖 Nuestra Historia</h2>
+                    <p style="font-size: 16px; line-height: 1.6; margin: 20px 0 0 0;">
+                        El Club de Patinaje Artístico Ayekantún nació en enero de 2017 en Quilpué. Durante estos años nos hemos consolidado como referente formativo, siendo cuna de destacados deportistas. Participamos en campeonatos nacionales, obteniendo importantes resultados.
+                    </p>
+                    <div id="historia-expandido" style="display: none; margin-top: 20px; font-size: 16px; line-height: 1.6;">
+                        <p>Somos una organización comprometida con la excelencia en la formación de nuestros deportistas. A través de entrenamiento riguroso y apoyo integral, hemos logrado que muchas de nuestras patinadores participen en competencias a nivel nacional y regional.</p>
+                        <p>Nuestro club es un espacio seguro, inclusivo y formativo donde se desarrollan no solo habilidades deportivas, sino también valores como el respeto, la disciplina, el trabajo en equipo y la perseverancia que les acompañarán toda la vida.</p>
+                    </div>
+                    <button onclick="var expandido = document.getElementById('historia-expandido'); var btn = this; if(expandido.style.display === 'none') { expandido.style.display = 'block'; btn.textContent = 'Leer menos ↑'; } else { expandido.style.display = 'none'; btn.textContent = 'Leer más →'; }" style="display: inline-block; margin-top: 20px; background: white; color: #667eea; padding: 10px 20px; border-radius: 5px; border: none; text-decoration: none; font-weight: bold; cursor: pointer;">Leer más →</button>
+                </div>
+                <div>
+                    <img src="fotos%20y%20videos/fotogrupal.jpg" alt="Nuestra Historia" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                </div>
             </div>
-            <div>
-                <h2>Información</h2>
-                <p>
-                   Este será nuestro canal oficial de comunicación. Aquí encontrarás toda la información relevante del club: campeonatos y competencias, reuniones y asambleas, calendario de actividades, noticias y novedades. Nuestro objetivo es mantener a todas las familias informadas de manera clara, oportuna y transparente.
-                </p>
+
+            <!-- MISIÓN Y VISIÓN - EN 2 COLUMNAS -->
+            <div id="mision" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 50px;">
+                
+                <!-- MISIÓN -->
+                <div id="mision-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 15px; padding: 40px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; flex-direction: column;">
+                    <h2 style="font-size: 28px; margin-top: 0;">🎯 Nuestra Misión</h2>
+                    <p style="font-size: 15px; line-height: 1.6; flex-grow: 1;">
+                        Formar deportistas y personas íntegras a través del patinaje artístico, promoviendo el desarrollo deportivo, personal y social en un ambiente basado en el respeto, la disciplina, el compañerismo y la pasión.
+                    </p>
+                    <img src="fotos%20y%20videos/fotogrupal.jpg" alt="Nuestra Misión" style="width: 100%; border-radius: 10px; margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                </div>
+
+                <!-- VISIÓN -->
+                <div id="vision" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 15px; padding: 40px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; flex-direction: column;">
+                    <h2 style="font-size: 28px; margin-top: 0;">✨ Nuestra Visión</h2>
+                    <p style="font-size: 15px; line-height: 1.6; flex-grow: 1;">
+                        Ser un club reconocido por la excelencia en la formación de deportistas, por el compromiso con nuestra comunidad y contribuir al crecimiento del patinaje artístico en Quilpué y la Región de Valparaíso.
+                    </p>
+                    <img src="fotos%20y%20videos/fotogrupal.jpg" alt="Nuestra Visión" style="width: 100%; border-radius: 10px; margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                </div>
+
             </div>
+
+            <!-- INFORMACIÓN - GRANDE DERECHA -->
+            <div id="informacion" style="display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 40px; align-items: center;">
+                <div>
+                    <img src="fotos%20y%20videos/fotogrupal.jpg" alt="Información" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                </div>
+                <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 15px; padding: 40px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <h2 style="font-size: 36px; margin-top: 0;">ℹ️ Información</h2>
+                    <p style="font-size: 16px; line-height: 1.6; margin: 20px 0 0 0;">
+                        Este es nuestro canal oficial de comunicación. Aquí encontrarás información relevante del club: campeonatos, competencias, reuniones, calendario de actividades, noticias y novedades. Mantenemos a todas las familias informadas de manera clara y oportuna.
+                    </p>
+                    <div id="informacion-expandido" style="display: none; margin-top: 20px; font-size: 16px; line-height: 1.6;">
+                        <p>Mediante este canal nos mantenemos en contacto permanente con las familias, compartiendo actualizaciones sobre competencias, entrenamientos especiales, cambios de horario, y eventos relevantes para nuestra comunidad.</p>
+                        <p>También aquí publicamos logros de nuestras deportistas, fotos de eventos, videos de competencias y comunicados importantes. Te invitamos a seguirnos en WhatsApp e Instagram para no perderte ninguna noticia.</p>
+                    </div>
+                    <button onclick="var expandido = document.getElementById('informacion-expandido'); var btn = this; if(expandido.style.display === 'none') { expandido.style.display = 'block'; btn.textContent = 'Leer menos ↑'; } else { expandido.style.display = 'none'; btn.textContent = 'Leer más →'; }" style="display: inline-block; margin-top: 20px; background: white; color: #fa709a; padding: 10px 20px; border-radius: 5px; border: none; text-decoration: none; font-weight: bold; cursor: pointer;">Leer más →</button>
+                </div>
+            </div>
+
         </div>
     </section>
 
