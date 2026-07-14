@@ -61,6 +61,33 @@
             <li class="direccion-item" data-lat="-33.0471" data-lng="-71.3157"><strong>Dirección:</strong> <a href="https://www.google.com/maps?q=Multicancha+La+Perlina,+Del+Nogal+1700,+Quilpué,+Región+de+Valparaíso" target="_blank">Multicancha La Perlina, Del Nogal 1700, Quilpué, Región de Valparaíso</a></li>
         </ul>
         <div id="mapa-ubicacion" style="width:100%;height:450px;max-width:100%;border-radius:5px;"></div>
+        
+        <h3>Formulario de Contacto</h3>
+        <p>Completa el siguiente formulario y nos pondremos en contacto contigo pronto:</p>
+        <form id="formulario-contacto" method="POST" style="max-width: 600px; margin: 20px 0;">
+            <div style="margin-bottom: 15px;">
+                <label for="nombre" style="display: block; margin-bottom: 5px; font-weight: bold;">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label for="telefono" style="display: block; margin-bottom: 5px; font-weight: bold;">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label for="comentarios" style="display: block; margin-bottom: 5px; font-weight: bold;">Comentarios:</label>
+                <textarea id="comentarios" name="comentarios" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; font-family: Arial, sans-serif;"></textarea>
+            </div>
+            
+            <button type="submit" style="background-color: #2196F3; color: white; padding: 12px 30px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;">Enviar</button>
+            <button type="reset" style="background-color: #888; color: white; padding: 12px 30px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; margin-left: 10px; transition: background-color 0.3s ease;">Limpiar</button>
+        </form>
     
     </section>
     <!-- Leaflet JS -->
