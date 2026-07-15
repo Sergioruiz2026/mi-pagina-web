@@ -61,33 +61,33 @@
             <li class="direccion-item" data-lat="-33.0458" data-lng="-71.3183"><strong>Dirección:</strong> <a href="https://www.google.com/maps?q=Estadio+Municipal+Villa+Olímpica+-+Paicaví+0127,+Quilpué,+Valparaíso,+Quilpué,+Región+de+Valparaíso" target="_blank">Estadio Municipal Villa Olímpica - Paicaví 0127, Quilpué, Región de Valparaíso</a></li>
             <li class="direccion-item" data-lat="-33.0471" data-lng="-71.3157"><strong>Dirección:</strong> <a href="https://www.google.com/maps?q=Multicancha+La+Perlina,+Del+Nogal+1700,+Quilpué,+Región+de+Valparaíso" target="_blank">Multicancha La Perlina, Del Nogal 1700, Quilpué, Región de Valparaíso</a></li>
         </ul>
-        <div id="mapa-ubicacion" style="width:100%;height:450px;max-width:100%;border-radius:5px;"></div>
+        <div id="mapa-ubicacion" class="map-container"></div>
         
         <h3 data-i18n="pages.contacto.formTitle">Formulario de Contacto</h3>
         <p data-i18n="pages.contacto.formText">Completa el siguiente formulario y nos pondremos en contacto contigo pronto:</p>
-        <form id="formulario-contacto" method="POST" style="max-width: 600px; margin: 20px 0;">
-            <div style="margin-bottom: 15px;">
-                <label for="nombre" style="display: block; margin-bottom: 5px; font-weight: bold;" data-i18n="pages.contacto.name">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+        <form id="formulario-contacto" class="contact-form" method="POST">
+            <div>
+                <label for="nombre" data-i18n="pages.contacto.name">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
             </div>
             
-            <div style="margin-bottom: 15px;">
-                <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;" data-i18n="pages.contacto.email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+            <div>
+                <label for="email" data-i18n="pages.contacto.email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
             </div>
             
-            <div style="margin-bottom: 15px;">
-                <label for="telefono" style="display: block; margin-bottom: 5px; font-weight: bold;" data-i18n="pages.contacto.phone">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+            <div>
+                <label for="telefono" data-i18n="pages.contacto.phone">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
             </div>
             
-            <div style="margin-bottom: 15px;">
-                <label for="comentarios" style="display: block; margin-bottom: 5px; font-weight: bold;" data-i18n="pages.contacto.comments">Comentarios:</label>
-                <textarea id="comentarios" name="comentarios" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; font-family: Arial, sans-serif;"></textarea>
+            <div>
+                <label for="comentarios" data-i18n="pages.contacto.comments">Comentarios:</label>
+                <textarea id="comentarios" name="comentarios" rows="5" required></textarea>
             </div>
             
-            <button type="submit" style="background-color: #2196F3; color: white; padding: 12px 30px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;" data-i18n="pages.contacto.send">Enviar</button>
-            <button type="reset" style="background-color: #888; color: white; padding: 12px 30px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; margin-left: 10px; transition: background-color 0.3s ease;" data-i18n="pages.contacto.clear">Limpiar</button>
+            <button type="submit" data-i18n="pages.contacto.send">Enviar</button>
+            <button type="reset" data-i18n="pages.contacto.clear">Limpiar</button>
         </form>
     
     </section>
@@ -167,48 +167,37 @@
     </script>
     
     <!-- PIE DE PÁGINA -->
-    <footer style="background-color: #1a1a1a; color: #fff; padding: 30px 20px; margin-top: 50px; border-top: 3px solid #2196F3;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <!-- SECCIÓN DE SOPORTE -->
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 30px; margin-bottom: 30px; text-align: left; flex-wrap: wrap;">
-                <!-- SOPORTE -->
-                <div style="flex: 1; min-width: 280px;">
-                    <h3 style="margin: 0 0 15px 0; font-size: 18px; color: #4facfe;" data-i18n="footer.supportTitle">📞 Soporte</h3>
-                    <p style="margin: 0 0 10px 0; font-size: 14px; color: #ccc;"><strong data-i18n="footer.nameLabel">Nombre:</strong> Sergio Ruiz</p>
-                    <p style="margin: 0 0 10px 0; font-size: 14px; color: #ccc;">
-                        <strong data-i18n="footer.emailLabel">📧 Correo:</strong> <a href="mailto:sergio.ruiz.espinoza2026@gmail.com" style="color: #4facfe; text-decoration: none;">sergio.ruiz.espinoza2026@gmail.com</a>
-                    </p>
-                    <p style="margin: 0; font-size: 14px; color: #ccc;">
-                        <strong data-i18n="footer.whatsappLabel">💬 WhatsApp:</strong> <a href="https://wa.me/56997131557" style="color: #25D366; text-decoration: none;">+56 9 97131557</a>
-                    </p>
-                </div>
-                <!-- PUBLICIDAD PULSSO -->
-                <div class="footer-ad" style="flex: 0 0 180px; display:flex; justify-content:center; align-items:center;">
-                    <a href="https://sergioruiz2026.github.io/pulsso/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Pulsso">
-                        <img src="fotos%20y%20videos/pulsso.jpeg" alt="Publicidad Pulsso" />
-                    </a>
-                </div>
-                <!-- REDES SOCIALES -->
-                <div style="flex: 1; min-width: 280px; text-align: right;">
-                    <h3 style="margin: 0 0 15px 0; font-size: 18px; color: #fa709a;" data-i18n="footer.socialTitle">Síguenos en Nuestras Redes</h3>
-                    <div style="display: flex; justify-content: flex-end; gap: 20px; font-size: 24px;">
-                        <a href="https://wa.me/56991252341" style="color: #25D366; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">📱 WhatsApp</a>
-                        <a href="https://www.instagram.com/patinaje.ayekantun" style="color: #E4405F; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">📸 Instagram</a>
-                    </div>
+    <footer class="page-footer">
+        <div class="footer-grid">
+            <div class="footer-links">
+                <h3 data-i18n="footer.supportTitle">📞 Soporte</h3>
+                <p><strong data-i18n="footer.nameLabel">Nombre:</strong> Sergio Ruiz</p>
+                <p><strong data-i18n="footer.emailLabel">📧 Correo:</strong> <a href="mailto:sergio.ruiz.espinoza2026@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a></p>
+                <p><strong data-i18n="footer.whatsappLabel">💬 WhatsApp:</strong> <a href="https://wa.me/56997131557">+56 9 97131557</a></p>
+            </div>
+            <div class="footer-ad">
+                <a href="https://sergioruiz2026.github.io/pulsso/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Pulsso">
+                    <img src="fotos%20y%20videos/pulsso.jpeg" alt="Publicidad Pulsso" />
+                </a>
+            </div>
+            <div class="footer-social">
+                <h3 data-i18n="footer.socialTitle">Síguenos en Nuestras Redes</h3>
+                <div class="footer-network">
+                    <a href="https://wa.me/56991252341">📱 WhatsApp</a>
+                    <a href="https://www.instagram.com/patinaje.ayekantun">📸 Instagram</a>
                 </div>
             </div>
-            <!-- INFORMACIÓN DE COPYRIGHT -->
-            <div style="border-top: 1px solid #444; padding-top: 20px; text-align: center;">
-                <p style="margin: 0; font-size: 14px; color: #999;" data-i18n="footer.copyright">&copy; 2024 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.</p>
-                <p style="margin: 5px 0 0 0; font-size: 12px; color: #666;" data-i18n="footer.location">Quilpué, Región de Valparaíso, Chile</p>
+            <div class="footer-copy">
+                <p data-i18n="footer.copyright">&copy; 2024 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.</p>
+                <p data-i18n="footer.location">Quilpué, Región de Valparaíso, Chile</p>
             </div>
         </div>
     </footer>
 
     <!-- BOTONES FLOTANTES SUBIR/BAJAR -->
-    <div style="position: fixed; right: 20px; bottom: 100px; display: flex; flex-direction: column; gap: 10px; z-index: 999;">
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)'">⬆️</button>
-        <button onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});" style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)'">⬇️</button>
+    <div class="float-buttons">
+        <button class="float-btn float-btn--up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆️</button>
+        <button class="float-btn float-btn--down" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">⬇️</button>
     </div>
 </body>
 </html>

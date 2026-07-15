@@ -40,57 +40,44 @@
 
     <section class="contenido">
         <div class="video">
-            <video controls preload="metadata" width="100%" style="max-width: 720px; display: block; margin: 0 auto;">
+            <video controls preload="metadata">
                 <source src="fotos y videos/videos/videomya.mp4" type="video/mp4">
-                
             </video>
-            <p style="text-align: center; margin-top: 1rem;" data-i18n="pages.videos.caption">Video de la presentación del club.</p>
+            <p data-i18n="pages.videos.caption">Video de la presentación del club.</p>
         </div>
     </section>
     <script src="main.js" defer></script>
     <!-- PIE DE PÁGINA -->
-    <footer style="background-color: #1a1a1a; color: #fff; padding: 30px 20px; margin-top: 50px; border-top: 3px solid #2196F3;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <!-- SECCIÓN DE SOPORTE -->
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 30px; margin-bottom: 30px; text-align: left; flex-wrap: wrap;">
-                <!-- SOPORTE -->
-                <div style="flex: 1; min-width: 280px;">
-                    <h3 style="margin: 0 0 15px 0; font-size: 18px; color: #4facfe;" data-i18n="footer.supportTitle">📞 Soporte</h3>
-                    <p style="margin: 0 0 10px 0; font-size: 14px; color: #ccc;"><strong data-i18n="footer.nameLabel">Nombre:</strong> Sergio Ruiz</p>
-                    <p style="margin: 0 0 10px 0; font-size: 14px; color: #ccc;">
-                        <strong data-i18n="footer.emailLabel">📧 Correo:</strong> <a href="mailto:sergio.ruiz.espinoza2026@gmail.com" style="color: #4facfe; text-decoration: none;">sergio.ruiz.espinoza2026@gmail.com</a>
-                    </p>
-                    <p style="margin: 0; font-size: 14px; color: #ccc;">
-                        <strong data-i18n="footer.whatsappLabel">💬 WhatsApp:</strong> <a href="https://wa.me/56997131557" style="color: #25D366; text-decoration: none;">+56 9 97131557</a>
-                    </p>
-                </div>
-                <!-- PUBLICIDAD PULSSO -->
-                <div class="footer-ad" style="flex: 0 0 180px; display:flex; justify-content:center; align-items:center;">
-                    <a href="https://sergioruiz2026.github.io/pulsso/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Pulsso">
-                        <img src="fotos%20y%20videos/pulsso.jpeg" alt="Publicidad Pulsso" />
-                    </a>
-                </div>
-                <!-- REDES SOCIALES -->
-                <div style="flex: 1; min-width: 280px; text-align: right;">
-                    <h3 style="margin: 0 0 15px 0; font-size: 18px; color: #fa709a;" data-i18n="footer.socialTitle">Síguenos en Nuestras Redes</h3>
-                    <div style="display: flex; justify-content: flex-end; gap: 20px; font-size: 24px;">
-                        <a href="https://wa.me/56991252341" style="color: #25D366; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">📱 WhatsApp</a>
-                        <a href="https://www.instagram.com/patinaje.ayekantun" style="color: #E4405F; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">📸 Instagram</a>
-                    </div>
+    <footer class="page-footer">
+        <div class="footer-grid">
+            <div class="footer-links">
+                <h3 data-i18n="footer.supportTitle">📞 Soporte</h3>
+                <p><strong data-i18n="footer.nameLabel">Nombre:</strong> Sergio Ruiz</p>
+                <p><strong data-i18n="footer.emailLabel">📧 Correo:</strong> <a href="mailto:sergio.ruiz.espinoza2026@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a></p>
+                <p><strong data-i18n="footer.whatsappLabel">💬 WhatsApp:</strong> <a href="https://wa.me/56997131557">+56 9 97131557</a></p>
+            </div>
+            <div class="footer-ad">
+                <a href="https://sergioruiz2026.github.io/pulsso/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Pulsso">
+                    <img src="fotos%20y%20videos/pulsso.jpeg" alt="Publicidad Pulsso" />
+                </a>
+            </div>
+            <div class="footer-social">
+                <h3 data-i18n="footer.socialTitle">Síguenos en Nuestras Redes</h3>
+                <div class="footer-network">
+                    <a href="https://wa.me/56991252341">📱 WhatsApp</a>
+                    <a href="https://www.instagram.com/patinaje.ayekantun">📸 Instagram</a>
                 </div>
             </div>
-            <!-- INFORMACIÓN DE COPYRIGHT -->
-            <div style="border-top: 1px solid #444; padding-top: 20px; text-align: center;">
-                <p style="margin: 0; font-size: 14px; color: #999;" data-i18n="footer.copyright">&copy; 2024 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.</p>
-                <p style="margin: 5px 0 0 0; font-size: 12px; color: #666;" data-i18n="footer.location">Quilpué, Región de Valparaíso, Chile</p>
+            <div class="footer-copy">
+                <p data-i18n="footer.copyright">&copy; 2024 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.</p>
+                <p data-i18n="footer.location">Quilpué, Región de Valparaíso, Chile</p>
             </div>
         </div>
     </footer>
 
-    <!-- BOTONES FLOTANTES SUBIR/BAJAR -->
-    <div style="position: fixed; right: 20px; bottom: 100px; display: flex; flex-direction: column; gap: 10px; z-index: 999;">
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)'">⬆️</button>
-        <button onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});" style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)'">⬇️</button>
+    <div class="float-buttons">
+        <button class="float-btn float-btn--up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆️</button>
+        <button class="float-btn float-btn--down" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">⬇️</button>
     </div>
-    </body>
-    </html>
+</body>
+</html>
