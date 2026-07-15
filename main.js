@@ -61,6 +61,7 @@ const translations = {
             history: { title: '📖 Nuestra Historia', desc: 'Conoce cómo nació Ayekantún en 2017 y nuestra trayectoria en el patinaje artístico.' },
             mission: { title: '🎯 Nuestra Misión', desc: 'Formar deportistas íntegras a través de la disciplina, respeto y pasión por el patinaje.' },
             vision: { title: '✨ Nuestra Visión', desc: 'Ser referentes en la formación de deportistas y contribuir al patinaje artístico en la región.' },
+            laEscuelita: { title: '🏫 La Escuelita', desc: 'Descubre el espacio de aprendizaje, alegría y crecimiento para niñas y niños.' },
             info: { title: 'ℹ️ Información', desc: 'Mantente informado sobre campeonatos, eventos y novedades del club.' }
         },
         sections: {
@@ -87,6 +88,7 @@ const translations = {
         },
         nav: {
             inicio: 'Inicio',
+            laEscuelita: 'La Escuelita',
             deportistas: 'Deportistas',
             entrenadora: 'Entrenadora',
             galeria: 'Galería',
@@ -106,6 +108,16 @@ const translations = {
             videos: 'Ayekantún - Videos'
         },
         pages: {
+            laEscuelita: {
+                heroTitle: 'La Escuelita',
+                heroText: 'Un espacio de formación, alegría y crecimiento para niñas y niños.',
+                sectionTitle: '¿Qué es La Escuelita?',
+                intro: 'La Escuelita es un espacio cercano donde las niñas y niños pueden aprender, moverse, expresarse y crecer con seguridad. Aquí se combina la disciplina del patinaje con la diversión, el compañerismo y el desarrollo personal.',
+                card1Title: 'Aprendizaje divertido',
+                card1Text: 'Cada clase está pensada para que los más pequeños aprendan con entusiasmo y confianza.',
+                card2Title: 'Valores y compañerismo',
+                card2Text: 'Promovemos el respeto, la disciplina y el trabajo en equipo desde el inicio.'
+            },
             contacto: {
                 heroTitle: 'Contacto',
                 heading: 'Información de contacto',
@@ -166,6 +178,7 @@ const translations = {
             history: { title: '📖 Our History', desc: 'Learn how Ayekantún was born in 2017 and our journey in artistic skating.' },
             mission: { title: '🎯 Our Mission', desc: 'Train athletes through discipline, respect and passion for skating.' },
             vision: { title: '✨ Our Vision', desc: 'Be a reference in the training of athletes and contribute to artistic skating in the region.' },
+            laEscuelita: { title: '🏫 The Little School', desc: 'Discover the space for learning, joy and growth for girls and boys.' },
             info: { title: 'ℹ️ Information', desc: 'Stay informed about championships, events and club news.' }
         },
         sections: {
@@ -192,6 +205,7 @@ const translations = {
         },
         nav: {
             inicio: 'Home',
+            laEscuelita: 'The Little School',
             deportistas: 'Athletes',
             entrenadora: 'Coach',
             galeria: 'Gallery',
@@ -211,6 +225,16 @@ const translations = {
             videos: 'Ayekantún - Videos'
         },
         pages: {
+            laEscuelita: {
+                heroTitle: 'The Little School',
+                heroText: 'A space for learning, joy and growth for girls and boys.',
+                sectionTitle: 'What is The Little School?',
+                intro: 'The Little School is a welcoming space where girls and boys can learn, move, express themselves and grow with confidence. Here, the discipline of skating is combined with fun, teamwork and personal development.',
+                card1Title: 'Fun learning',
+                card1Text: 'Each class is designed so that the youngest can learn with enthusiasm and confidence.',
+                card2Title: 'Values and teamwork',
+                card2Text: 'We promote respect, discipline and teamwork from the beginning.'
+            },
             contacto: {
                 heroTitle: 'Contact',
                 heading: 'Contact information',
