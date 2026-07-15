@@ -91,6 +91,10 @@ nav h1{margin:0;font-size:1.05rem;color:var(--accent);letter-spacing:0.6px}
 .modal-cerrar{position:absolute;right:18px;top:18px;background:var(--card);color:var(--text);border:0;padding:6px 10px;border-radius:8px;cursor:pointer}
 /* Footer */
 .footer{max-width:1100px;margin:18px auto;color:var(--muted);font-size:0.9rem;text-align:center;padding:8px}
+.footer-ad{display:flex;justify-content:center;margin:0 auto 24px;}
+.footer-ad a{display:inline-block;}
+.footer-ad img{max-width:220px;width:100%;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,0.16);box-shadow:0 12px 28px rgba(0,0,0,0.25);transition:transform .25s ease,box-shadow .25s ease;}
+.footer-ad img:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(0,0,0,0.32);}
 /* Responsivo */
 @media (max-width:720px){
     .hero-content{flex-direction:column;align-items:flex-start}
