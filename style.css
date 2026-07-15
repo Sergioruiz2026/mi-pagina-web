@@ -312,6 +312,7 @@ nav ul li a:hover {
 /* ── TARJETA DE FOTO ──────────────────────────────────────── */
 .foto {
     background: var(--blanco);
+    color: var(--texto);
     border-radius: 14px;
     overflow: hidden;
     box-shadow: var(--sombra);
@@ -319,6 +320,28 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.foto-texto {
+    padding: 1rem 1rem 1.15rem;
+    background: var(--blanco);
+    color: var(--texto);
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.foto-texto h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--texto);
+}
+
+.foto-texto p {
+    margin: 0;
+    color: var(--texto);
+    opacity: 0.8;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .foto:hover {

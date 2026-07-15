@@ -78,6 +78,12 @@ nav h1{margin:0;font-size:1.05rem;color:var(--accent);letter-spacing:0.6px}
 .contenido{max-width:920px;margin:18px auto;padding:18px;background:var(--card);border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.6)}
 .contenido h2{margin-top:0;color:var(--accent)}
 .contenido p{color:var(--muted);line-height:1.6}
+
+/* Tarjetas de fotos */
+.foto{background:var(--card);color:var(--text);border:1px solid rgba(255,255,255,0.04)}
+.foto-texto{padding:16px 16px 18px;background:var(--card);color:var(--text);border-top:1px solid rgba(255,255,255,0.06)}
+.foto-texto h3{margin:0 0 8px;font-size:1.05rem;color:var(--text)}
+.foto-texto p{margin:0;color:var(--muted);line-height:1.55;font-size:0.96rem}
 /* Modal */
 .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);padding:20px}
 .modal.activo{display:flex}
