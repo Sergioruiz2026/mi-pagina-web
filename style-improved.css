@@ -155,6 +155,11 @@ footer a:hover{transform:translateY(-2px)}
 .foto-texto h3{margin:0 0 8px;font-size:1.05rem;color:var(--text)}
 .foto-texto p{margin:0;color:var(--muted);line-height:1.55;font-size:0.96rem}
 
+/* Mejora de contraste para textos sobre fotos y énfasis */
+.foto-texto{background:var(--card);color:var(--text);border-top:1px solid rgba(255,255,255,0.08)}
+.foto-texto a, .foto-texto a:link, .foto-texto a:visited{color:var(--accent)}
+em{color:var(--accent);font-style:normal;font-weight:700}
+
 /* Responsivo */
 @media (max-width:900px){
     #historia, #mision, #informacion{grid-template-columns:1fr !important;gap:24px !important}
