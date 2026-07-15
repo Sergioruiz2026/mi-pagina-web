@@ -78,14 +78,14 @@ nav ul li a:hover {
 
 /* ── HERO ─────────────────────────────────────────────────── */
 .hero {
-    background: linear-gradient(135deg, var(--oscuro) 0%, var(--morado) 60%, var(--rosa) 100%);
-    min-height: 380px;
+    min-height: 82vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 4rem 2rem;
     color: var(--blanco);
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.28) 45%, rgba(0,0,0,0.7) 100%), url("fotos%20y%20videos/fotogrupal2.JPG") center/cover no-repeat;
 }
 
 .hero h2 {
