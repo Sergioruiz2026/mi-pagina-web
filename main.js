@@ -89,6 +89,8 @@ const translations = {
         nav: {
             inicio: 'Inicio',
             laEscuelita: 'La Escuelita',
+            inscripciones: 'Inscripciones',
+            horarios: 'Conoce nuestros horarios',
             deportistas: 'Deportistas',
             entrenadora: 'Entrenadora',
             galeria: 'Galería',
@@ -206,6 +208,8 @@ const translations = {
         nav: {
             inicio: 'Home',
             laEscuelita: 'The Little School',
+            inscripciones: 'Registrations',
+            horarios: 'Check our schedules',
             deportistas: 'Athletes',
             entrenadora: 'Coach',
             galeria: 'Gallery',
