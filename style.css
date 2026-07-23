@@ -307,6 +307,7 @@ nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
     justify-items: center;
+    align-items: stretch;
 }
 
 /* ── TARJETA DE FOTO ──────────────────────────────────────── */
@@ -351,8 +352,9 @@ nav ul li a:hover {
 
 .foto img {
     width: 100%;
-    height: 220px;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
+    height: auto;
     cursor: zoom-in;
     display: block;
     transition: transform 0.3s;
