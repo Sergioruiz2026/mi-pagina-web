@@ -239,6 +239,12 @@ em{color:var(--accent);font-style:normal;font-weight:700}
 .panel-gradient--vision{background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)}
 .section-heading{font-size:clamp(2rem,3vw,3.2rem);margin-top:0}
 .responsive-image{width:100%;height:auto;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+
+/* Estilos para videos */
+.video{max-width:1000px;margin:40px auto;padding:20px;border-radius:12px;background:rgba(0,0,0,0.2);box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+.video video{width:100%;height:auto;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.3);display:block;margin:0 auto;background:#000}
+.video p{text-align:center;margin:20px 0 0;color:var(--muted);font-size:0.95rem;line-height:1.5}
+
 .page-footer{background-color:#1a1a1a;color:#fff;padding:30px 20px;margin-top:50px;border-top:3px solid #2196F3}
 .footer-grid{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap}
 .page-footer .footer-ad{flex:0 0 180px;display:flex;justify-content:center;align-items:center}
