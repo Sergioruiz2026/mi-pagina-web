@@ -43,8 +43,8 @@
     <section class="contenido" style="max-width: 720px; margin: 32px auto; padding: 24px; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
         <h2 style="margin-bottom: 10px;">Inscripciones</h2>
         <p style="margin-bottom: 16px;">Las inscripciones están abiertas para quienes quieran formar parte de nuestra escuela de patinaje.</p>
-        <p> La motivación de este formulario es recopilar información básica de contacto y detalles sobre la edad y nivel de interés de los aspirantes. Esto nos permitirá organizar mejor las clases y asegurarnos de que cada participante reciba la atención adecuada según su nivel y necesidades.</p>
-        </p>AL enviar este formulario, nos pondremos en contacto contigo para confirmar tu inscripción y proporcionarte más detalles sobre los horarios y requisitos.</p>
+        <p>La motivación de este formulario es recopilar información básica de contacto y detalles sobre la edad y nivel de interés de los aspirantes. Esto nos permitirá organizar mejor las clases y asegurarnos de que cada participante reciba la atención adecuada según su nivel y necesidades.</p>
+        <p>Al enviar este formulario, nos pondremos en contacto contigo para confirmar tu inscripción y proporcionarte más detalles sobre los horarios y requisitos.</p>
         <div style="background: #0f0f0f; border-left: 4px solid #b91c1c; padding: 14px 16px; border-radius: 10px; margin-bottom: 12px;">
             <strong>¿Qué necesitas?</strong>
             <ul style="margin: 8px 0 0 18px;">
@@ -52,24 +52,33 @@
                 <li>Indicar edad y nivel de interés.</li>
                </ul>
         </div>
-        <form style="margin-top: 20px; display: grid; gap: 12px;">
+
+        <form action="https://formsubmit.co/ayekantun@gmail.com" method="POST" autocomplete="off" style="margin-top: 20px; display: grid; gap: 12px;">
+            <input type="hidden" name="_subject" value="Solicitud de inscripción Ayekantún">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
             <label style="display: grid; gap: 6px; font-weight: 600;">
-                Nombre
-                <input type="text" placeholder="Tu nombre" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+                Nombre completo
+                <input type="text" name="Nombre" placeholder="Tu nombre" required style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
             </label>
             <label style="display: grid; gap: 6px; font-weight: 600;">
-                Correo
-                <input type="email" placeholder="tu@email.com" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+                Correo electrónico
+                <input type="email" name="Correo" placeholder="tu@email.com" required style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
             </label>
             <label style="display: grid; gap: 6px; font-weight: 600;">
                 Teléfono
-                <input type="tel" placeholder="Tu teléfono" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+                <input type="tel" name="Teléfono" placeholder="Tu teléfono" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+            </label>
+            <label style="display: grid; gap: 6px; font-weight: 600;">
+                Edad / nivel
+                <input type="text" name="Edad_nivel" placeholder="Ej. 10 años / nivel básico" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
             </label>
             <label style="display: grid; gap: 6px; font-weight: 600;">
                 Mensaje
-                <textarea rows="4" placeholder="Cuéntanos tu interés por inscribirte" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; resize: vertical;"></textarea>
+                <textarea name="Mensaje" rows="4" placeholder="Cuéntanos tu interés por inscribirte" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; resize: vertical;"></textarea>
             </label>
-            <button type="submit" style="padding: 10px 14px; border: none; border-radius: 8px; background: #b91c1c; color: white; cursor: pointer; font-weight: 700; width: fit-content;">Enviar</button>
+            <button type="submit" style="padding: 10px 14px; border: none; border-radius: 8px; background: #b91c1c; color: white; cursor: pointer; font-weight: 700; width: fit-content;">Enviar solicitud</button>
+            <p style="margin: 0; font-size: 0.95rem; color: #555;">Esta solicitud se enviará directamente a ayekantun@gmail.com mediante un servicio seguro.</p>
         </form>
 
         <p style="margin-top: 18px;"><strong>Correo:</strong> <a href="mailto:ayekantun@gmail.com">ayekantun@gmail.com</a></p>
