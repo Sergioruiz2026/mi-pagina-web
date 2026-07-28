@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayekantún - Contacto</title>
+    <title>AyekantÃºn - Contacto</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-improved.css">
     <!-- Leaflet CSS -->
@@ -15,22 +15,22 @@
 <body>
     <nav class="site-nav">
         <div class="container nav-inner">
-            <h1>Ayekantún</h1>
-            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+            <h1>AyekantÃºn</h1>
+            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menÃº">â˜°</button>
             <ul class="nav-links">
                 <li class="has-submenu">
                     <button class="submenu-toggle" aria-expanded="false" data-i18n="nav.inicio">Inicio</button>
-                    <ul class="submenu" aria-label="Submenú Inicio">
+                    <ul class="submenu" aria-label="SubmenÃº Inicio">
                         <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
                         <li><a href="index.html#historia" data-i18n="nav.historia">Historia</a></li>
-                        <li><a href="index.html#mision" data-i18n="nav.mision">Nuestra Misión</a></li>
-                        <li><a href="index.html#vision" data-i18n="nav.vision">Nuestra Visión</a></li>
-                        <li><a href="index.html#informacion" data-i18n="nav.informacion">Información</a></li>
+                        <li><a href="index.html#mision" data-i18n="nav.mision">Nuestra MisiÃ³n</a></li>
+                        <li><a href="index.html#vision" data-i18n="nav.vision">Nuestra VisiÃ³n</a></li>
+                        <li><a href="index.html#informacion" data-i18n="nav.informacion">InformaciÃ³n</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
                     <button class="submenu-toggle" aria-expanded="false" data-i18n="nav.laEscuelita">La Escuelita</button>
-                    <ul class="submenu" aria-label="Submenú La Escuelita">
+                    <ul class="submenu" aria-label="SubmenÃº La Escuelita">
                         <li><a href="la-esculita.html" data-i18n="nav.laEscuelita">La Escuelita</a></li>
                         <li><a href="inscripciones.html" data-i18n="nav.inscripciones">Inscripciones</a></li>
                         <li><a href="horarios.html" data-i18n="nav.horarios">Conoce nuestros horarios</a></li>
@@ -38,7 +38,7 @@
                 </li>
                 <li><a href="deportistas.html" data-i18n="nav.deportistas">Deportistas</a></li>
                 <li><a href="entrenadora.html" data-i18n="nav.entrenadora">Entrenadora</a></li>
-                <li><a href="galeria.html" data-i18n="nav.galeria">Galería</a></li>
+                <li><a href="galeria.html" data-i18n="nav.galeria">GalerÃ­a</a></li>
                 <li><a href="videos.html" data-i18n="nav.videos">Videos</a></li>
                 <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
             </ul>
@@ -50,24 +50,24 @@
     </section>
 
     <section class="contenido">
-        <h2 data-i18n="pages.contacto.heading">Información de contacto</h2>
+        <h2 data-i18n="pages.contacto.heading">InformaciÃ³n de contacto</h2>
         <p data-i18n="pages.contacto.intro1">
-            Si deseas más información sobre nuestras clases, inscripciones o actividades, escríbenos y te responderemos pronto.
+            Si deseas mÃ¡s informaciÃ³n sobre nuestras clases, inscripciones o actividades, escrÃ­benos y te responderemos pronto.
         </p>
         <p data-i18n="pages.contacto.intro2">
-            También puedes seguirnos en nuestras redes sociales para mantenerte al día con nuestras últimas novedades.
+            TambiÃ©n puedes seguirnos en nuestras redes sociales para mantenerte al dÃ­a con nuestras Ãºltimas novedades.
         </p>
         <ul class="contacto-lista">
             <li><strong>WhatsApp:</strong> <a href="https://wa.me/56991252341">+56 9 9125 2341</a></li>
             <li><strong>Email:</strong> <a href="mailto:patinaje.ayekantun@gmail.com">patinaje.ayekantun@gmail.com</a></li>
-            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/patinaje.ayekantun">Ayekantún Patinaje</a></li>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/patinaje.ayekantun">AyekantÃºn Patinaje</a></li>
         </ul>
-        <h3 data-i18n="pages.contacto.locationTitle">Ubicación</h3>
+        <h3 data-i18n="pages.contacto.locationTitle">UbicaciÃ³n</h3>
         <p data-i18n="pages.contacto.locationText">Puedes encontrarnos en los siguientes lugares:</p>
         <ul class="contacto-lista" id="direcciones-lista">
-            <li class="direccion-item" data-lat="-33.0486" data-lng="-71.3194"><strong>Dirección:</strong> <a href="https://www.google.com/maps?q=Liceo+Politecnico+Marga+Marga,+Calle+Cuatro+Pinos+2159,+Quilpué,+Región+de+Valparaíso" target="_blank">Liceo Politecnico Marga Marga, Calle Cuatro Pinos 2159, Quilpué, Región de Valparaíso</a></li>
-            <li class="direccion-item" data-lat="-33.0458" data-lng="-71.3183"><strong>Dirección:</strong> <a href="https://www.google.com/maps?q=Estadio+Municipal+Villa+Olímpica+-+Paicaví+0127,+Quilpué,+Valparaíso,+Quilpué,+Región+de+Valparaíso" target="_blank">Estadio Municipal Villa Olímpica - Paicaví 0127, Quilpué, Región de Valparaíso</a></li>
-            <li class="direccion-item" data-lat="-33.0471" data-lng="-71.3157"><strong>Dirección:</strong> <a href="https://www.google.com/maps?q=Multicancha+La+Perlina,+Del+Nogal+1700,+Quilpué,+Región+de+Valparaíso" target="_blank">Multicancha La Perlina, Del Nogal 1700, Quilpué, Región de Valparaíso</a></li>
+            <li class="direccion-item" data-lat="-33.0486" data-lng="-71.3194"><strong>DirecciÃ³n:</strong> <a href="https://www.google.com/maps?q=Liceo+Politecnico+Marga+Marga,+Calle+Cuatro+Pinos+2159,+QuilpuÃ©,+RegiÃ³n+de+ValparaÃ­so" target="_blank">Liceo Politecnico Marga Marga, Calle Cuatro Pinos 2159, QuilpuÃ©, RegiÃ³n de ValparaÃ­so</a></li>
+            <li class="direccion-item" data-lat="-33.0458" data-lng="-71.3183"><strong>DirecciÃ³n:</strong> <a href="https://www.google.com/maps?q=Estadio+Municipal+Villa+OlÃ­mpica+-+PaicavÃ­+0127,+QuilpuÃ©,+ValparaÃ­so,+QuilpuÃ©,+RegiÃ³n+de+ValparaÃ­so" target="_blank">Estadio Municipal Villa OlÃ­mpica - PaicavÃ­ 0127, QuilpuÃ©, RegiÃ³n de ValparaÃ­so</a></li>
+            <li class="direccion-item" data-lat="-33.0471" data-lng="-71.3157"><strong>DirecciÃ³n:</strong> <a href="https://www.google.com/maps?q=Multicancha+La+Perlina,+Del+Nogal+1700,+QuilpuÃ©,+RegiÃ³n+de+ValparaÃ­so" target="_blank">Multicancha La Perlina, Del Nogal 1700, QuilpuÃ©, RegiÃ³n de ValparaÃ­so</a></li>
         </ul>
         <div id="mapa-ubicacion" class="map-container"></div>
         
@@ -80,12 +80,12 @@
             </div>
             
             <div>
-                <label for="email" data-i18n="pages.contacto.email">Correo Electrónico:</label>
+                <label for="email" data-i18n="pages.contacto.email">Correo ElectrÃ³nico:</label>
                 <input type="email" id="email" name="email" required>
             </div>
             
             <div>
-                <label for="telefono" data-i18n="pages.contacto.phone">Teléfono:</label>
+                <label for="telefono" data-i18n="pages.contacto.phone">TelÃ©fono:</label>
                 <input type="tel" id="telefono" name="telefono" required>
             </div>
             
@@ -118,23 +118,23 @@
                 nombre: 'Liceo Politecnico Marga Marga',
                 lat: -33.0486,
                 lng: -71.3194,
-                direccion: 'Calle Cuatro Pinos 2159, Quilpué'
+                direccion: 'Calle Cuatro Pinos 2159, QuilpuÃ©'
             },
             {
-                nombre: 'Estadio Municipal Villa Olímpica',
+                nombre: 'Estadio Municipal Villa OlÃ­mpica',
                 lat: -33.0458,
                 lng: -71.3183,
-                direccion: 'Paicaví 0127, Quilpué'
+                direccion: 'PaicavÃ­ 0127, QuilpuÃ©'
             },
             {
                 nombre: 'Multicancha La Perlina',
                 lat: -33.0471,
                 lng: -71.3157,
-                direccion: 'Del Nogal 1700, Quilpué'
+                direccion: 'Del Nogal 1700, QuilpuÃ©'
             }
         ];
         
-        // Añadir marcadores al mapa
+        // AÃ±adir marcadores al mapa
         const marcadores = {};
         direcciones.forEach((dir, index) => {
             const marker = L.marker([dir.lat, dir.lng]).addTo(mapa);
@@ -142,7 +142,7 @@
             marcadores[index] = marker;
         });
         
-        // Actualizar mapa al hacer clic en una dirección
+        // Actualizar mapa al hacer clic en una direcciÃ³n
         document.querySelectorAll('.direccion-item').forEach((item, index) => {
             item.style.cursor = 'pointer';
             item.style.padding = '10px';
@@ -162,7 +162,7 @@
                 const lat = parseFloat(this.getAttribute('data-lat'));
                 const lng = parseFloat(this.getAttribute('data-lng'));
                 
-                // Centrar mapa en la ubicación
+                // Centrar mapa en la ubicaciÃ³n
                 mapa.setView([lat, lng], 16);
                 
                 // Abrir popup del marcador
@@ -174,14 +174,14 @@
         
     </script>
     
-    <!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÃGINA -->
     <footer class="page-footer">
         <div class="footer-grid">
             <div class="footer-links">
-                <h3 data-i18n="footer.supportTitle">📞 Soporte</h3>
+                <h3 data-i18n="footer.supportTitle">ðŸ“ž Soporte</h3>
                 <p><strong data-i18n="footer.nameLabel">Nombre:</strong> Sergio Ruiz</p>
-                <p><strong data-i18n="footer.emailLabel">📧 Correo:</strong> <a href="mailto:sergio.ruiz.espinoza2026@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a></p>
-                <p><strong data-i18n="footer.whatsappLabel">💬 WhatsApp:</strong> <a href="https://wa.me/56997131557">+56 9 97131557</a></p>
+                <p><strong data-i18n="footer.emailLabel">ðŸ“§ Correo:</strong> <a href="mailto:sergio.ruiz.espinoza2026@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a></p>
+                <p><strong data-i18n="footer.whatsappLabel">ðŸ’¬ WhatsApp:</strong> <a href="https://wa.me/56997131557">+56 9 97131557</a></p>
             </div>
             <div class="footer-ad">
                 <a href="https://sergioruiz2026.github.io/pulsso/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Pulsso">
@@ -189,27 +189,26 @@
                 </a>
             </div>
             <div class="footer-social">
-                <h3 data-i18n="footer.socialTitle">Síguenos en Nuestras Redes</h3>
+                <h3 data-i18n="footer.socialTitle">SÃ­guenos en Nuestras Redes</h3>
                 <div class="footer-network">
-                    <a href="https://wa.me/56991252341">📱 WhatsApp</a>
-                    <a href="https://www.instagram.com/patinaje.ayekantun">📸 Instagram</a>
+                    <a href="https://wa.me/56991252341">ðŸ“± WhatsApp</a>
+                    <a href="https://www.instagram.com/patinaje.ayekantun">ðŸ“¸ Instagram</a>
                 </div>
             </div>
             <div class="footer-copy">
-                <p data-i18n="footer.copyright">&copy; 2017 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.</p>
-                <p data-i18n="footer.location">Quilpué, Región de Valparaíso, Chile</p>
+                <p data-i18n="footer.copyright">&copy; 2017 AyekantÃºn - Escuela de Patinaje ArtÃ­stico. Todos los derechos reservados.</p>
+                <p data-i18n="footer.location">QuilpuÃ©, RegiÃ³n de ValparaÃ­so, Chile</p>
             </div>
         </div>
     </footer>
 
     <!-- BOTONES FLOTANTES SUBIR/BAJAR -->
     <div class="float-buttons">
-        <button class="float-btn float-btn--up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆️</button>
-        <button class="float-btn float-btn--down" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">⬇️</button>
-        <button class="float-btn float-btn--whatsapp" onclick="window.open('https://wa.me/56991252341', '_blank')">💬</button>
-        <button class="float-btn float-btn--instagram" onclick="window.open('https://www.instagram.com/patinaje.ayekantun', '_blank')">📸</button>
+        <button class="float-btn float-btn--up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">â¬†ï¸</button>
+        <button class="float-btn float-btn--down" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">â¬‡ï¸</button>
+        <button class="float-btn float-btn--whatsapp" onclick="window.open('https://wa.me/56991252341', '_blank')">ðŸ’¬</button>
+        <button class="float-btn float-btn--instagram" onclick="window.open('https://www.instagram.com/patinaje.ayekantun', '_blank')">ðŸ“¸</button>
     </div>
 </body>
 </html>
-
 

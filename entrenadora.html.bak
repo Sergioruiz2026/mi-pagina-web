@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayekantún - Entrenadora</title>
+    <title>AyekantÃºn - Entrenadora</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-improved.css">
     <link rel='stylesheet' href='contrast-utils.css'>
@@ -11,22 +11,22 @@
 <body class="page-entrenadora">
     <nav class="site-nav">
         <div class="container nav-inner">
-            <h1>Ayekantún</h1>
-            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+            <h1>AyekantÃºn</h1>
+            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menÃº">â˜°</button>
             <ul class="nav-links">
                 <li class="has-submenu">
                     <button class="submenu-toggle" aria-expanded="false" data-i18n="nav.inicio">Inicio</button>
-                    <ul class="submenu" aria-label="Submenú Inicio">
+                    <ul class="submenu" aria-label="SubmenÃº Inicio">
                         <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
                         <li><a href="index.html#historia" data-i18n="nav.historia">Historia</a></li>
-                        <li><a href="index.html#mision" data-i18n="nav.mision">Nuestra Misión</a></li>
-                        <li><a href="index.html#vision" data-i18n="nav.vision">Nuestra Visión</a></li>
-                        <li><a href="index.html#informacion" data-i18n="nav.informacion">Información</a></li>
+                        <li><a href="index.html#mision" data-i18n="nav.mision">Nuestra MisiÃ³n</a></li>
+                        <li><a href="index.html#vision" data-i18n="nav.vision">Nuestra VisiÃ³n</a></li>
+                        <li><a href="index.html#informacion" data-i18n="nav.informacion">InformaciÃ³n</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
                     <button class="submenu-toggle" aria-expanded="false" data-i18n="nav.laEscuelita">La Escuelita</button>
-                    <ul class="submenu" aria-label="Submenú La Escuelita">
+                    <ul class="submenu" aria-label="SubmenÃº La Escuelita">
                         <li><a href="la-esculita.html" data-i18n="nav.laEscuelita">La Escuelita</a></li>
                         <li><a href="inscripciones.html" data-i18n="nav.inscripciones">Inscripciones</a></li>
                         <li><a href="horarios.html" data-i18n="nav.horarios">Conoce nuestros horarios</a></li>
@@ -34,7 +34,7 @@
                 </li>
                 <li><a href="deportistas.html" data-i18n="nav.deportistas">Deportistas</a></li>
                 <li><a href="entrenadora.html" data-i18n="nav.entrenadora">Entrenadora</a></li>
-                <li><a href="galeria.html" data-i18n="nav.galeria">Galería</a></li>
+                <li><a href="galeria.html" data-i18n="nav.galeria">GalerÃ­a</a></li>
                 <li><a href="videos.html" data-i18n="nav.videos">Videos</a></li>
                 <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
             </ul>
@@ -48,18 +48,18 @@
     <section class="contenido">
         <div class="galeria">
             <div class="foto">
-                <img src="fotos%20para%20pagina%20web/entrenadora.jpeg" alt="Entrenadora Ayekantún" onclick="abrirImagen(this.src, this.alt)" style="cursor: zoom-in;" />
+                <img src="fotos%20para%20pagina%20web/entrenadora.jpeg" alt="Entrenadora AyekantÃºn" onclick="abrirImagen(this.src, this.alt)" style="cursor: zoom-in;" />
                 <div class="foto-texto">
                     <h3 data-i18n="pages.entrenadora.card1Title">Profesional y Apasionada</h3>
                     <p data-i18n="pages.entrenadora.card1Text">Formadora de nuevas generaciones de patinadores y patinadoras.</p>
                 </div>
             </div>
             <div class="foto">
-                <img src="fotos%20para%20pagina%20web/entrenamiento.jpg" alt="Entrenamiento Ayekantún" onclick="abrirImagen(this.src, this.alt)" style="cursor: zoom-in;" />
+                <img src="fotos%20para%20pagina%20web/entrenamiento.jpg" alt="Entrenamiento AyekantÃºn" onclick="abrirImagen(this.src, this.alt)" style="cursor: zoom-in;" />
                 <div class="foto-texto">
                     <h3 data-i18n="pages.entrenadora.card2Title">Trabajo en Equipo</h3>
-                    <p data-i18n="pages.entrenadora.card2Text">Cada entrenamiento está diseñado para crecer en técnica y confianza.</p>
-                    <p data-i18n="pages.entrenadora.card2Text2">La entrenadora guía a cada patinador y patinadora en su desarrollo personal y deportivo.</p>
+                    <p data-i18n="pages.entrenadora.card2Text">Cada entrenamiento estÃ¡ diseÃ±ado para crecer en tÃ©cnica y confianza.</p>
+                    <p data-i18n="pages.entrenadora.card2Text2">La entrenadora guÃ­a a cada patinador y patinadora en su desarrollo personal y deportivo.</p>
                     <p data-i18n="pages.entrenadora.card2Text3">Su enfoque es fomentar la disciplina, la perseverancia y el amor por el patinaje.</p>
                 </div>
             </div>
@@ -68,20 +68,20 @@
 
     <!-- MODAL -->
     <div id="modal" class="modal" onclick="cerrarImagen(event)">
-        <button class="modal-cerrar" onclick="cerrarImagen(event)" aria-label="Cerrar">✕</button>
+        <button class="modal-cerrar" onclick="cerrarImagen(event)" aria-label="Cerrar">âœ•</button>
         <img id="imagenGrande" src="" alt="">
     </div>
 
     <script src="main.js" defer></script>
     
-    <!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÃGINA -->
     <footer class="page-footer">
         <div class="footer-grid">
             <div class="footer-links">
-                <h3 data-i18n="footer.supportTitle">📞 Soporte</h3>
+                <h3 data-i18n="footer.supportTitle">ðŸ“ž Soporte</h3>
                 <p><strong data-i18n="footer.nameLabel">Nombre:</strong> Sergio Ruiz</p>
-                <p><strong data-i18n="footer.emailLabel">📧 Correo:</strong> <a href="mailto:patinaje.ayekantun@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a></p>
-                <p><strong data-i18n="footer.whatsappLabel">💬 WhatsApp:</strong> <a href="https://wa.me/56997131557">+56 9 97131557</a></p>
+                <p><strong data-i18n="footer.emailLabel">ðŸ“§ Correo:</strong> <a href="mailto:patinaje.ayekantun@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a></p>
+                <p><strong data-i18n="footer.whatsappLabel">ðŸ’¬ WhatsApp:</strong> <a href="https://wa.me/56997131557">+56 9 97131557</a></p>
             </div>
             <div class="footer-ad">
                 <a href="https://sergioruiz2026.github.io/pulsso/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Pulsso">
@@ -89,26 +89,25 @@
                 </a>
             </div>
             <div class="footer-social">
-                <h3 data-i18n="footer.socialTitle">Síguenos en Nuestras Redes</h3>
+                <h3 data-i18n="footer.socialTitle">SÃ­guenos en Nuestras Redes</h3>
                 <div class="footer-network">
-                    <a href="https://wa.me/56991252341">📱 WhatsApp</a>
-                    <a href="https://www.instagram.com/patinaje.ayekantun">📸 Instagram</a>
+                    <a href="https://wa.me/56991252341">ðŸ“± WhatsApp</a>
+                    <a href="https://www.instagram.com/patinaje.ayekantun">ðŸ“¸ Instagram</a>
                 </div>
             </div>
             <div class="footer-copy">
-                <p data-i18n="footer.copyright">&copy; 2017 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.</p>
-                <p data-i18n="footer.location">Quilpué, Región de Valparaíso, Chile</p>
+                <p data-i18n="footer.copyright">&copy; 2017 AyekantÃºn - Escuela de Patinaje ArtÃ­stico. Todos los derechos reservados.</p>
+                <p data-i18n="footer.location">QuilpuÃ©, RegiÃ³n de ValparaÃ­so, Chile</p>
             </div>
         </div>
     </footer>
 
     <div class="float-buttons">
-        <button class="float-btn float-btn--up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆️</button>
-        <button class="float-btn float-btn--down" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">⬇️</button>
-        <button class="float-btn float-btn--whatsapp" onclick="window.open('https://wa.me/56991252341', '_blank')">💬</button>
-        <button class="float-btn float-btn--instagram" onclick="window.open('https://www.instagram.com/patinaje.ayekantun', '_blank')">📸</button>
+        <button class="float-btn float-btn--up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">â¬†ï¸</button>
+        <button class="float-btn float-btn--down" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">â¬‡ï¸</button>
+        <button class="float-btn float-btn--whatsapp" onclick="window.open('https://wa.me/56991252341', '_blank')">ðŸ’¬</button>
+        <button class="float-btn float-btn--instagram" onclick="window.open('https://www.instagram.com/patinaje.ayekantun', '_blank')">ðŸ“¸</button>
     </div>
 </body>
 </html>
-
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayekantún - Galería</title>
+    <title>AyekantÃºn - GalerÃ­a</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-improved.css">
     <link rel='stylesheet' href='contrast-utils.css'>
@@ -13,22 +13,22 @@
     <!-- MENU -->
     <nav class="site-nav">
         <div class="container nav-inner">
-            <h1>Ayekantún</h1>
-            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+            <h1>AyekantÃºn</h1>
+            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menÃº">â˜°</button>
             <ul class="nav-links">
                 <li class="has-submenu">
                     <button class="submenu-toggle" aria-expanded="false" data-i18n="nav.inicio">Inicio</button>
-                    <ul class="submenu" aria-label="Submenú Inicio">
+                    <ul class="submenu" aria-label="SubmenÃº Inicio">
                         <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
                         <li><a href="index.html#historia" data-i18n="nav.historia">Historia</a></li>
-                        <li><a href="index.html#mision" data-i18n="nav.mision">Nuestra Misión</a></li>
-                        <li><a href="index.html#vision" data-i18n="nav.vision">Nuestra Visión</a></li>
-                        <li><a href="index.html#informacion" data-i18n="nav.informacion">Información</a></li>
+                        <li><a href="index.html#mision" data-i18n="nav.mision">Nuestra MisiÃ³n</a></li>
+                        <li><a href="index.html#vision" data-i18n="nav.vision">Nuestra VisiÃ³n</a></li>
+                        <li><a href="index.html#informacion" data-i18n="nav.informacion">InformaciÃ³n</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
                     <button class="submenu-toggle" aria-expanded="false" data-i18n="nav.laEscuelita">La Escuelita</button>
-                    <ul class="submenu" aria-label="Submenú La Escuelita">
+                    <ul class="submenu" aria-label="SubmenÃº La Escuelita">
                         <li><a href="la-esculita.html" data-i18n="nav.laEscuelita">La Escuelita</a></li>
                         <li><a href="inscripciones.html" data-i18n="nav.inscripciones">Inscripciones</a></li>
                         <li><a href="horarios.html" data-i18n="nav.horarios">Conoce nuestros horarios</a></li>
@@ -36,7 +36,7 @@
                 </li>
                 <li><a href="deportistas.html" data-i18n="nav.deportistas">Deportistas</a></li>
                 <li><a href="entrenadora.html" data-i18n="nav.entrenadora">Entrenadora</a></li>
-                <li><a href="galeria.html" data-i18n="nav.galeria">Galería</a></li>
+                <li><a href="galeria.html" data-i18n="nav.galeria">GalerÃ­a</a></li>
                 <li><a href="videos.html" data-i18n="nav.videos">Videos</a></li>
                 <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
             </ul>
@@ -45,147 +45,147 @@
 
     <!-- HERO -->
     <section class="hero">
-        <h2 data-i18n="pages.galeria.heroTitle">Galería de Ayekantún</h2>
+        <h2 data-i18n="pages.galeria.heroTitle">GalerÃ­a de AyekantÃºn</h2>
         <p data-i18n="pages.galeria.heroText">Explora nuestros mejores momentos en pista y competencia.</p>
     </section>
 
-    <!-- IMÁGENES -->
+    <!-- IMÃGENES -->
     <section class="contenido">
         <div class="galeria">
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (1).jpg"
-                     alt="Clase de patinaje artístico"
+                     alt="Clase de patinaje artÃ­stico"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (2).jpg"
                      alt="Alumnas en la pista de patinaje"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (3).jpg"
-                     alt="Presentación de patinaje en Villa Alemana"
+                     alt="PresentaciÃ³n de patinaje en Villa Alemana"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (4).jpg"
                      alt="Entrenamiento de patinaje"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (5).jpg"
                      alt="Patinaje en pista"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (6).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (7).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (8).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (9).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (10).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (11).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (12).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (13).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (14).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (15).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (16).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (17).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (18).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
             <div class="foto">
                 <img src="fotos%20para%20pagina%20web/gala2026 (19).jpg"
-                     alt="Patinaje artístico en competencia"
+                     alt="Patinaje artÃ­stico en competencia"
                      onclick="abrirImagen(this.src, this.alt)">
-                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">❤️ <span>0</span></button>
+                <button class="like-btn" onclick="darLike(this)" aria-label="Dar like">â¤ï¸ <span>0</span></button>
             </div>
         </div>
     </section>
 
     <!-- MODAL -->
     <div id="modal" class="modal" onclick="cerrarImagen(event)">
-        <button class="modal-cerrar" onclick="cerrarImagen(event)" aria-label="Cerrar">✕</button>
+        <button class="modal-cerrar" onclick="cerrarImagen(event)" aria-label="Cerrar">âœ•</button>
         <img id="imagenGrande" src="" alt="">
     </div>
 
     <script src="main.js" defer></script>
 
     
-    <!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÃGINA -->
     <footer class="page-footer">
         <div class="footer-grid">
             <div class="footer-links">
-                <h3 data-i18n="footer.supportTitle">📞 Soporte</h3>
+                <h3 data-i18n="footer.supportTitle">ðŸ“ž Soporte</h3>
                 <p><strong data-i18n="footer.nameLabel">Nombre:</strong> Sergio Ruiz</p>
-                <p><strong data-i18n="footer.emailLabel">📧 Correo:</strong> <a href="mailto:patinaje.ayekantun@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a></p>
-                <p><strong data-i18n="footer.whatsappLabel">💬 WhatsApp:</strong> <a href="https://wa.me/56997131557">+56 9 97131557</a></p>
+                <p><strong data-i18n="footer.emailLabel">ðŸ“§ Correo:</strong> <a href="mailto:patinaje.ayekantun@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a></p>
+                <p><strong data-i18n="footer.whatsappLabel">ðŸ’¬ WhatsApp:</strong> <a href="https://wa.me/56997131557">+56 9 97131557</a></p>
             </div>
             <div class="footer-ad">
                 <a href="https://sergioruiz2026.github.io/pulsso/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Pulsso">
@@ -193,26 +193,25 @@
                 </a>
             </div>
             <div class="footer-social">
-                <h3 data-i18n="footer.socialTitle">Síguenos en Nuestras Redes</h3>
+                <h3 data-i18n="footer.socialTitle">SÃ­guenos en Nuestras Redes</h3>
                 <div class="footer-network">
-                    <a href="https://wa.me/56991252341">📱 WhatsApp</a>
-                    <a href="https://www.instagram.com/patinaje.ayekantun">📸 Instagram</a>
+                    <a href="https://wa.me/56991252341">ðŸ“± WhatsApp</a>
+                    <a href="https://www.instagram.com/patinaje.ayekantun">ðŸ“¸ Instagram</a>
                 </div>
             </div>
             <div class="footer-copy">
-                <p data-i18n="footer.copyright">&copy; 2017 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.</p>
-                <p data-i18n="footer.location">Quilpué, Región de Valparaíso, Chile</p>
+                <p data-i18n="footer.copyright">&copy; 2017 AyekantÃºn - Escuela de Patinaje ArtÃ­stico. Todos los derechos reservados.</p>
+                <p data-i18n="footer.location">QuilpuÃ©, RegiÃ³n de ValparaÃ­so, Chile</p>
             </div>
         </div>
     </footer>
 
     <div class="float-buttons">
-        <button class="float-btn float-btn--up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆️</button>
-        <button class="float-btn float-btn--down" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">⬇️</button>
-        <button class="float-btn float-btn--whatsapp" onclick="window.open('https://wa.me/56991252341', '_blank')">💬</button>
-        <button class="float-btn float-btn--instagram" onclick="window.open('https://www.instagram.com/patinaje.ayekantun', '_blank')">📸</button>
+        <button class="float-btn float-btn--up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">â¬†ï¸</button>
+        <button class="float-btn float-btn--down" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">â¬‡ï¸</button>
+        <button class="float-btn float-btn--whatsapp" onclick="window.open('https://wa.me/56991252341', '_blank')">ðŸ’¬</button>
+        <button class="float-btn float-btn--instagram" onclick="window.open('https://www.instagram.com/patinaje.ayekantun', '_blank')">ðŸ“¸</button>
     </div>
 </body>
 </html>
-
 

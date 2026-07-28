@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayekantún - Inscripciones</title>
+    <title>AyekantÃºn - Inscripciones</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-improved.css">
     <link rel='stylesheet' href='contrast-utils.css'>
@@ -11,22 +11,22 @@
 <body>
     <nav class="site-nav">
         <div class="container nav-inner">
-            <h1>Ayekantún</h1>
-            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+            <h1>AyekantÃºn</h1>
+            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menÃº">â˜°</button>
             <ul class="nav-links">
                 <li class="has-submenu">
                     <button class="submenu-toggle" aria-expanded="false" data-i18n="nav.inicio">Inicio</button>
-                    <ul class="submenu" aria-label="Submenú Inicio">
+                    <ul class="submenu" aria-label="SubmenÃº Inicio">
                         <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
                         <li><a href="index.html#historia" data-i18n="nav.historia">Historia</a></li>
-                        <li><a href="index.html#mision" data-i18n="nav.mision">Nuestra Misión</a></li>
-                        <li><a href="index.html#vision" data-i18n="nav.vision">Nuestra Visión</a></li>
-                        <li><a href="index.html#informacion" data-i18n="nav.informacion">Información</a></li>
+                        <li><a href="index.html#mision" data-i18n="nav.mision">Nuestra MisiÃ³n</a></li>
+                        <li><a href="index.html#vision" data-i18n="nav.vision">Nuestra VisiÃ³n</a></li>
+                        <li><a href="index.html#informacion" data-i18n="nav.informacion">InformaciÃ³n</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
                     <button class="submenu-toggle" aria-expanded="false" data-i18n="nav.laEscuelita">La Escuelita</button>
-                    <ul class="submenu" aria-label="Submenú La Escuelita">
+                    <ul class="submenu" aria-label="SubmenÃº La Escuelita">
                         <li><a href="la-esculita.html" data-i18n="nav.laEscuelita">La Escuelita</a></li>
                         <li><a href="inscripciones.html" data-i18n="nav.inscripciones">Inscripciones</a></li>
                         <li><a href="horarios.html" data-i18n="nav.horarios">Conoce nuestros horarios</a></li>
@@ -34,7 +34,7 @@
                 </li>
                 <li><a href="deportistas.html" data-i18n="nav.deportistas">Deportistas</a></li>
                 <li><a href="entrenadora.html" data-i18n="nav.entrenadora">Entrenadora</a></li>
-                <li><a href="galeria.html" data-i18n="nav.galeria">Galería</a></li>
+                <li><a href="galeria.html" data-i18n="nav.galeria">GalerÃ­a</a></li>
                 <li><a href="videos.html" data-i18n="nav.videos">Videos</a></li>
                 <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
             </ul>
@@ -43,23 +43,23 @@
 
     <section class="contenido" style="max-width: 720px; margin: 32px auto; padding: 24px; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
         <h2 style="margin-bottom: 10px;">Inscripciones</h2>
-        <p style="margin-bottom: 16px;">Las inscripciones están abiertas para quienes quieran formar parte de nuestra escuela de patinaje.</p>
-        <p>La motivación de este formulario es recopilar información básica de contacto y detalles sobre la edad y nivel de interés de los aspirantes. Esto nos permitirá organizar mejor las clases y asegurarnos de que cada participante reciba la atención adecuada según su nivel y necesidades.</p>
-        <p>Al enviar este formulario, nos pondremos en contacto contigo para confirmar tu inscripción y proporcionarte más detalles sobre los horarios y requisitos.</p>
+        <p style="margin-bottom: 16px;">Las inscripciones estÃ¡n abiertas para quienes quieran formar parte de nuestra escuela de patinaje.</p>
+        <p>La motivaciÃ³n de este formulario es recopilar informaciÃ³n bÃ¡sica de contacto y detalles sobre la edad y nivel de interÃ©s de los aspirantes. Esto nos permitirÃ¡ organizar mejor las clases y asegurarnos de que cada participante reciba la atenciÃ³n adecuada segÃºn su nivel y necesidades.</p>
+        <p>Al enviar este formulario, nos pondremos en contacto contigo para confirmar tu inscripciÃ³n y proporcionarte mÃ¡s detalles sobre los horarios y requisitos.</p>
         <div style="background: #0f0f0f; border-left: 4px solid #b91c1c; padding: 14px 16px; border-radius: 10px; margin-bottom: 12px;">
-            <strong>¿Qué necesitas?</strong>
+            <strong>Â¿QuÃ© necesitas?</strong>
             <ul style="margin: 8px 0 0 18px;">
                 <li>Completar tus datos de contacto.</li>
-                <li>Indicar edad y nivel de interés.</li>
+                <li>Indicar edad y nivel de interÃ©s.</li>
                </ul>
         </div>
 
         <form action="https://formsubmit.co/ayekantun@gmail.com" method="POST" autocomplete="off" style="margin-top: 20px; display: grid; gap: 12px;">
-            <input type="hidden" name="_subject" value="Inscripción Ayekantún — {{Nombre}}">
+            <input type="hidden" name="_subject" value="InscripciÃ³n AyekantÃºn â€” {{Nombre}}">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_replyto" value="Correo">
-            <input type="hidden" name="_autoresponse" value="Gracias por inscribirte en Ayekantún. Hemos recibido tu solicitud y nos pondremos en contacto contigo en un plazo de 48 horas. Para consultas, escribe a ayekantun@gmail.com.">
+            <input type="hidden" name="_autoresponse" value="Gracias por inscribirte en AyekantÃºn. Hemos recibido tu solicitud y nos pondremos en contacto contigo en un plazo de 48 horas. Para consultas, escribe a ayekantun@gmail.com.">
             <input type="hidden" name="_next" value="gracias.html">
             <label style="display: grid; gap: 6px; font-weight: 600;">
                 Nombre completo Alumno/a
@@ -70,22 +70,22 @@
                 <input type="text" name="Nombre_apoderado" placeholder="Nombre del apoderado" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
             </label>
             <label style="display: grid; gap: 6px; font-weight: 600;">
-                Correo electrónico
+                Correo electrÃ³nico
                 <input type="email" name="Correo" placeholder="tu@email.com" required style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
             </label>
             <label style="display: grid; gap: 6px; font-weight: 600;">
-                Teléfono
-                <input type="tel" name="Teléfono" placeholder="Tu teléfono" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+                TelÃ©fono
+                <input type="tel" name="TelÃ©fono" placeholder="Tu telÃ©fono" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
             </label>
             <label style="display: grid; gap: 6px; font-weight: 600;">
                 Edad
                 <input type="number" name="Edad" placeholder="Ej. 10" min="1" max="120" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
             </label>
             <label style="display: grid; gap: 6px; font-weight: 600;">
-                Disciplina de interés
+                Disciplina de interÃ©s
                 <select name="Disciplina" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; background: white;">
                     <option value="">-- Selecciona (opcional) --</option>
-                    <option value="Patinaje Artistico">Patinaje artístico</option>
+                    <option value="Patinaje Artistico">Patinaje artÃ­stico</option>
                     <option value="Urbano/Recreativo">Urbano/Recreativo</option>
                 </select>
             </label>
@@ -93,26 +93,25 @@
                 Nivel
                 <select name="Nivel" required style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; background: white;">
                     <option value="" disabled selected>-- Selecciona tu nivel --</option>
-                    <option value="Basico">Básico</option>
+                    <option value="Basico">BÃ¡sico</option>
                     <option value="Intermedio">Intermedio</option>
                     <option value="Urbano/Recreativo">Urbano/Recreativo</option>
                 </select>
             </label>
             <label style="display: grid; gap: 6px; font-weight: 600;">
                 Mensaje
-                <textarea name="Mensaje" rows="4" placeholder="Cuéntanos tu interés por inscribirte" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; resize: vertical;"></textarea>
+                <textarea name="Mensaje" rows="4" placeholder="CuÃ©ntanos tu interÃ©s por inscribirte" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; resize: vertical;"></textarea>
             </label>
             <button type="submit" style="padding: 10px 14px; border: none; border-radius: 8px; background: #b91c1c; color: white; cursor: pointer; font-weight: 700; width: fit-content;">Enviar solicitud</button>
-            <p style="margin: 0; font-size: 0.95rem; color: #fcf8f8;">Esta solicitud se enviará directamente a ayekantun@gmail.com mediante un servicio seguro.</p>
+            <p style="margin: 0; font-size: 0.95rem; color: #fcf8f8;">Esta solicitud se enviarÃ¡ directamente a ayekantun@gmail.com mediante un servicio seguro.</p>
         </form>
 
         <p style="margin-top: 18px;"><strong>Correo:</strong> <a href="mailto:ayekantun@gmail.com">ayekantun@gmail.com</a></p>
         <p><strong>WhatsApp:</strong> <a href="https://wa.me/56991252341">+56 9 91252341</a></p>
-        <p><a href="la-esculita.html">← Volver a La Escuelita</a></p>
+        <p><a href="la-esculita.html">â† Volver a La Escuelita</a></p>
     </section>
 
     <script src="main.js" defer></script>
 </body>
 </html>
-
 
