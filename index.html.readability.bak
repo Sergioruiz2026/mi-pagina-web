@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayekantun - Escuela de Patinaje Arti�stico</title>
+    <title>Ayekantun - Escuela de Patinaje Arti­stico</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-improved.css">
     <link rel='stylesheet' href='contrast-utils.css'>
 </head>
 <body>
 
-    <!-- MENÚ -->
+    <!-- MENÃš -->
     <nav class="site-nav">
         <div class="container nav-inner">
-            <h1>Ayekantún</h1>
-            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+            <h1>AyekantÃºn</h1>
+            <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menÃº">â˜°</button>
             <ul class="nav-links">
                 <li class="has-submenu">
                     <button class="submenu-toggle" aria-expanded="false" data-i18n="nav.inicio">Inicio</button>
-                    <ul class="submenu" aria-label="Submenú Inicio">
+                    <ul class="submenu" aria-label="SubmenÃº Inicio">
                         <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
                         <li><a href="index.html#historia" data-i18n="nav.historia">Historia</a></li>
-                        <li><a href="index.html#mision" data-i18n="nav.mision">Nuestra Misión</a></li>
-                        <li><a href="index.html#vision" data-i18n="nav.vision">Nuestra Visión</a></li>
-                        <li><a href="index.html#informacion" data-i18n="nav.informacion">Información</a></li>
+                        <li><a href="index.html#mision" data-i18n="nav.mision">Nuestra MisiÃ³n</a></li>
+                        <li><a href="index.html#vision" data-i18n="nav.vision">Nuestra VisiÃ³n</a></li>
+                        <li><a href="index.html#informacion" data-i18n="nav.informacion">InformaciÃ³n</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
                     <button class="submenu-toggle" aria-expanded="false" data-i18n="nav.laEscuelita">La Escuelita</button>
-                    <ul class="submenu" aria-label="Submenú La Escuelita">
+                    <ul class="submenu" aria-label="SubmenÃº La Escuelita">
                         <li><a href="la-esculita.html" data-i18n="nav.laEscuelita">La Escuelita</a></li>
                         <li><a href="inscripciones.html" data-i18n="nav.inscripciones">Inscripciones</a></li>
                         <li><a href="horarios.html" data-i18n="nav.horarios">Conoce nuestros horarios</a></li>
@@ -36,7 +36,7 @@
                 </li>
                 <li><a href="deportistas.html" data-i18n="nav.deportistas">Deportistas</a></li>
                 <li><a href="entrenadora.html" data-i18n="nav.entrenadora">Entrenadora</a></li>
-                <li><a href="galeria.html" data-i18n="nav.galeria">Galería</a></li>
+                <li><a href="galeria.html" data-i18n="nav.galeria">GalerÃ­a</a></li>
                 <li><a href="videos.html" data-i18n="nav.videos">Videos</a></li>
                 <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
             </ul>
@@ -47,58 +47,58 @@
     <section id="inicio" class="hero">
         <div class="hero-content">
             <div class="logo-wrap">
-                <img class="hero-logo" src="fotos%20para%20pagina%20web/logo.jpeg" alt="Ayekantún Patinaje Artísticos">
+                <img class="hero-logo" src="fotos%20para%20pagina%20web/logo.jpeg" alt="AyekantÃºn Patinaje ArtÃ­sticos">
                 <svg class="logo-arc" viewBox="0 0 700 260" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                     <defs>
-                        <!-- Arco más ancho y más bajo para quedar fuera del logo -->
+                        <!-- Arco mÃ¡s ancho y mÃ¡s bajo para quedar fuera del logo -->
                         <path id="arcPath" d="M10,200 A400,400 0 0,1 690,200" />
                     </defs>
                     <text>
-                        <textPath href="#arcPath" startOffset="50%" text-anchor="middle">Escuela de Patinaje Artístico</textPath>
+                        <textPath href="#arcPath" startOffset="50%" text-anchor="middle">Escuela de Patinaje ArtÃ­stico</textPath>
                     </text>
                 </svg>
             </div>
-            <p class="hero-sub improve-readability text-bg-dark" data-i18n="heroSubtitle">Club formativo y competitivo</p>
+            <p class="hero-sub" data-i18n="heroSubtitle">Club formativo y competitivo</p>
         </div>
     </section>
 
-    <!-- MENÚ VISUAL DE SECCIONES -->
+    <!-- MENÃš VISUAL DE SECCIONES -->
     <section class="section-intro section-panel">
-        <h2 class="section-title" data-i18n="homeTitle">Conoce más sobre Ayekantún</h2>
+        <h2 class="section-title" data-i18n="homeTitle">Conoce mÃ¡s sobre AyekantÃºn</h2>
         <div class="card-grid">
             
             <!-- Tarjeta Historia -->
             <a href="#historia" style="text-decoration: none; color: inherit;">
                 <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
                     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 20px; text-align: center; color: white;">
-                        <h3 style="font-size: 24px; margin: 0;" data-i18n="cards.history.title">📖 Nuestra Historia</h3>
+                        <h3 style="font-size: 24px; margin: 0;" data-i18n="cards.history.title">ðŸ“– Nuestra Historia</h3>
                     </div>
                     <div style="padding: 20px;">
-                        <p style="color: #666; margin: 0;" data-i18n="cards.history.desc">Conoce cómo nació Ayekantún en 2017 y nuestra trayectoria en el patinaje artístico.</p>
+                        <p style="color: #666; margin: 0;" data-i18n="cards.history.desc">Conoce cÃ³mo naciÃ³ AyekantÃºn en 2017 y nuestra trayectoria en el patinaje artÃ­stico.</p>
                     </div>
                 </div>
             </a>
 
-            <!-- Tarjeta Misión -->
+            <!-- Tarjeta MisiÃ³n -->
             <a href="#mision" style="text-decoration: none; color: inherit;">
                 <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
                     <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 40px 20px; text-align: center; color: white;">
-                        <h3 style="font-size: 24px; margin: 0;" data-i18n="cards.mission.title">🎯 Nuestra Misión</h3>
+                        <h3 style="font-size: 24px; margin: 0;" data-i18n="cards.mission.title">ðŸŽ¯ Nuestra MisiÃ³n</h3>
                     </div>
                     <div style="padding: 20px;">
-                        <p style="color: #666; margin: 0;" data-i18n="cards.mission.desc">Formar deportistas íntegras a través de la disciplina, respeto y pasión por el patinaje.</p>
+                        <p style="color: #666; margin: 0;" data-i18n="cards.mission.desc">Formar deportistas Ã­ntegras a travÃ©s de la disciplina, respeto y pasiÃ³n por el patinaje.</p>
                     </div>
                 </div>
             </a>
 
-            <!-- Tarjeta Visión -->
+            <!-- Tarjeta VisiÃ³n -->
             <a href="#vision" style="text-decoration: none; color: inherit;">
                 <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
                     <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 40px 20px; text-align: center; color: white;">
-                        <h3 style="font-size: 24px; margin: 0;" data-i18n="cards.vision.title">✨ Nuestra Visión</h3>
+                        <h3 style="font-size: 24px; margin: 0;" data-i18n="cards.vision.title">âœ¨ Nuestra VisiÃ³n</h3>
                     </div>
                     <div style="padding: 20px;">
-                        <p style="color: #666; margin: 0;" data-i18n="cards.vision.desc">Ser referentes en la formación de deportistas y contribuir al patinaje artístico en la región.</p>
+                        <p style="color: #666; margin: 0;" data-i18n="cards.vision.desc">Ser referentes en la formaciÃ³n de deportistas y contribuir al patinaje artÃ­stico en la regiÃ³n.</p>
                     </div>
                 </div>
             </a>
@@ -107,19 +107,19 @@
             <a href="la-esculita.html" style="text-decoration: none; color: inherit;">
                 <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
                     <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 40px 20px; text-align: center; color: white;">
-                        <h3 style="font-size: 24px; margin: 0;" data-i18n="cards.laEscuelita.title">🏫 La Escuelita</h3>
+                        <h3 style="font-size: 24px; margin: 0;" data-i18n="cards.laEscuelita.title">ðŸ« La Escuelita</h3>
                     </div>
                     <div style="padding: 20px;">
-                        <p style="color: #666; margin: 0;" data-i18n="cards.laEscuelita.desc">Descubre el espacio de aprendizaje, alegría y crecimiento para niñas y niños.</p>
+                        <p style="color: #666; margin: 0;" data-i18n="cards.laEscuelita.desc">Descubre el espacio de aprendizaje, alegrÃ­a y crecimiento para niÃ±as y niÃ±os.</p>
                     </div>
                 </div>
             </a>
 
-            <!-- Tarjeta Información -->
+            <!-- Tarjeta InformaciÃ³n -->
             <a href="#informacion" style="text-decoration: none; color: inherit;">
                 <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
                     <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 40px 20px; text-align: center; color: white;">
-                        <h3 style="font-size: 24px; margin: 0;" data-i18n="cards.info.title">ℹ️ Información</h3>
+                        <h3 style="font-size: 24px; margin: 0;" data-i18n="cards.info.title">â„¹ï¸ InformaciÃ³n</h3>
                     </div>
                     <div style="padding: 20px;">
                         <p style="color: #666; margin: 0;" data-i18n="cards.info.desc">Mantente informado sobre campeonatos, eventos y novedades del club.</p>
@@ -131,71 +131,71 @@
     </section>
 
     
-    <!-- SECCIONES EN LAYOUT VISUAL DINÁMICO -->
+    <!-- SECCIONES EN LAYOUT VISUAL DINÃMICO -->
     <section style="padding: 50px 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
         <div style="max-width: 1400px; margin: 0 auto;">
             
             <!-- HISTORIA - GRANDE IZQUIERDA -->
             <div id="historia" class="section-columns section-columns--wide">
                 <div class="panel-gradient panel-gradient--history">
-                    <h2 class="section-heading" data-i18n="sections.history.title">📖 Nuestra Historia</h2>
+                    <h2 class="section-heading" data-i18n="sections.history.title">ðŸ“– Nuestra Historia</h2>
                     <p style="font-size: 16px; line-height: 1.6; margin: 20px 0 0 0;" data-i18n="sections.history.text">
-                        El Club de Patinaje Artístico Ayekantún nació en enero de 2017 en Quilpué. Durante estos años nos hemos consolidado como referente formativo, siendo cuna de destacados deportistas. Participamos en campeonatos nacionales, obteniendo importantes resultados.
+                        El Club de Patinaje ArtÃ­stico AyekantÃºn naciÃ³ en enero de 2017 en QuilpuÃ©. Durante estos aÃ±os nos hemos consolidado como referente formativo, siendo cuna de destacados deportistas. Participamos en campeonatos nacionales, obteniendo importantes resultados.
                     </p>
                     <div id="historia-expandido" style="display: none; margin-top: 20px; font-size: 16px; line-height: 1.6;">
-                        <p data-i18n="sections.history.extra1">Somos una organización comprometida con la excelencia en la formación de nuestros deportistas. A través de entrenamiento riguroso y apoyo integral, hemos logrado que muchas de nuestras patinadores participen en competencias a nivel nacional y regional.</p>
-                        <p data-i18n="sections.history.extra2">Nuestro club es un espacio seguro, inclusivo y formativo donde se desarrollan no solo habilidades deportivas, sino también valores como el respeto, la disciplina, el trabajo en equipo y la perseverancia que les acompañarán toda la vida.</p>
+                        <p data-i18n="sections.history.extra1">Somos una organizaciÃ³n comprometida con la excelencia en la formaciÃ³n de nuestros deportistas. A travÃ©s de entrenamiento riguroso y apoyo integral, hemos logrado que muchas de nuestras patinadores participen en competencias a nivel nacional y regional.</p>
+                        <p data-i18n="sections.history.extra2">Nuestro club es un espacio seguro, inclusivo y formativo donde se desarrollan no solo habilidades deportivas, sino tambiÃ©n valores como el respeto, la disciplina, el trabajo en equipo y la perseverancia que les acompaÃ±arÃ¡n toda la vida.</p>
                     </div>
-                    <button onclick="var expandido = document.getElementById('historia-expandido'); var btn = this; if(expandido.style.display === 'none') { expandido.style.display = 'block'; btn.textContent = 'Leer menos ↑'; } else { expandido.style.display = 'none'; btn.textContent = 'Leer más →'; }" style="display: inline-block; margin-top: 20px; background: white; color: #667eea; padding: 10px 20px; border-radius: 5px; border: none; text-decoration: none; font-weight: bold; cursor: pointer;">Leer más →</button>
+                    <button onclick="var expandido = document.getElementById('historia-expandido'); var btn = this; if(expandido.style.display === 'none') { expandido.style.display = 'block'; btn.textContent = 'Leer menos â†‘'; } else { expandido.style.display = 'none'; btn.textContent = 'Leer mÃ¡s â†’'; }" style="display: inline-block; margin-top: 20px; background: white; color: #667eea; padding: 10px 20px; border-radius: 5px; border: none; text-decoration: none; font-weight: bold; cursor: pointer;">Leer mÃ¡s â†’</button>
                 </div>
                 <div>
                     <img src="fotos%20para%20pagina%20web/gala2026 (1).jpg" alt="Nuestra Historia" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                 </div>
             </div>
 
-            <!-- MISIÓN Y VISIÓN - EN 2 COLUMNAS -->
+            <!-- MISIÃ“N Y VISIÃ“N - EN 2 COLUMNAS -->
                 <div id="mision" class="section-columns section-columns--equal">
                 
-                <!-- MISIÓN -->
+                <!-- MISIÃ“N -->
                 <div id="mision-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 15px; padding: 40px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; flex-direction: column;">
-                    <h2 style="font-size: 28px; margin-top: 0;" data-i18n="sections.mission.title">🎯 Nuestra Misión</h2>
+                    <h2 style="font-size: 28px; margin-top: 0;" data-i18n="sections.mission.title">ðŸŽ¯ Nuestra MisiÃ³n</h2>
                     <p style="font-size: 15px; line-height: 1.6; flex-grow: 1;" data-i18n="sections.mission.text">
-                        Formar deportistas y personas íntegras a través del patinaje artístico, promoviendo el desarrollo deportivo, personal y social en un ambiente basado en el respeto, la disciplina, el compañerismo y la pasión.
+                        Formar deportistas y personas Ã­ntegras a travÃ©s del patinaje artÃ­stico, promoviendo el desarrollo deportivo, personal y social en un ambiente basado en el respeto, la disciplina, el compaÃ±erismo y la pasiÃ³n.
                     </p>
                     <p style="font-size: 15px; line-height: 1.6; flex-grow: 1;" data-i18n="sections.mission.text2">
-                        ademas de fomentar la participación en competencias y eventos que fortalezcan la confianza y habilidades de nuestras patinadoras
-                        junto con nuestra entrenadora, buscamos que cada deportista alcance su máximo potencial y disfrute del proceso de aprendizaje y crecimiento en el patinaje artístico
-                        sin perder de vista la importancia de la diversión, la creatividad y el amor por este deporte que nos une como comunidad.
+                        ademas de fomentar la participaciÃ³n en competencias y eventos que fortalezcan la confianza y habilidades de nuestras patinadoras
+                        junto con nuestra entrenadora, buscamos que cada deportista alcance su mÃ¡ximo potencial y disfrute del proceso de aprendizaje y crecimiento en el patinaje artÃ­stico
+                        sin perder de vista la importancia de la diversiÃ³n, la creatividad y el amor por este deporte que nos une como comunidad.
                     </p>
-                    <img src="fotos%20para%20pagina%20web/grupo.jpeg" alt="Nuestra Misión" style="width: 100%; border-radius: 10px; margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    <img src="fotos%20para%20pagina%20web/grupo.jpeg" alt="Nuestra MisiÃ³n" style="width: 100%; border-radius: 10px; margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
                 </div>
 
-                <!-- VISIÓN -->
+                <!-- VISIÃ“N -->
                 <div id="vision" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 15px; padding: 40px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; flex-direction: column;">
-                    <h2 style="font-size: 28px; margin-top: 0;" data-i18n="sections.vision.title">✨ Nuestra Visión</h2>
+                    <h2 style="font-size: 28px; margin-top: 0;" data-i18n="sections.vision.title">âœ¨ Nuestra VisiÃ³n</h2>
                     <p style="font-size: 15px; line-height: 1.6; flex-grow: 1;" data-i18n="sections.vision.text">
-                        Ser un club reconocido por la excelencia en la formación de deportistas, por el compromiso con nuestra comunidad y contribuir al crecimiento del patinaje artístico en Quilpué y la Región de Valparaíso.
+                        Ser un club reconocido por la excelencia en la formaciÃ³n de deportistas, por el compromiso con nuestra comunidad y contribuir al crecimiento del patinaje artÃ­stico en QuilpuÃ© y la RegiÃ³n de ValparaÃ­so.
                     </p>
-                    <img src="fotos%20para%20pagina%20web/grupo2.jpeg" alt="Nuestra Visión" style="width: 100%; border-radius: 10px; margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    <img src="fotos%20para%20pagina%20web/grupo2.jpeg" alt="Nuestra VisiÃ³n" style="width: 100%; border-radius: 10px; margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
                 </div>
 
             </div>
 
-            <!-- INFORMACIÓN - GRANDE DERECHA -->
+            <!-- INFORMACIÃ“N - GRANDE DERECHA -->
             <div id="informacion" class="section-columns section-columns--reverse">
                 <div>
-                    <img src="fotos%20para%20pagina%20web/grupo3.jpg" alt="Información" class="responsive-image">
+                    <img src="fotos%20para%20pagina%20web/grupo3.jpg" alt="InformaciÃ³n" class="responsive-image">
                 </div>
                 <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 15px; padding: 40px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <h2 style="font-size: 36px; margin-top: 0;" data-i18n="sections.information.title">ℹ️ Información</h2>
+                    <h2 style="font-size: 36px; margin-top: 0;" data-i18n="sections.information.title">â„¹ï¸ InformaciÃ³n</h2>
                     <p style="font-size: 16px; line-height: 1.6; margin: 20px 0 0 0;" data-i18n="sections.information.text">
-                        Este es nuestro canal oficial de comunicación. Aquí encontrarás información relevante del club: campeonatos, competencias, reuniones, calendario de actividades, noticias y novedades. Mantenemos a todas las familias informadas de manera clara y oportuna.
+                        Este es nuestro canal oficial de comunicaciÃ³n. AquÃ­ encontrarÃ¡s informaciÃ³n relevante del club: campeonatos, competencias, reuniones, calendario de actividades, noticias y novedades. Mantenemos a todas las familias informadas de manera clara y oportuna.
                     </p>
                     <div id="informacion-expandido" style="display: none; margin-top: 20px; font-size: 16px; line-height: 1.6;">
                         <p data-i18n="sections.information.extra1">Mediante este canal nos mantenemos en contacto permanente con las familias, compartiendo actualizaciones sobre competencias, entrenamientos especiales, cambios de horario, y eventos relevantes para nuestra comunidad.</p>
-                        <p data-i18n="sections.information.extra2">También aquí publicamos logros de nuestras deportistas, fotos de eventos, videos de competencias y comunicados importantes. Te invitamos a seguirnos en WhatsApp e Instagram para no perderte ninguna noticia.</p>
+                        <p data-i18n="sections.information.extra2">TambiÃ©n aquÃ­ publicamos logros de nuestras deportistas, fotos de eventos, videos de competencias y comunicados importantes. Te invitamos a seguirnos en WhatsApp e Instagram para no perderte ninguna noticia.</p>
                     </div>
-                    <button onclick="var expandido = document.getElementById('informacion-expandido'); var btn = this; if(expandido.style.display === 'none') { expandido.style.display = 'block'; btn.textContent = 'Leer menos ↑'; } else { expandido.style.display = 'none'; btn.textContent = 'Leer más →'; }" style="display: inline-block; margin-top: 20px; background: white; color: #fa709a; padding: 10px 20px; border-radius: 5px; border: none; text-decoration: none; font-weight: bold; cursor: pointer;">Leer más →</button>
+                    <button onclick="var expandido = document.getElementById('informacion-expandido'); var btn = this; if(expandido.style.display === 'none') { expandido.style.display = 'block'; btn.textContent = 'Leer menos â†‘'; } else { expandido.style.display = 'none'; btn.textContent = 'Leer mÃ¡s â†’'; }" style="display: inline-block; margin-top: 20px; background: white; color: #fa709a; padding: 10px 20px; border-radius: 5px; border: none; text-decoration: none; font-weight: bold; cursor: pointer;">Leer mÃ¡s â†’</button>
                 </div>
             </div>
 
@@ -204,19 +204,19 @@
 
     <!-- MODAL -->
     <div id="modal" class="modal" onclick="cerrarImagen(event)">
-        <button class="modal-cerrar" onclick="cerrarImagen(event)" aria-label="Cerrar">✕</button>
+        <button class="modal-cerrar" onclick="cerrarImagen(event)" aria-label="Cerrar">âœ•</button>
         <img id="imagenGrande" src="" alt="">
     </div>
     <script src="main.js" defer></script>
     
-    <!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÃGINA -->
     <footer class="page-footer">
         <div class="footer-grid">
             <div class="footer-links">
-                <h3 data-i18n="footer.supportTitle">📞 Soporte</h3>
+                <h3 data-i18n="footer.supportTitle">ðŸ“ž Soporte</h3>
                 <p><strong data-i18n="footer.nameLabel">Nombre:</strong> Sergio Ruiz</p>
-                <p><strong data-i18n="footer.emailLabel">📧 Correo:</strong> <a href="mailto:sergio.ruiz.espinoza2026@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a></p>
-                <p><strong data-i18n="footer.whatsappLabel">💬 WhatsApp:</strong> <a href="https://wa.me/56997131557">+56 9 97131557</a></p>
+                <p><strong data-i18n="footer.emailLabel">ðŸ“§ Correo:</strong> <a href="mailto:sergio.ruiz.espinoza2026@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a></p>
+                <p><strong data-i18n="footer.whatsappLabel">ðŸ’¬ WhatsApp:</strong> <a href="https://wa.me/56997131557">+56 9 97131557</a></p>
             </div>
             <div class="footer-ad">
                 <a href="https://sergioruiz2026.github.io/pulsso/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Pulsso">
@@ -224,26 +224,25 @@
                 </a>
             </div>
             <div class="footer-social">
-                <h3 data-i18n="footer.socialTitle">Síguenos en Nuestras Redes</h3>
+                <h3 data-i18n="footer.socialTitle">SÃ­guenos en Nuestras Redes</h3>
                 <div class="footer-network">
-                    <a href="https://wa.me/56991252341">📱 WhatsApp</a>
-                    <a href="https://www.instagram.com/patinaje.ayekantun">📸 Instagram</a>
+                    <a href="https://wa.me/56991252341">ðŸ“± WhatsApp</a>
+                    <a href="https://www.instagram.com/patinaje.ayekantun">ðŸ“¸ Instagram</a>
                 </div>
             </div>
             <div class="footer-copy">
-                <p data-i18n="footer.copyright">&copy; 2017 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.</p>
-                <p data-i18n="footer.location">Quilpué, Región de Valparaíso, Chile</p>
+                <p data-i18n="footer.copyright">&copy; 2017 AyekantÃºn - Escuela de Patinaje ArtÃ­stico. Todos los derechos reservados.</p>
+                <p data-i18n="footer.location">QuilpuÃ©, RegiÃ³n de ValparaÃ­so, Chile</p>
             </div>
         </div>
     </footer>
 
     <div class="float-buttons">
-        <button class="float-btn float-btn--up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆️</button>
-        <button class="float-btn float-btn--down" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">⬇️</button>
-        <button class="float-btn float-btn--whatsapp" onclick="window.open('https://wa.me/56991252341', '_blank')">💬</button>
-        <button class="float-btn float-btn--instagram" onclick="window.open('https://www.instagram.com/patinaje.ayekantun', '_blank')">📸</button>
+        <button class="float-btn float-btn--up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">â¬†ï¸</button>
+        <button class="float-btn float-btn--down" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">â¬‡ï¸</button>
+        <button class="float-btn float-btn--whatsapp" onclick="window.open('https://wa.me/56991252341', '_blank')">ðŸ’¬</button>
+        <button class="float-btn float-btn--instagram" onclick="window.open('https://www.instagram.com/patinaje.ayekantun', '_blank')">ðŸ“¸</button>
     </div>
 </body>
 </html>
-
 
