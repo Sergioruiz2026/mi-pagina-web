@@ -1,0 +1,108 @@
+/* Utilidades para mejorar nitidez y legibilidad
+   - Usa clases .text-bg-light / .text-bg-dark para bloques de texto
+   - Usa .improve-readability para añadir sombra y contraste en texto sobre imágenes
+   - Usa .section-with-bg en secciones con imagen de fondo para añadir un overlay
+*/
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  color: #111;
+  line-height: 1.5;
+}
+
+/* Tipografía más nítida */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  color: #0d0d0d;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+p, li, a, span, label {
+  color: #111;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Sombra sutil para mejorar legibilidad sobre fondos complejos */
+.improve-readability {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  -webkit-font-smoothing: antialiased;
+  transform: translateZ(0);
+}
+
+/* Fondo semitransparente claro detrás del texto (útil en secciones oscuras) */
+.text-bg-light {
+  background-color: rgba(255,255,255,0.85);
+  color: #111;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Fondo semitransparente oscuro detrás del texto (útil en fotos claras) */
+.text-bg-dark {
+  background-color: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Secciones con imagen de fondo: overlay oscuro para que el texto destaque */
+.section-with-bg {
+  position: relative;
+  overflow: hidden;
+}
+.section-with-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 0;
+}
+.section-with-bg * {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+/* Forzar contraste extra en elementos críticos */
+.strong-contrast {
+  color: #0b0b0b;
+  background: #ffffff;
+  padding: 0.2em 0.3em;
+  border-radius: 3px;
+}
+
+/* Botones y enlaces: aumentar contraste y claridad */
+a, .btn {
+  color: #0a58ca;
+  text-decoration: none;
+}
+
+/* Clase para forzar máxima nitidez donde haga falta */
+.crisp {
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Hero subtitle: aumentar contraste y legibilidad */
+.hero-sub {
+  font-weight: 600;
+  color: #fff; /* por defecto sobre imagen oscura */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+/* Ajustes adicionales para móviles */
+@media (max-width: 600px) {
+  html, body { font-size: 16px; }
+  h1 { font-size: 1.6rem; }
+}
