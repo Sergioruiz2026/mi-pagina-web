@@ -17,14 +17,14 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: 0.25px;
-  color: #111111;
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  text-shadow: 0 1px 2px rgba(238, 229, 229, 0.808);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 
 p, li, a, span, label {
-  color: #222222;
+  color: var(--text);
   font-weight: 500;
   letter-spacing: 0.2px;
 }
@@ -118,18 +118,18 @@ a:hover, a:focus-visible, .btn:hover, .btn:focus-visible {
 [style*="color: #777"], [style*="color:#777"],
 [style*="color: #888"], [style*="color:#888"],
 [style*="color: #999"], [style*="color:#999"] {
-  color: #faf5f5 !important;
-  font-weight: 600 !important;
+  color: var(--text) !important;
+  font-weight: 700 !important;
 }
 
 .hero-sub, .hero-title, .hero p, .panel-gradient, .panel-gradient *,
 .hero, .hero *, .modal, .modal *, .section-with-bg, .section-with-bg *,
 .nav-links, .nav-links *, .submenu, .submenu *, .tarjeta-player, .tarjeta-player * {
-  color: #ffffff !important;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.7) !important;
+  color: var(--text) !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
 }
 
 .nav-links a, .nav-links button, .submenu a, .submenu button,
 .modal-cerrar, .modal-cerrar * {
-  color: #ffffff !important;
+  color: var(--text) !important;
 }
