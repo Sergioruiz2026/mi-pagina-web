@@ -14,8 +14,8 @@ body[data-theme="light"]{
     --bg-2: #e6ebf3;
     --card: #ffffff;
     --accent: #c82121;
-    --text: #1b1b1b;
-    --muted: #5a5a5a;
+    --text: #111111;
+    --muted: #3f3f3f;
 }
 body[data-theme="dark"]{
     --bg: #0b0b0b;
@@ -23,7 +23,7 @@ body[data-theme="dark"]{
     --card: #0f0f0f;
     --accent: #c82121;
     --text: #f7f5f5;
-    --muted: #cfcaca;
+    --muted: #e8e2e2;
 }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:radial-gradient(1200px 600px at 10% 10%, rgba(200,32,33,0.03), transparent), linear-gradient(180deg, var(--bg), var(--bg-2));color:var(--text)}
@@ -58,7 +58,7 @@ nav h1{margin:0;font-size:1.05rem;color:var(--accent);letter-spacing:0.6px}
 .hero-title{margin:0;font-size:1.6rem;color:var(--text);font-weight:700}
 .logo-wrap{position:relative;display:inline-block}
 .hero-logo{width:220px;max-width:60%;height:auto;border-radius:12px;object-fit:contain;border:6px solid #ffffff;padding:8px;background:transparent;box-shadow:0 30px 60px rgba(0,0,0,0.85), 0 2px 8px rgba(200,32,33,0.08);transition:transform .18s ease, box-shadow .18s ease}
-.hero-sub{margin:0;color:var(--muted);font-size:1rem}
+.hero-sub{margin:0;color:var(--text);font-size:1rem;font-weight:600;text-shadow:0 2px 8px rgba(0,0,0,0.55)}
 .logo-arc{position:absolute;left:50%;top:-5%;transform:translateX(-50%);width:220%;height:170px;overflow:visible}
 .logo-arc text{fill:var(--text);font-family:'Segoe UI', 'Helvetica Neue', Arial, sans-serif;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-size:42px;text-shadow:0 2px 8px rgba(0,0,0,0.35)}
 .logo-arc textPath{dominant-baseline:middle}
@@ -118,7 +118,7 @@ footer a:hover{transform:translateY(-2px)}
 .tarjeta-player__play:hover{transform:translateY(-1px);box-shadow:0 10px 18px rgba(200,32,33,0.28)}
 .tarjeta-player__bar{flex:1;height:7px;border-radius:999px;background:rgba(255,255,255,0.14);overflow:hidden}
 .tarjeta-player__bar-fill{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg, var(--accent), #ff8f65);transition:width .15s linear}
-.tarjeta-player__status{font-size:0.75rem;color:var(--muted)}
+.tarjeta-player__status{font-size:0.75rem;color:var(--text)}
 
 .page-entrenadora .galeria{align-items:stretch}
 .page-entrenadora .foto{display:flex;flex-direction:column;min-height:100%}
@@ -148,6 +148,28 @@ footer a:hover{transform:translateY(-2px)}
 
 /* Mejor experiencia de modal en móvil */
 .modal img{max-width:100%;max-height:80vh}
+
+/* Reforzar legibilidad sin tocar el HTML */
+[style*="color: #666"], [style*="color:#666"],
+[style*="color: #777"], [style*="color:#777"],
+[style*="color: #888"], [style*="color:#888"],
+[style*="color: #999"], [style*="color:#999"],
+[style*="color: #6b7280"], [style*="color:#6b7280"] {
+    color: #222222 !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+}
+
+.hero-sub, .hero-title, .hero p, .panel-gradient, .panel-gradient * {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7) !important;
+}
+
+.section-intro .card-grid p,
+.tarjeta-texto p,
+.foto-texto p {
+    color: #222222 !important;
+}
 
 @media (max-width:900px){
     #historia, #mision, #informacion{grid-template-columns:1fr}
@@ -189,7 +211,7 @@ footer a:hover{transform:translateY(-2px)}
 .footer-ad img:hover{transform:translateY(-6px) scale(1.04);box-shadow:0 20px 42px rgba(0,0,0,0.36);}
 @keyframes footerAdPulse{0%,100%{transform:translateY(0);}25%{transform:translateY(-6px) scale(1.01);}50%{transform:translateY(-3px);}75%{transform:translateY(-6px) scale(1.01);} }
 .foto-texto h3{margin:0 0 8px;font-size:1.05rem;color:var(--text)}
-.foto-texto p{margin:0;color:var(--muted);line-height:1.55;font-size:0.96rem}
+.foto-texto p{margin:0;color:var(--text);line-height:1.55;font-size:0.96rem}
 
 /* Mejora de contraste para textos sobre fotos y énfasis */
 .foto-texto{background:var(--card);color:var(--text);border-top:1px solid rgba(255,255,255,0.08)}
