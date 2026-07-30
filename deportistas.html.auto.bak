@@ -91,18 +91,18 @@
         </div>
 
         <div class="tarjeta">
-            <img class="responsive-image clickable-image" src="fotos%20para%20pagina%20web/mya (1).jpeg" alt="Mya" onclick="abrirImagen(this.src, this.alt)">
+            <img class="responsive-image clickable-image" src="fotos%20para%20pagina%20web/ (1).jpeg" alt="" onclick="abrirImagen(this.src, this.alt)">
             <div class="tarjeta-texto">
-                <h3 data-i18n="pages.deportistas.card3Name">Mya</h3>
+                <h3 data-i18n="pages.deportistas.card3Name"></h3>
                 <p data-i18n="pages.deportistas.card3Description">Su dedicaciÃ³n y pasiÃ³n por el patinaje la han llevado a participar en su primera competencias, obteniendo reconocimientos por su talento y esfuerzo.</p>
             </div>
         </div>
 
         <div class="tarjeta">
-            <img class="responsive-image clickable-image" src="fotos%20para%20pagina%20web/mya (2).jpeg" alt="Mya" onclick="abrirImagen(this.src, this.alt)">
+            <img class="responsive-image clickable-image" src="fotos%20para%20pagina%20web/ (2).jpeg" alt="" onclick="abrirImagen(this.src, this.alt)">
             <div class="tarjeta-texto">
-                <h3 data-i18n="pages.deportistas.card4Name">Mya</h3>
-                <p data-i18n="pages.deportistas.card4Description">Mya es conocida por su elegancia y gracia en la pista, combinando tÃ©cnica y expresiÃ³n artÃ­stica en cada rutina.</p>
+                <h3 data-i18n="pages.deportistas.card4Name"></h3>
+                <p data-i18n="pages.deportistas.card4Description"> es conocida por su elegancia y gracia en la pista, combinando tÃ©cnica y expresiÃ³n artÃ­stica en cada rutina.</p>
             </div>
         </div>
 

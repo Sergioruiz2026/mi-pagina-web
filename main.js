@@ -379,7 +379,7 @@ function initMusicPlayers() {
     var trackList = [
         { title: 'Inspiración', src: 'audio/track.wav' },
         { title: 'Energía', src: 'audio/track.wav' },
-        { title: 'Fluidez', src: 'audio/track.wav' },
+        { title: 'Mya', src: 'audio/mya.mpeg' },
         { title: 'Movimiento', src: 'audio/track.wav' }
     ];
 
