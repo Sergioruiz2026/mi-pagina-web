@@ -372,10 +372,118 @@ function applyLanguage(lang) {
     document.title = translations[lang].pageTitles[pageKey] || translations[lang].pageTitles.home;
 }
 
+function initMusicPlayers() {
+    var cards = document.querySelectorAll('.page-deportistas .tarjeta');
+    if (!cards.length) return;
+
+    var trackList = [
+        { title: 'Inspiración', src: 'audio/track.wav' },
+        { title: 'Energía', src: 'audio/track.wav' },
+        { title: 'Fluidez', src: 'audio/track.wav' },
+        { title: 'Movimiento', src: 'audio/track.wav' }
+    ];
+
+    cards.forEach(function (card, index) {
+        if (card.querySelector('.tarjeta-player')) return;
+
+        var textBlock = card.querySelector('.tarjeta-texto');
+        if (!textBlock) return;
+
+        var image = card.querySelector('img');
+        if (image) {
+            image.setAttribute('loading', 'lazy');
+            image.setAttribute('decoding', 'async');
+        }
+
+        var track = trackList[index % trackList.length];
+        var playerMarkup = [
+            '<div class="tarjeta-player" role="group" aria-label="Reproductor de música">',
+            '  <div class="tarjeta-player__meta">',
+            '    <span class="tarjeta-player__label">Escucha</span>',
+            '    <span class="tarjeta-player__title">' + track.title + '</span>',
+            '  </div>',
+            '  <audio preload="none" src="' + track.src + '"></audio>',
+            '  <div class="tarjeta-player__controls">',
+            '    <button class="tarjeta-player__play" type="button" aria-label="Reproducir música">▶</button>',
+            '    <div class="tarjeta-player__bar" aria-hidden="true">',
+            '      <span class="tarjeta-player__bar-fill"></span>',
+            '    </div>',
+            '  </div>',
+            '  <span class="tarjeta-player__status">Listo para reproducir</span>',
+            '</div>'
+        ].join('');
+
+        textBlock.insertAdjacentHTML('afterend', playerMarkup);
+
+        var player = card.querySelector('.tarjeta-player');
+        var button = player.querySelector('.tarjeta-player__play');
+        var audio = player.querySelector('audio');
+        var fill = player.querySelector('.tarjeta-player__bar-fill');
+        var status = player.querySelector('.tarjeta-player__status');
+
+        function pauseOtherPlayers(currentPlayer) {
+            document.querySelectorAll('.tarjeta-player').forEach(function (otherPlayer) {
+                if (otherPlayer === currentPlayer) return;
+                var otherAudio = otherPlayer.querySelector('audio');
+                if (otherAudio && !otherAudio.paused) {
+                    otherAudio.pause();
+                    var otherButton = otherPlayer.querySelector('.tarjeta-player__play');
+                    var otherStatus = otherPlayer.querySelector('.tarjeta-player__status');
+                    if (otherButton) otherButton.textContent = '▶';
+                    if (otherStatus) otherStatus.textContent = 'Pausado';
+                    var otherFill = otherPlayer.querySelector('.tarjeta-player__bar-fill');
+                    if (otherFill) otherFill.style.width = '0%';
+                }
+            });
+        }
+
+        button.addEventListener('click', function () {
+            if (audio.paused) {
+                pauseOtherPlayers(player);
+                audio.play().then(function () {
+                    button.textContent = '❚❚';
+                    button.setAttribute('aria-label', 'Pausar música');
+                    status.textContent = 'Reproduciendo';
+                }).catch(function () {
+                    status.textContent = 'No disponible';
+                });
+            } else {
+                audio.pause();
+                button.textContent = '▶';
+                button.setAttribute('aria-label', 'Reproducir música');
+                status.textContent = 'Pausado';
+            }
+        });
+
+        audio.addEventListener('timeupdate', function () {
+            if (audio.duration) {
+                fill.style.width = (audio.currentTime / audio.duration * 100) + '%';
+            }
+        });
+
+        audio.addEventListener('pause', function () {
+            button.textContent = '▶';
+            button.setAttribute('aria-label', 'Reproducir música');
+            if (status.textContent !== 'No disponible') {
+                status.textContent = 'Pausado';
+            }
+        });
+
+        audio.addEventListener('ended', function () {
+            button.textContent = '▶';
+            button.setAttribute('aria-label', 'Reproducir música');
+            fill.style.width = '0%';
+            status.textContent = 'Listo para reproducir';
+        });
+    });
+}
+
 function initSite() {
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') cerrarImagen();
     });
+
+    initMusicPlayers();
 
     var navInner = document.querySelector('.site-nav .nav-inner');
     if (navInner && !navInner.querySelector('.nav-controls')) {
