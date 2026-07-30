@@ -122,7 +122,14 @@ a:hover, a:focus-visible, .btn:hover, .btn:focus-visible {
   font-weight: 600 !important;
 }
 
-.hero-sub, .hero-title, .hero p, .panel-gradient, .panel-gradient * {
+.hero-sub, .hero-title, .hero p, .panel-gradient, .panel-gradient *,
+.hero, .hero *, .modal, .modal *, .section-with-bg, .section-with-bg *,
+.nav-links, .nav-links *, .submenu, .submenu *, .tarjeta-player, .tarjeta-player * {
   color: #ffffff !important;
   text-shadow: 0 2px 8px rgba(0,0,0,0.7) !important;
+}
+
+.nav-links a, .nav-links button, .submenu a, .submenu button,
+.modal-cerrar, .modal-cerrar * {
+  color: #ffffff !important;
 }
