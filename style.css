@@ -11,9 +11,18 @@
     --morado:     #bb1616;
     --oscuro:     #1a1a2e;
     --gris:       #d3b3b3;
-    --texto:      #333;
+    --texto:      #f5f7fa;
     --blanco:     #0c1516;
     --sombra:     0 4px 20px rgba(0,0,0,0.12);
+    --page-bg:   #0f172a;
+    --surface-card: #111827;
+    --surface-soft: #1f2937;
+    --text-strong: #f8fafc;
+    --text-muted: #d1d5db;
+    --border-soft: rgba(255,255,255,0.14);
+    --nav-bg: #111827;
+    --nav-text: #f8fafc;
+    --nav-hover-bg: rgba(200, 33, 33, 0.16);
 }
 
 body[data-theme="light"] {
@@ -23,19 +32,37 @@ body[data-theme="light"] {
     --oscuro: #f5f7fa;
     --gris: #e1e6ee;
     --texto: #1e1e1e;
-    --blanco: #111111;
+    --blanco: #ffffff;
     --sombra: 0 4px 20px rgba(0,0,0,0.08);
+    --page-bg: #f7f7f7;
+    --surface-card: #ffffff;
+    --surface-soft: #f8fafc;
+    --text-strong: #111827;
+    --text-muted: #374151;
+    --border-soft: rgba(15, 23, 42, 0.12);
+    --nav-bg: #111827;
+    --nav-text: #f8fafc;
+    --nav-hover-bg: rgba(200, 33, 33, 0.16);
 }
 
 body[data-theme="dark"] {
     --rosa: #050505;
     --rosa-claro: #f81717;
     --morado: #bb1616;
-    --oscuro: #1a1a2e;
+    --oscuro: #0f172a;
     --gris: #d3b3b3;
-    --texto: #333;
-    --blanco: #e4ebec;
+    --texto: #f5f7fa;
+    --blanco: #111827;
     --sombra: 0 4px 20px rgba(0,0,0,0.12);
+    --page-bg: #0f172a;
+    --surface-card: #111827;
+    --surface-soft: #1f2937;
+    --text-strong: #f8fafc;
+    --text-muted: #d1d5db;
+    --border-soft: rgba(255,255,255,0.14);
+    --nav-bg: #111827;
+    --nav-text: #f8fafc;
+    --nav-hover-bg: rgba(200, 33, 33, 0.16);
 }
 
 html {
@@ -46,10 +73,11 @@ html {
 body {
     min-height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #111111;
-    background: #f7f7f7;
+    color: var(--texto);
+    background: var(--page-bg);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 section {
@@ -61,7 +89,8 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: var(--oscuro);
+    background: var(--nav-bg);
+    color: var(--nav-text);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,8 +102,9 @@ nav {
 nav h1 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--nav-text);
     letter-spacing: 0.03em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 
 nav ul {
@@ -87,16 +117,17 @@ nav ul {
 nav ul li a {
     display: block;
     padding: 0.4rem 0.9rem;
-    color: #ffffff;
+    color: var(--nav-text);
     text-decoration: none;
     border-radius: 6px;
     font-size: 0.92rem;
+    font-weight: 600;
     transition: background 0.2s, color 0.2s;
 }
 
 nav ul li a:hover {
-    background: var(--rosa);
-    color: #ffffff;
+    background: var(--nav-hover-bg);
+    color: var(--nav-text);
 }
 
 .nav-controls {
@@ -112,8 +143,8 @@ nav ul li a:hover {
     border-radius: 999px;
     padding: 0.5rem 0.8rem;
     cursor: pointer;
-    background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.12));
-    color: #ffffff;
+    background: rgba(255,255,255,0.12);
+    color: var(--nav-text);
     font-weight: 700;
     box-shadow: 0 4px 12px rgba(0,0,0,0.18);
     transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
@@ -237,7 +268,8 @@ nav ul li a:hover {
 }
 
 .bloque {
-    background: var(--blanco);
+    background: var(--surface-card);
+    color: var(--text-strong);
     border-radius: 18px;
     padding: 1.5rem;
     box-shadow: var(--sombra);
@@ -250,7 +282,7 @@ nav ul li a:hover {
 }
 
 .bloque p {
-    color: #2f2f2f;
+    color: var(--text-muted);
     line-height: 1.7;
     margin-bottom: 1rem;
 }
@@ -265,7 +297,7 @@ nav ul li a:hover {
 .contenido h2 {
     font-size: 1.9rem;
     font-weight: 700;
-    color: #111111;
+    color: var(--text-strong);
     margin-bottom: 1.25rem;
     display: inline-block;
 }
@@ -282,7 +314,7 @@ nav ul li a:hover {
 
 .contenido p {
     font-size: 1.05rem;
-    color: #222222;
+    color: var(--text-muted);
     max-width: 640px;
     line-height: 1.8;
 }
@@ -380,10 +412,10 @@ nav ul li a:hover {
     padding: 0.65rem 1rem;
     border: none;
     background: var(--blanco);
-    color: #3f3f3f;
+    color: var(--texto);
     font-size: 1rem;
     cursor: pointer;
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(0,0,0,0.08);
     transition: background 0.2s, color 0.2s, transform 0.15s;
 }
 
@@ -437,7 +469,7 @@ nav ul li a:hover {
     position: fixed;
     top: 1rem;
     right: 1.5rem;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.96);
     border: none;
     color: #111111;
     font-size: 1.5rem;
@@ -446,6 +478,7 @@ nav ul li a:hover {
     border-radius: 50%;
     cursor: pointer;
     z-index: 10000;
+    font-weight: 700;
 }
 
 .modal-cerrar:hover {

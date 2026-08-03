@@ -9,8 +9,30 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
-  color: #f8f5f5;
+  color: var(--text);
   line-height: 1.5;
+}
+
+body {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+body[data-theme="light"] {
+  --surface-card: #ffffff;
+  --surface-soft: #f8fafc;
+  --surface-muted: #eef2f7;
+  --text-strong: #111827;
+  --text-muted: #374151;
+  --border-soft: rgba(15, 23, 42, 0.12);
+}
+
+body[data-theme="dark"] {
+  --surface-card: #111827;
+  --surface-soft: #0f172a;
+  --surface-muted: #1f2937;
+  --text-strong: #f8fafc;
+  --text-muted: #d1d5db;
+  --border-soft: rgba(255, 255, 255, 0.14);
 }
 
 /* Tipografía más nítida */
@@ -27,6 +49,52 @@ p, li, a, span, label {
   color: var(--text);
   font-weight: 500;
   letter-spacing: 0.2px;
+  text-shadow: none;
+}
+
+.contenido,
+.bloque,
+.foto,
+.foto-texto,
+.tarjeta,
+.tarjeta-texto,
+.card-grid .foto-texto,
+.section-intro,
+.page-footer,
+.footer,
+.panel-gradient,
+.panel-gradient *,
+.contact-form input,
+.contact-form textarea,
+.contact-form label,
+.contact-form button,
+.map-container,
+.video,
+.video p {
+  color: var(--text-strong) !important;
+  border-color: var(--border-soft) !important;
+}
+
+.contenido,
+.bloque,
+.foto,
+.tarjeta,
+.section-intro,
+.page-footer,
+.footer {
+  background-color: var(--surface-card) !important;
+}
+
+.section-intro,
+.page-footer,
+.footer {
+  background-color: var(--surface-soft) !important;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: var(--surface-card) !important;
+  color: var(--text-strong) !important;
 }
 
 /* Sombra sutil para mejorar legibilidad sobre fondos complejos */
@@ -102,9 +170,9 @@ a:hover, a:focus-visible, .btn:hover, .btn:focus-visible {
 
 /* Hero subtitle: aumentar contraste y legibilidad */
 .hero-sub {
-  font-weight: 600;
-  color: #fff; /* por defecto sobre imagen oscura */
-  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  font-weight: 700;
+  color: var(--text-strong);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.75);
 }
 
 /* Ajustes adicionales para móviles */
@@ -117,19 +185,69 @@ a:hover, a:focus-visible, .btn:hover, .btn:focus-visible {
 [style*="color: #666"], [style*="color:#666"],
 [style*="color: #777"], [style*="color:#777"],
 [style*="color: #888"], [style*="color:#888"],
-[style*="color: #999"], [style*="color:#999"] {
-  color: var(--text) !important;
+[style*="color: #999"], [style*="color:#999"],
+[style*="color: #333"], [style*="color:#333"],
+[style*="color: #111"], [style*="color:#111"],
+[style*="color: #1d1d1d"], [style*="color:#1d1d1d"],
+[style*="color: white"], [style*="color:white"],
+[style*="color: #fff"], [style*="color:#fff"],
+[style*="color: #ffffff"], [style*="color:#ffffff"],
+[style*="color: #ccc"], [style*="color:#ccc"],
+[style*="color: #ddd"], [style*="color:#ddd"] {
+  color: var(--text-strong) !important;
   font-weight: 700 !important;
+}
+
+body[data-theme="dark"] [style*="background: white"],
+body[data-theme="dark"] [style*="background:white"],
+body[data-theme="dark"] [style*="background: #fff"],
+body[data-theme="dark"] [style*="background:#fff"],
+body[data-theme="dark"] [style*="background: #ffffff"],
+body[data-theme="dark"] [style*="background:#ffffff"],
+body[data-theme="dark"] [style*="background: #f5f5f5"],
+body[data-theme="dark"] [style*="background:#f5f5f5"],
+body[data-theme="dark"] [style*="background: #f7f7f7"],
+body[data-theme="dark"] [style*="background:#f7f7f7"] {
+  background-color: var(--surface-card) !important;
+  color: var(--text-strong) !important;
 }
 
 .hero-sub, .hero-title, .hero p, .panel-gradient, .panel-gradient *,
 .hero, .hero *, .modal, .modal *, .section-with-bg, .section-with-bg *,
-.nav-links, .nav-links *, .submenu, .submenu *, .tarjeta-player, .tarjeta-player * {
+.tarjeta-player, .tarjeta-player * {
   color: var(--text) !important;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
 }
 
-.nav-links a, .nav-links button, .submenu a, .submenu button,
+.site-nav .nav-links,
+.site-nav .nav-links *,
+.site-nav .submenu,
+.site-nav .submenu * {
+  color: var(--nav-text) !important;
+  text-shadow: none !important;
+}
+
+.site-nav .nav-links a,
+.site-nav .nav-links button,
+.site-nav .submenu a,
+.site-nav .submenu button,
+.site-nav .submenu-toggle,
 .modal-cerrar, .modal-cerrar * {
-  color: var(--text) !important;
+  color: var(--nav-text) !important;
+}
+
+.site-nav .submenu {
+  background: var(--nav-bg) !important;
+}
+
+.site-nav .submenu a:hover,
+.site-nav .nav-links a:hover,
+.site-nav .submenu-toggle:hover {
+  background: var(--nav-hover-bg) !important;
+}
+
+body[data-theme="light"] .text-bg-dark,
+body[data-theme="dark"] .text-bg-light {
+  color: #ffffff !important;
+  background-color: rgba(0,0,0,0.76) !important;
 }
