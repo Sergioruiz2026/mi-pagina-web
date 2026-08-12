@@ -66,77 +66,31 @@
             // Configura aquí tu Channel ID o handle y, opcionalmente, tu API key de YouTube Data API v3.
             // Puedes usar un handle como '@EscuelaPatinajeAyekantun' (lo usaremos para enlaces),
             // pero para embeds robustos la API key o el Channel ID ('UC...') es preferible.
-            const CHANNEL_HANDLE = '@EscuelaPatinajeAyekantun';
-            const CHANNEL_ID = 'UCs8JTNBykzcqsRhGCOMl6Gg'; // ID proporcionado por el usuario
-            const API_KEY = 'AIzaSyAAnGy0Dk1wzvhI3BJ7TEVnRtBmAPce5rs'; // API key proporcionada por el usuario
+                // Usar siempre el embed de la playlist de uploads del canal (sin API)
+                const CHANNEL_HANDLE = '@EscuelaPatinajeAyekantun';
+                const CHANNEL_ID = 'UCs8JTNBykzcqsRhGCOMl6Gg'; // ID proporcionado por el usuario
 
-            function uploadsPlaylistId(cid){
-                if(!cid) return '';
-                return cid.startsWith('UC') ? 'UU' + cid.slice(2) : cid;
-            }
+                function uploadsPlaylistId(cid){
+                    if(!cid) return '';
+                    return cid.startsWith('UC') ? 'UU' + cid.slice(2) : cid;
+                }
 
-            const container = document.getElementById('yt-videos');
-            if(!container) return;
+                const container = document.getElementById('yt-videos');
+                if(!container) return;
 
-            if(CHANNEL_ID === 'CHANNEL_ID'){
-                container.innerHTML = '<p class="embed-note">Por favor reemplaza <strong>CHANNEL_ID</strong> por el ID de tu canal para mostrar los videos.</p>';
-                return;
-            }
+                const playlistId = uploadsPlaylistId(CHANNEL_ID) || CHANNEL_HANDLE;
 
-            const playlistId = uploadsPlaylistId(CHANNEL_ID) || CHANNEL_HANDLE;
-
-            if(API_KEY && API_KEY !== 'YOUR_API_KEY' && CHANNEL_ID && CHANNEL_ID !== 'CHANNEL_ID'){
-                // Usar YouTube Data API para obtener miniaturas y títulos
-                fetch('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=12&playlistId='+playlistId+'&key='+API_KEY)
-                .then(r=>r.json())
-                .then(data=>{
-                    if(!data.items || data.items.length === 0){
-                        container.innerHTML = '<p class="embed-note">No se encontraron videos.</p>';
-                        return;
-                    }
-                    const grid = document.createElement('div');
-                    grid.className = 'yt-grid';
-                    // Poner el primer video como destacado y crear la cuadrícula
-                    const firstVideoId = data.items[0] && data.items[0].snippet.resourceId && data.items[0].snippet.resourceId.videoId;
-                    const featuredIframe = document.getElementById('featured-iframe');
-                    if(firstVideoId && featuredIframe){
-                        featuredIframe.src = 'https://www.youtube.com/embed/' + firstVideoId;
-                        featuredIframe.title = data.items[0].snippet.title || 'Video destacado - Ayekantún';
-                    }
-                    data.items.forEach(item=>{
-                        const vid = item.snippet.resourceId && item.snippet.resourceId.videoId;
-                        const title = item.snippet.title;
-                        const thumb = (item.snippet.thumbnails && (item.snippet.thumbnails.medium || item.snippet.thumbnails.default)).url;
-                        const a = document.createElement('a');
-                        a.href = 'https://www.youtube.com/watch?v=' + vid;
-                        a.target = '_blank';
-                        a.rel = 'noopener noreferrer';
-                        a.className = 'yt-card';
-                        a.innerHTML = '<img src="'+thumb+'" alt="'+title+'"><p>'+title+'</p>';
-                        grid.appendChild(a);
-                    });
-                    container.innerHTML = '';
-                    container.appendChild(grid);
-                })
-                .catch(err=>{
-                    console.error(err);
-                    container.innerHTML = '<p class="embed-note">Error cargando videos desde la API.</p>';
-                });
-            } else {
-                // Fallback: embeber la playlist de uploads
+                // Embeder la playlist de uploads — nuevos videos aparecerán automáticamente en la playlist
                 const iframe = document.createElement('iframe');
                 iframe.width = '100%';
                 iframe.height = '500';
-                // Si sólo tenemos handle, mostramos el canal o la URL de la lista como enlace embebido.
-                // Intentamos embeber la playlist con lo que tengamos (playlistId puede ser handle o UU...)
                 iframe.src = 'https://www.youtube.com/embed?listType=playlist&list=' + playlistId;
                 iframe.title = 'Videos subidos de Ayekantún';
                 iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
                 iframe.allowFullscreen = true;
                 container.innerHTML = '';
                 container.appendChild(iframe);
-                container.insertAdjacentHTML('beforeend','<p class="embed-note">Usa una API key y/o el Channel ID para mostrar miniaturas y títulos en cuadrícula.</p>');
-            }
+                container.insertAdjacentHTML('beforeend','<p class="embed-note">Usamos el playlist de uploads del canal. Los videos nuevos se muestran automáticamente cuando se suben.</p>');
         })();
         </script>
 
