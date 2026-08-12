@@ -54,7 +54,7 @@ const translations = {
             emailLabel: '📧 Correo:',
             whatsappLabel: '💬 WhatsApp:',
             socialTitle: 'Síguenos en Nuestras Redes',
-            copyright: '© 2024 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.',
+            copyright: '© 2017 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.',
             location: 'Quilpué, Región de Valparaíso, Chile'
         },
         cards: {
@@ -173,7 +173,7 @@ const translations = {
             emailLabel: '📧 Email:',
             whatsappLabel: '💬 WhatsApp:',
             socialTitle: 'Follow Us on Social Media',
-            copyright: '© 2024 Ayekantún - Artistic Skating School. All rights reserved.',
+            copyright: '© 2017 Ayekantún - Artistic Skating School. All rights reserved.',
             location: 'Quilpué, Valparaíso Region, Chile'
         },
         cards: {

@@ -49,6 +49,33 @@
 
     <section class="contenido">
         <h2 data-i18n="pages.videos.sectionTitle">Nuestros Videos</h2>
+
+        <!-- Sección de YouTube: pega tu CHANNEL_ID en los iframes o pide ayuda para obtenerlo -->
+        <div class="youtube-embeds">
+            <div class="yt-live">
+                <h3>En Vivo</h3>
+                <iframe
+                    src="https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID"
+                    title="Transmisión en vivo de Ayekantún"
+                    width="560" height="315"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p class="embed-note">Reemplaza <strong>CHANNEL_ID</strong> por el ID real del canal.</p>
+            </div>
+
+            <div class="yt-playlist">
+                <h3>Videos Subidos</h3>
+                <!-- Ejemplo: embeber un video específico; cambia VIDEO_ID por el ID del video o usa un playlist -->
+                <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    title="Video de Ayekantún"
+                    width="560" height="315"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p class="embed-note">Para mostrar la lista de subidos necesitarás el ID de playlist o usar la YouTube Data API.</p>
+            </div>
+        </div>
+
         <div class="video">
             <video width="100%" height="auto" controls>
                 <source src="./fotos%20para%20pagina%20web/entrenamiento.mp4" type="video/mp4">
