@@ -50,56 +50,116 @@
     <section class="contenido">
         <h2 data-i18n="pages.videos.sectionTitle">Nuestros Videos</h2>
 
-        <!-- Sección de YouTube: pega tu CHANNEL_ID en los iframes o pide ayuda para obtenerlo -->
-        <!-- Video destacado (proporcionado por el usuario) -->
+        <!-- Sección de YouTube: Video destacado -->
         <div class="video-featured">
             <h3>Video Destacado</h3>
             <iframe id="featured-iframe" width="560" height="315" src="https://www.youtube.com/embed/m3SA0aKc-Os" title="Video destacado - Ayekantún" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <div id="yt-videos" class="youtube-embeds">
+        <!-- Últimos 12 videos -->
+        <h3>Últimos Videos</h3>
+        <div id="yt-videos" class="youtube-grid">
             <p class="embed-note">Cargando videos...</p>
         </div>
 
         <script>
         (function(){
-            // Configura aquí tu Channel ID o handle y, opcionalmente, tu API key de YouTube Data API v3.
-            // Puedes usar un handle como '@EscuelaPatinajeAyekantun' (lo usaremos para enlaces),
-            // pero para embeds robustos la API key o el Channel ID ('UC...') es preferible.
-                // Usar siempre el embed de la playlist de uploads del canal (sin API)
-                const CHANNEL_HANDLE = '@EscuelaPatinajeAyekantun';
-                const CHANNEL_ID = 'UCs8JTNBykzcqsRhGCOMl6Gg'; // ID proporcionado por el usuario
+            // ============================================================
+            // IMPORTANTE: Obtén tu API Key de Google Cloud Console
+            // 1. Ve a https://console.cloud.google.com/
+            // 2. Crea un proyecto nuevo
+            // 3. Habilita "YouTube Data API v3"
+            // 4. Crea una "API key" (tipo "API key" a secas)
+            // 5. Pega la clave aquí:
+            // ============================================================
+            
+            const YOUTUBE_API_KEY = 'AIzaSyCLhnyWC4mYwxRh5CFlxbtNwl3DhovvPE8'; // API Key de YouTube
+            const CHANNEL_ID = 'UCs8JTNBykzcqsRhGCOMl6Gg'; // ID del canal Ayekantún
+            const MAX_VIDEOS = 12; // Mostrar hasta 12 videos
+            const REFRESH_INTERVAL = 3600000; // Actualizar cada hora (3600000 ms)
 
-                function uploadsPlaylistId(cid){
-                    if(!cid) return '';
-                    return cid.startsWith('UC') ? 'UU' + cid.slice(2) : cid;
+            const container = document.getElementById('yt-videos');
+            if(!container) return;
+
+            // Función para cargar los últimos N videos del canal
+            async function loadLatestVideos(){
+                try {
+                    // 1. Obtener el ID de la playlist de uploads del canal
+                    const channelRes = await fetch(
+                        `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${CHANNEL_ID}&key=${YOUTUBE_API_KEY}`
+                    );
+                    const channelData = await channelRes.json();
+                    
+                    if(!channelData.items || channelData.items.length === 0){
+                        container.innerHTML = '<p class="embed-note">Error: No se encontró el canal. Verifica el Channel ID.</p>';
+                        return;
+                    }
+
+                    const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
+
+                    // 2. Obtener los últimos MAX_VIDEOS videos de la playlist
+                    const playlistRes = await fetch(
+                        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=${MAX_VIDEOS}&key=${YOUTUBE_API_KEY}&order=date`
+                    );
+                    const playlistData = await playlistRes.json();
+
+                    if(!playlistData.items || playlistData.items.length === 0){
+                        container.innerHTML = '<p class="embed-note">No hay videos disponibles.</p>';
+                        return;
+                    }
+
+                    // 3. Ordenar por fecha (más recientes primero)
+                    const videos = playlistData.items.sort((a, b) => 
+                        new Date(b.snippet.publishedAt) - new Date(a.snippet.publishedAt)
+                    );
+
+                    // 4. Generar HTML con grid de videos
+                    const html = videos.map(video => {
+                        const videoId = video.snippet.resourceId.videoId;
+                        const title = video.snippet.title;
+                        const thumbnail = video.snippet.thumbnails.medium.url;
+                        const publishedAt = new Date(video.snippet.publishedAt);
+                        const dateStr = publishedAt.toLocaleDateString('es-ES', 
+                            { year: 'numeric', month: 'long', day: 'numeric' }
+                        );
+
+                        return `
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="${thumbnail}" alt="${title}" loading="lazy">
+                                    <a href="https://www.youtube.com/watch?v=${videoId}" 
+                                       target="_blank" 
+                                       class="play-button" 
+                                       aria-label="Ver video: ${title}">
+                                        ▶
+                                    </a>
+                                </div>
+                                <div class="video-info">
+                                    <h4>${title}</h4>
+                                    <p class="video-date">${dateStr}</p>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+
+                    container.innerHTML = html;
+
+                } catch(error){
+                    console.error('Error cargando videos:', error);
+                    container.innerHTML = '<p class="embed-note">⚠️ Error al cargar los videos. Verifica tu API Key y que esté correctamente configurada.</p>';
                 }
+            }
 
-                const container = document.getElementById('yt-videos');
-                if(!container) return;
+            // Cargar videos al abrir la página
+            loadLatestVideos();
 
-                const playlistId = uploadsPlaylistId(CHANNEL_ID) || CHANNEL_HANDLE;
+            // Actualizar automáticamente cada hora
+            setInterval(loadLatestVideos, REFRESH_INTERVAL);
 
-                // Embeder la playlist de uploads — nuevos videos aparecerán automáticamente en la playlist
-                const iframe = document.createElement('iframe');
-                iframe.width = '100%';
-                iframe.height = '500';
-                iframe.src = 'https://www.youtube.com/embed?listType=playlist&list=' + playlistId;
-                iframe.title = 'Videos subidos de Ayekantún';
-                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-                iframe.allowFullscreen = true;
-                container.innerHTML = '';
-                container.appendChild(iframe);
-                container.insertAdjacentHTML('beforeend','<p class="embed-note">Usamos el playlist de uploads del canal. Los videos nuevos se muestran automáticamente cuando se suben.</p>');
         })();
         </script>
 
-        <div class="video">
-            <video width="100%" height="auto" controls>
-                <source src="./fotos%20para%20pagina%20web/entrenamiento.mp4" type="video/mp4">
-                Tu navegador no soporta videos HTML5. Por favor, actualiza tu navegador.
-            </video>
-            <p data-i18n="pages.videos.caption">Video de la presentación del club.</p>
+        
         </div>
     </section>
     <script src="main.js" defer></script>
