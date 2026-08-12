@@ -333,6 +333,7 @@ em{color:var(--accent);font-style:normal;font-weight:700}
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border-soft);
+    cursor: pointer;
 }
 
 .video-card:hover {

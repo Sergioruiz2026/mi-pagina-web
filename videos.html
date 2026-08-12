@@ -62,6 +62,14 @@
             <p class="embed-note">Cargando videos...</p>
         </div>
 
+        <!-- Modal para reproducción de videos -->
+        <div id="video-modal" class="video-modal">
+            <div class="video-modal-content">
+                <button class="video-modal-close" aria-label="Cerrar">✕</button>
+                <div id="video-modal-player" class="video-modal-player"></div>
+            </div>
+        </div>
+
         <script>
         (function(){
             // ============================================================
@@ -80,6 +88,10 @@
             const MIN_DURATION_SECONDS = 61; // Más de 60 segundos para NO ser short
 
             const container = document.getElementById('yt-videos');
+            const modal = document.getElementById('video-modal');
+            const modalPlayer = document.getElementById('video-modal-player');
+            const modalClose = document.querySelector('.video-modal-close');
+
             if(!container) return;
 
             // Función para convertir duración ISO 8601 a segundos
@@ -97,6 +109,51 @@
                 
                 return seconds;
             }
+
+            // Función para formatear duración en MM:SS o HH:MM:SS
+            function formatDuration(seconds) {
+                const hours = Math.floor(seconds / 3600);
+                const minutes = Math.floor((seconds % 3600) / 60);
+                const secs = seconds % 60;
+                
+                if (hours > 0) {
+                    return `${hours}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+                } else {
+                    return `${minutes}:${String(secs).padStart(2, '0')}`;
+                }
+            }
+
+            // Abrir modal con video
+            function openVideoModal(videoId, title) {
+                const iframe = document.createElement('iframe');
+                iframe.width = '100%';
+                iframe.height = '100%';
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                iframe.title = title;
+                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                iframe.allowFullscreen = true;
+                
+                modalPlayer.innerHTML = '';
+                modalPlayer.appendChild(iframe);
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Desabilitar scroll
+            }
+
+            // Cerrar modal
+            function closeVideoModal() {
+                modal.classList.remove('active');
+                modalPlayer.innerHTML = '';
+                document.body.style.overflow = 'auto'; // Restaurar scroll
+            }
+
+            // Event listeners para el modal
+            modalClose.addEventListener('click', closeVideoModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) closeVideoModal();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeVideoModal();
+            });
 
             // Función para cargar los últimos N videos del canal (excluyendo shorts)
             async function loadLatestVideos(){
@@ -197,15 +254,12 @@
                         const durationStr = formatDuration(duration);
 
                         return `
-                            <div class="video-card">
+                            <div class="video-card" onclick="window.openVideoModal('${videoId}', '${title.replace(/'/g, "\\'")}')">
                                 <div class="video-thumbnail">
                                     <img src="${thumbnail}" alt="${title}" loading="lazy">
-                                    <a href="https://www.youtube.com/watch?v=${videoId}" 
-                                       target="_blank" 
-                                       class="play-button" 
-                                       aria-label="Ver video: ${title}">
+                                    <div class="play-button">
                                         ▶
-                                    </a>
+                                    </div>
                                     <span class="video-duration">${durationStr}</span>
                                 </div>
                                 <div class="video-info">
@@ -224,18 +278,8 @@
                 }
             }
 
-            // Función para formatear duración en MM:SS o HH:MM:SS
-            function formatDuration(seconds) {
-                const hours = Math.floor(seconds / 3600);
-                const minutes = Math.floor((seconds % 3600) / 60);
-                const secs = seconds % 60;
-                
-                if (hours > 0) {
-                    return `${hours}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
-                } else {
-                    return `${minutes}:${String(secs).padStart(2, '0')}`;
-                }
-            }
+            // Exponer función globalmente para onclick
+            window.openVideoModal = openVideoModal;
 
             // Cargar videos al abrir la página
             loadLatestVideos();
