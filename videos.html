@@ -77,19 +77,24 @@
             const CHANNEL_ID = 'UCs8JTNBykzcqsRhGCOMl6Gg'; // ID del canal Ayekantún
             const MAX_VIDEOS = 12; // Mostrar hasta 12 videos
             const REFRESH_INTERVAL = 3600000; // Actualizar cada hora (3600000 ms)
-            const MIN_DURATION_SECONDS = 60; // Mínimo 60 segundos para NO ser short
+            const MIN_DURATION_SECONDS = 61; // Más de 60 segundos para NO ser short
 
             const container = document.getElementById('yt-videos');
             if(!container) return;
 
             // Función para convertir duración ISO 8601 a segundos
             function parseDuration(duration) {
+                if (!duration) return 0;
                 // Formato: PT1H2M3S
-                const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
                 let seconds = 0;
-                if (match[1]) seconds += parseInt(match[1]) * 3600;
-                if (match[2]) seconds += parseInt(match[2]) * 60;
-                if (match[3]) seconds += parseInt(match[3]);
+                const hours = duration.match(/(\d+)H/);
+                const minutes = duration.match(/(\d+)M/);
+                const secs = duration.match(/(\d+)S/);
+                
+                if (hours) seconds += parseInt(hours[1]) * 3600;
+                if (minutes) seconds += parseInt(minutes[1]) * 60;
+                if (secs) seconds += parseInt(secs[1]);
+                
                 return seconds;
             }
 
@@ -108,48 +113,78 @@
                     }
 
                     const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
+                    let allVideos = [];
+                    let nextPageToken = null;
+                    let attempts = 0;
+                    const maxAttempts = 3;
 
-                    // 2. Obtener más videos de la playlist (pedimos el doble para filtrar shorts)
-                    const playlistRes = await fetch(
-                        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${uploadsPlaylistId}&maxResults=50&key=${YOUTUBE_API_KEY}`
-                    );
-                    const playlistData = await playlistRes.json();
+                    // Obtener videos hasta conseguir 12 que NO sean shorts
+                    while (allVideos.length < MAX_VIDEOS && attempts < maxAttempts) {
+                        const pageParams = nextPageToken ? `&pageToken=${nextPageToken}` : '';
+                        
+                        // Obtener videos de la playlist
+                        const playlistRes = await fetch(
+                            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${uploadsPlaylistId}&maxResults=50&key=${YOUTUBE_API_KEY}${pageParams}`
+                        );
+                        const playlistData = await playlistRes.json();
 
-                    if(!playlistData.items || playlistData.items.length === 0){
-                        container.innerHTML = '<p class="embed-note">No hay videos disponibles.</p>';
+                        if(!playlistData.items || playlistData.items.length === 0) break;
+
+                        const videoIds = playlistData.items
+                            .map(item => item.contentDetails.videoId)
+                            .filter(id => id)
+                            .join(',');
+
+                        if (!videoIds) break;
+
+                        // Obtener detalles de duración para cada video
+                        const videosRes = await fetch(
+                            `https://www.googleapis.com/youtube/v3/videos?part=contentDetails,snippet&id=${videoIds}&key=${YOUTUBE_API_KEY}`
+                        );
+                        const videosData = await videosRes.json();
+
+                        // Crear mapa de duraciones
+                        const durations = {};
+                        videosData.items.forEach(item => {
+                            durations[item.id] = parseDuration(item.contentDetails.duration);
+                        });
+
+                        // Procesar videos y agregar a la lista
+                        for (const item of playlistData.items) {
+                            const videoId = item.contentDetails.videoId;
+                            const duration = durations[videoId] || 0;
+
+                            // Solo agregar si NO es un short (más de 60 segundos)
+                            if (duration > MIN_DURATION_SECONDS) {
+                                allVideos.push({
+                                    ...item,
+                                    duration: duration
+                                });
+
+                                if (allVideos.length >= MAX_VIDEOS) break;
+                            }
+                        }
+
+                        nextPageToken = playlistData.nextPageToken;
+                        attempts++;
+
+                        if (!nextPageToken) break; // No hay más páginas
+                    }
+
+                    if(allVideos.length === 0){
+                        container.innerHTML = '<p class="embed-note">No hay videos disponibles (solo shorts encontrados).</p>';
                         return;
                     }
 
-                    // 3. Obtener detalles de duración para filtrar shorts
-                    const videoIds = playlistData.items.map(item => item.contentDetails.videoId).join(',');
-                    const videosRes = await fetch(
-                        `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoIds}&key=${YOUTUBE_API_KEY}`
+                    // Ordenar por fecha (más recientes primero)
+                    allVideos.sort((a, b) => 
+                        new Date(b.snippet.publishedAt) - new Date(a.snippet.publishedAt)
                     );
-                    const videosData = await videosRes.json();
 
-                    // Crear mapa de duraciones
-                    const durations = {};
-                    videosData.items.forEach(item => {
-                        durations[item.id] = parseDuration(item.contentDetails.duration);
-                    });
+                    // Tomar solo los primeros MAX_VIDEOS
+                    const videos = allVideos.slice(0, MAX_VIDEOS);
 
-                    // 4. Filtrar solo videos (no shorts) y ordenar por fecha
-                    const videos = playlistData.items
-                        .filter(item => {
-                            const duration = durations[item.contentDetails.videoId] || 0;
-                            return duration >= MIN_DURATION_SECONDS;
-                        })
-                        .sort((a, b) => 
-                            new Date(b.snippet.publishedAt) - new Date(a.snippet.publishedAt)
-                        )
-                        .slice(0, MAX_VIDEOS);
-
-                    if(videos.length === 0){
-                        container.innerHTML = '<p class="embed-note">No hay videos (solo shorts) disponibles.</p>';
-                        return;
-                    }
-
-                    // 5. Generar HTML con grid de videos
+                    // Generar HTML con grid de videos
                     const html = videos.map(video => {
                         const videoId = video.contentDetails.videoId;
                         const title = video.snippet.title;
@@ -158,7 +193,7 @@
                         const dateStr = publishedAt.toLocaleDateString('es-ES', 
                             { year: 'numeric', month: 'long', day: 'numeric' }
                         );
-                        const duration = durations[videoId];
+                        const duration = video.duration;
                         const durationStr = formatDuration(duration);
 
                         return `
