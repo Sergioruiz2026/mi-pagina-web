@@ -354,6 +354,18 @@ em{color:var(--accent);font-style:normal;font-weight:700}
     transition: transform 0.3s ease;
 }
 
+.video-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
 .video-card:hover .video-thumbnail img {
     transform: scale(1.05);
 }
