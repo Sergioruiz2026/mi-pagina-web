@@ -668,7 +668,10 @@ em{color:var(--accent);font-style:normal;font-weight:700}
     border-radius: 50%;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -680,6 +683,14 @@ em{color:var(--accent);font-style:normal;font-weight:700}
 
 .float-btn--down {
     background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.float-btn--whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+}
+
+.float-btn--instagram {
+    background: linear-gradient(135deg, #feda75 0%, #fa7e1e 18%, #d62976 45%, #962fbf 72%, #4f5bd5 100%);
 }
 
 .float-btn:hover,
