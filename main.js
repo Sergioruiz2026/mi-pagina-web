@@ -49,10 +49,10 @@ const translations = {
         heroSubtitle: 'Club formativo y competitivo',
         homeTitle: 'Conoce más sobre Ayekantún',
         footer: {
-            supportTitle: '📞 Soporte',
+            supportTitle: 'Soporte',
             nameLabel: 'Nombre:',
-            emailLabel: '📧 Correo:',
-            whatsappLabel: '💬 WhatsApp:',
+            emailLabel: 'Correo:',
+            whatsappLabel: 'WhatsApp:',
             socialTitle: 'Síguenos en Nuestras Redes',
             copyright: '© 2017 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.',
             location: 'Quilpué, Región de Valparaíso, Chile'
@@ -168,10 +168,10 @@ const translations = {
         heroSubtitle: 'Formative and competitive club',
         homeTitle: 'Discover more about Ayekantún',
         footer: {
-            supportTitle: '📞 Support',
+            supportTitle: 'Support',
             nameLabel: 'Name:',
-            emailLabel: '📧 Email:',
-            whatsappLabel: '💬 WhatsApp:',
+            emailLabel: 'Email:',
+            whatsappLabel: 'WhatsApp:',
             socialTitle: 'Follow Us on Social Media',
             copyright: '© 2017 Ayekantún - Artistic Skating School. All rights reserved.',
             location: 'Quilpué, Valparaíso Region, Chile'
