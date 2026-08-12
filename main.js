@@ -321,7 +321,7 @@ function applyLanguage(lang) {
 
     var button = document.querySelector('.lang-toggle');
     if (button) {
-        button.textContent = lang === 'en' ? 'US' : 'ES';
+        button.textContent = lang === 'en' ? '🇺🇸' : '🇨🇱';
         button.setAttribute('aria-label', lang === 'en' ? 'Cambiar a español' : 'Cambiar a inglés');
     }
 

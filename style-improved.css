@@ -621,7 +621,10 @@ em{color:var(--accent);font-style:normal;font-weight:700}
 .page-footer .footer-links p,
 .page-footer .footer-social p{margin:0 0 10px 0;font-size:14px;color:#ccc}
 .page-footer .footer-ad img{max-width:100%;border-radius:12px;display:block}
-.page-footer .footer-network{display:flex;justify-content:flex-end;gap:20px;font-size:24px;flex-wrap:wrap}
+.page-footer .footer-network{display:flex;justify-content:flex-end;gap:14px;font-size:24px;flex-wrap:wrap}
+.page-footer .footer-network a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;color:#fff;text-decoration:none;transition:transform .2s ease, box-shadow .2s ease}
+.page-footer .footer-network a[href*="wa.me"]{background:#25d366;box-shadow:0 4px 12px rgba(37,211,102,.35)}
+.page-footer .footer-network a[href*="instagram.com"]{background:linear-gradient(135deg, #f58529 0%, #dd2a7b 35%, #8134af 68%, #515bd4 100%);box-shadow:0 4px 12px rgba(221,42,123,.35)}
 .page-footer .footer-copy{border-top:1px solid #444;padding-top:20px;text-align:center;margin-top:20px}
 .page-footer a{color:inherit;text-decoration:none;transition:transform .2s ease}
 .page-footer a:hover{transform:translateY(-1px)}
@@ -686,11 +689,13 @@ em{color:var(--accent);font-style:normal;font-weight:700}
 }
 
 .float-btn--whatsapp {
-    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    background: #25d366;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.42);
 }
 
 .float-btn--instagram {
-    background: linear-gradient(135deg, #feda75 0%, #fa7e1e 18%, #d62976 45%, #962fbf 72%, #4f5bd5 100%);
+    background: linear-gradient(135deg, #f58529 0%, #dd2a7b 35%, #8134af 68%, #515bd4 100%);
+    box-shadow: 0 4px 12px rgba(221, 42, 123, 0.38);
 }
 
 .float-btn:hover,
