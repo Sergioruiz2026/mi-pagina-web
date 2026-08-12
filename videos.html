@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Ayekantún - Videos</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-improved.css">
@@ -71,6 +74,7 @@
         </div>
 
         <script>
+        console.log('Cargando script de videos - timestamp:', new Date().toLocaleString());
         (function(){
             // ============================================================
             // IMPORTANTE: Obtén tu API Key de Google Cloud Console
@@ -161,14 +165,28 @@
                     const channelRes = await fetch(
                         `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${CHANNEL_ID}&key=${YOUTUBE_API_KEY}`
                     );
-                    const channelData = await channelRes.json();
-                    
-                    if(!channelData.items || channelData.items.length === 0){
-                        container.innerHTML = '<p class="embed-note">Error: No se encontró el canal. Verifica el Channel ID.</p>';
-                        return;
+                    let uploadsPlaylistId = null;
+                    try {
+                        const channelData = await channelRes.json();
+                        console.log('YouTube channels API status:', channelRes.status, channelData && channelData.error ? channelData.error : 'OK');
+
+                        if (channelData && channelData.items && channelData.items.length) {
+                            uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
+                        }
+                    } catch (e) {
+                        console.warn('Error parseando respuesta de channels API:', e);
                     }
 
-                    const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
+                    // Si no se pudo obtener mediante la API Channels, construimos el playlistId a partir del Channel ID (fallback)
+                    if (!uploadsPlaylistId && CHANNEL_ID && CHANNEL_ID.startsWith && CHANNEL_ID.startsWith('UC')) {
+                        uploadsPlaylistId = 'UU' + CHANNEL_ID.slice(2);
+                        console.warn('Fallback: construyendo uploads playlist id a partir del CHANNEL_ID ->', uploadsPlaylistId);
+                    }
+
+                    if (!uploadsPlaylistId) {
+                        container.innerHTML = '<p class="embed-note">Error: No se encontró el canal. Verifica el Channel ID o la API Key.</p>';
+                        return;
+                    }
 
                     // 2. Obtener los últimos MAX_VIDEOS videos de la playlist
                     const playlistRes = await fetch(
@@ -207,6 +225,11 @@
                         .sort((a, b) => 
                             new Date(b.snippet.publishedAt) - new Date(a.snippet.publishedAt)
                         );
+
+                    console.log('Videos cargados (SIN FILTRO):', videos.length);
+                    videos.forEach((v, i) => {
+                        console.log(`Video ${i+1}: ${v.snippet.title} - Duración: ${formatDuration(v.duration)}s`);
+                    });
 
                     // 5. Generar HTML con grid de videos
                     const html = videos.map(video => {
