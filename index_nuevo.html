@@ -57,20 +57,35 @@ footer{padding:40px 0 90px;border-top:1px solid var(--line);color:var(--muted);f
 footer a{color:var(--brand);font-weight:500}
 .wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 8px 22px rgba(0,0,0,.3);z-index:30}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.on{opacity:1;transform:none}
-@media(max-width:760px){nav ul{display:none}.split{grid-template-columns:1fr}section{padding:56px 0}}
+nav>.wrap>ul{gap:16px;font-size:.88rem}
+.has-sub{position:relative;padding:18px 0}
+.sub{display:none;position:absolute;top:100%;left:-12px;flex-direction:column;gap:0;min-width:210px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:0 14px 34px rgba(0,0,0,.18)}
+.has-sub:hover .sub,.has-sub:focus-within .sub{display:flex}
+.sub a{display:block;padding:9px 12px;border-radius:8px}
+.sub a:hover{background:var(--bg)}
+.tg{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;font-size:1.3rem;width:42px;height:42px;cursor:pointer}
+.card a{color:var(--accent);font-weight:500}
+.ad{display:block;margin-top:20px;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#0a0a0a,#b00018);color:#fff;text-align:center}
+.ad img{display:block;width:100%;max-height:260px;object-fit:cover}
+.ad span{display:block;padding:14px;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:1100px){.tg{display:block}nav .btn{display:none}nav>.wrap>ul{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 20px 16px;max-height:80vh;overflow:auto}nav.open>.wrap>ul{display:flex}nav ul a{display:block;padding:10px 0}.has-sub{padding:0}.sub{display:flex;position:static;border:0;box-shadow:none;background:transparent;padding:0 0 0 14px;min-width:0}}
+@media(max-width:760px){.split{grid-template-columns:1fr}section{padding:56px 0}}
 </style>
 </head>
 <body>
 <nav><div class="wrap"><a href="#inicio" class="logo"><img src="https://sergioruiz2026.github.io/mi-pagina-web/fotos%20para%20pagina%20web/logo.jpeg" alt="Logo Ayekantún" onerror="this.remove()">Ayekantún</a>
-<ul><li><a href="#historia">Historia</a></li><li><a href="#mision">Misión</a></li><li><a href="#galeria">Galería</a></li><li><a href="#contacto">Contacto</a></li></ul>
-<a class="btn" href="#contacto" style="padding:9px 20px;font-size:.9rem">Inscríbete</a></div></nav>
+<ul>
+<li class="has-sub"><a href="#inicio">Inicio ▾</a><ul class="sub"><li><a href="#inicio">Inicio</a></li><li><a href="#historia">Historia</a></li><li><a href="#mision">Nuestra Misión</a></li><li><a href="#vision">Nuestra Visión</a></li><li><a href="#informacion">Información</a></li></ul></li>
+<li class="has-sub"><a href="la-esculita.html">La Escuelita ▾</a><ul class="sub"><li><a href="la-esculita.html">La Escuelita</a></li><li><a href="inscripciones.html">Inscripciones</a></li><li><a href="horarios.html">Conoce nuestros horarios</a></li></ul></li>
+<li><a href="deportistas.html">Deportistas</a></li><li><a href="entrenadora.html">Entrenadora</a></li><li><a href="galeria.html">Galería</a></li><li><a href="videos.html">Videos</a></li><li><a href="transmisiones.html">🔴 En Vivo</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+<a class="btn" href="inscripciones.html" style="padding:9px 20px;font-size:.9rem">Inscríbete</a><button class="tg" aria-label="Abrir menú" aria-expanded="false">☰</button></div></nav>
 
 <header class="hero" id="inicio">
 <img class="bg" src="https://sergioruiz2026.github.io/mi-pagina-web/fotos%20para%20pagina%20web/grupo.jpeg" alt="" onerror="this.remove()">
 <div class="in"><img class="hero-logo" src="https://sergioruiz2026.github.io/mi-pagina-web/fotos%20para%20pagina%20web/logo.jpeg" alt="Logo Ayekantún Patinaje Artístico" onerror="this.remove()"><span class="tag">Quilpué · Desde 2017</span>
 <h1>Ayekantún</h1>
 <p>Escuela de patinaje artístico: un club formativo y competitivo donde las niñas y niños crecen con disciplina, respeto y pasión.</p>
-<div class="btns"><a class="btn" href="#contacto">Quiero inscribirme</a><a class="btn ghost" href="#historia">Conócenos</a></div></div>
+<div class="btns"><a class="btn" href="inscripciones.html">Quiero inscribirme</a><a class="btn ghost" href="#historia">Conócenos</a></div></div>
 </header>
 
 <div class="stats"><div class="wrap">
@@ -91,7 +106,7 @@ footer a{color:var(--brand);font-weight:500}
 <div class="eyebrow">Lo que nos mueve</div><h2>Misión y visión</h2>
 <div class="cards">
 <div class="card rv"><div class="ic">🎯</div><h3>Misión</h3><p>Formar deportistas y personas íntegras a través del patinaje artístico, en un ambiente de respeto, disciplina, compañerismo y pasión.</p></div>
-<div class="card rv"><div class="ic">✨</div><h3>Visión</h3><p>Ser un club reconocido por la excelencia en la formación de deportistas y contribuir al crecimiento del patinaje en la Región de Valparaíso.</p></div>
+<div class="card rv" id="vision"><div class="ic">✨</div><h3>Visión</h3><p>Ser un club reconocido por la excelencia en la formación de deportistas y contribuir al crecimiento del patinaje en la Región de Valparaíso.</p></div>
 <div class="card rv"><div class="ic">🏫</div><h3>La Escuelita</h3><p>Un espacio de aprendizaje, alegría y crecimiento para niñas y niños que dan sus primeros pasos sobre ruedas.</p></div>
 </div></div></section>
 
@@ -103,6 +118,15 @@ footer a{color:var(--brand);font-weight:500}
 <div class="ph rv"><img src="https://sergioruiz2026.github.io/mi-pagina-web/fotos%20para%20pagina%20web/grupo3.jpg" alt="Grupo 3" onerror="this.remove()"></div>
 <div class="ph rv"><img src="https://sergioruiz2026.github.io/mi-pagina-web/fotos%20para%20pagina%20web/logo.jpeg" alt="Logo" onerror="this.remove()"></div>
 </div></div></section>
+
+<section id="informacion" style="padding-top:0"><div class="wrap">
+<div class="eyebrow">Información</div><h2>Nuestro canal oficial</h2>
+<div class="cards">
+<div class="card rv"><div class="ic">📣</div><h3>Mantente informada</h3><p>Aquí compartimos campeonatos, competencias, reuniones, calendario de actividades, cambios de horario, logros de nuestras deportistas y comunicados importantes. Síguenos en <a href="https://www.instagram.com/patinaje.ayekantun">Instagram</a> y WhatsApp para no perderte nada.</p></div>
+<div class="card rv"><div class="ic">🛟</div><h3>Soporte</h3><p><b>Sergio Ruiz</b><br><a href="mailto:sergio.ruiz.espinoza2026@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a><br><a href="https://wa.me/56997131557">+56 9 97131557</a></p></div>
+</div>
+<a class="ad rv" href="https://sergioruiz2026.github.io/pulsso/"><img src="https://sergioruiz2026.github.io/mi-pagina-web/fotos%20para%20pagina%20web/pulsso.jpeg" alt="Publicidad Pulsso" onerror="this.remove()"><span>Publicidad · Pulsso</span></a>
+</div></section>
 
 <section id="contacto" style="padding-top:0"><div class="wrap"><div class="cta rv">
 <h2>¿Lista para patinar con nosotras?</h2>
@@ -119,6 +143,9 @@ footer a{color:var(--brand);font-weight:500}
 <script>
 var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.15});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var nv=document.querySelector('nav'),tg=document.querySelector('.tg');
+tg.addEventListener('click',function(){nv.classList.toggle('open');tg.setAttribute('aria-expanded',nv.classList.contains('open'))});
+document.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){nv.classList.remove('open')})});
 </script>
 </body>
 </html>
