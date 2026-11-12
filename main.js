@@ -499,6 +499,7 @@ var staticTextTranslations = {
     'Reproducir música': 'Play music',
     'Pausar música': 'Pause music',
     'Reproductor de música': 'Music player',
+    'Visitas al sitio': 'Website visits',
     'Tu nombre': 'Your name',
     'Nombre del apoderado': 'Parent or guardian name',
     'tu@email.com': 'you@email.com',
@@ -533,6 +534,121 @@ function translateSpanishDate(value) {
         diciembre: 'December'
     };
     return months[match[2].toLowerCase()] + ' ' + Number(match[1]) + ', ' + match[3];
+}
+
+var siteVisitsUrl = 'https://sergioruiz2026.github.io/mi-pagina-web/';
+
+function updateSiteClock() {
+    var timeElement = document.querySelector('.site-utility__time');
+    var dateElement = document.querySelector('.site-utility__date');
+    if (!timeElement || !dateElement) return;
+
+    var lang = document.documentElement.lang === 'en' ? 'en-US' : 'es-CL';
+    var now = new Date();
+    timeElement.textContent = new Intl.DateTimeFormat(lang, {
+        timeZone: 'America/Santiago',
+        hour: '2-digit',
+        minute: '2-digit',
+        hourCycle: 'h23'
+    }).format(now);
+    dateElement.textContent = new Intl.DateTimeFormat(lang, {
+        timeZone: 'America/Santiago',
+        weekday: 'short',
+        day: 'numeric',
+        month: 'short'
+    }).format(now);
+}
+
+function updateSiteWidgetLanguage(lang) {
+    var utility = document.querySelector('.site-utility');
+    if (utility) {
+        utility.setAttribute('aria-label', lang === 'en'
+            ? 'Date and time in Quilpué'
+            : 'Fecha y hora de Quilpué');
+    }
+
+    var counterImage = document.querySelector('.site-visit-counter img');
+    var counterLink = document.querySelector('.site-visit-counter a');
+    if (counterImage) {
+        counterImage.alt = lang === 'en' ? 'Public visitor counter' : 'Contador público de visitas';
+        counterImage.title = lang === 'en' ? 'Public visitor counter' : 'Contador público de visitas';
+    }
+    if (counterLink) {
+        counterLink.setAttribute('aria-label', lang === 'en'
+            ? 'View public visitor statistics'
+            : 'Ver estadísticas públicas de visitas');
+    }
+}
+
+function addSiteWidgetStyles() {
+    if (document.getElementById('site-widget-styles')) return;
+    var style = document.createElement('style');
+    style.id = 'site-widget-styles';
+    style.textContent = [
+        '.site-utility{min-height:30px;padding:4px 20px;display:flex;justify-content:flex-end;align-items:center;gap:8px;background:var(--bg,#faf7f7);color:var(--muted,#5c5555);font:500 .72rem/1.35 Inter,system-ui,sans-serif;border-bottom:1px solid var(--line,#eadede)}',
+        '.site-utility__group{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}',
+        '.site-utility__separator{opacity:.55}',
+        '.site-visit-counter{display:flex;justify-content:center;align-items:center;gap:8px;margin:12px auto 0;padding:10px 16px;border-top:1px solid var(--line,#eadede);color:var(--muted,#5c5555);font:500 .72rem/1.4 Inter,system-ui,sans-serif}',
+        '.site-visit-counter a{display:inline-flex;align-items:center;min-height:20px}',
+        '.site-visit-counter img{display:block;width:auto;height:20px;border:0}',
+        '@media(max-width:480px){.site-utility{gap:5px;padding:4px 12px;font-size:.66rem}.site-utility__group{gap:4px}.site-visit-counter{padding:9px 12px}}'
+    ].join('');
+    document.head.appendChild(style);
+}
+
+function initSiteWidgets() {
+    addSiteWidgetStyles();
+
+    if (!document.querySelector('.site-utility')) {
+        var utility = document.createElement('div');
+        utility.className = 'site-utility';
+        utility.setAttribute('role', 'group');
+        utility.setAttribute('aria-label', 'Fecha y hora de Quilpué');
+        utility.innerHTML = [
+            '<span class="site-utility__group">Quilpué</span>',
+            '<span class="site-utility__separator" aria-hidden="true">·</span>',
+            '<time class="site-utility__time"></time>',
+            '<span class="site-utility__separator" aria-hidden="true">·</span>',
+            '<time class="site-utility__date"></time>'
+        ].join('');
+        var navigation = document.querySelector('.site-nav') || document.querySelector('body > nav');
+        if (navigation) navigation.insertAdjacentElement('beforebegin', utility);
+        else document.body.insertAdjacentElement('afterbegin', utility);
+        updateSiteClock();
+        window.setInterval(updateSiteClock, 30000);
+    }
+
+    if (!document.querySelector('.site-visit-counter')) {
+        var counter = document.createElement('div');
+        counter.className = 'site-visit-counter';
+        var visitPath = encodeURIComponent(siteVisitsUrl);
+        var badgeUrl = 'https://api.visitorbadge.io/api/visitors?path=' + visitPath + '&label=total&labelColor=%23555555&countColor=%23d6001c&style=flat&_=' + Date.now();
+        var statusUrl = 'https://visitorbadge.io/status?path=' + visitPath;
+        var badge = document.createElement('img');
+        badge.src = badgeUrl;
+        badge.referrerPolicy = 'no-referrer';
+        badge.alt = 'Contador público de visitas';
+        badge.title = 'Contador público de visitas';
+        var statusLink = document.createElement('a');
+        statusLink.href = statusUrl;
+        statusLink.target = '_blank';
+        statusLink.rel = 'noopener noreferrer';
+        statusLink.setAttribute('aria-label', 'Ver estadísticas públicas de visitas');
+        statusLink.appendChild(badge);
+        var label = document.createElement('span');
+        label.className = 'site-visit-label';
+        label.textContent = 'Visitas al sitio';
+        counter.appendChild(label);
+        counter.appendChild(statusLink);
+
+        var footer = document.querySelector('footer');
+        if (footer) footer.appendChild(counter);
+        else {
+            var whatsapp = document.querySelector('.wa, .float-buttons');
+            if (whatsapp) whatsapp.insertAdjacentElement('beforebegin', counter);
+            else document.body.appendChild(counter);
+        }
+    }
 }
 
 function applyStaticTranslations(lang) {
@@ -656,6 +772,9 @@ function applyLanguage(lang) {
     if (logoArcText) {
         logoArcText.textContent = translations[lang].logoArc;
     }
+
+    updateSiteClock();
+    updateSiteWidgetLanguage(lang);
 
     var pageKey = 'home';
     var pathname = window.location.pathname.toLowerCase();
@@ -785,6 +904,7 @@ function initSite() {
     });
 
     initMusicPlayers();
+    initSiteWidgets();
 
     var navInner = document.querySelector('.site-nav .nav-inner');
     if (navInner && !navInner.querySelector('.nav-controls')) {
@@ -813,7 +933,6 @@ function initSite() {
             applyLanguage(nextLang);
         });
     }
-
     var translationObserver = new MutationObserver(function () {
         applyStaticTranslations(document.documentElement.lang || 'es');
     });
