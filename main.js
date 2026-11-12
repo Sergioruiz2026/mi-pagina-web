@@ -107,7 +107,12 @@ const translations = {
             deportistas: 'Ayekantún - Deportistas',
             entrenadora: 'Ayekantún - Entrenadora',
             galeria: 'Ayekantún - Galería',
-            videos: 'Ayekantún - Videos'
+            videos: 'Ayekantún - Videos',
+            laEscuelita: 'Ayekantún - La Escuelita',
+            horarios: 'Ayekantún - Horarios',
+            inscripciones: 'Ayekantún - Inscripciones',
+            transmisiones: 'Ayekantún - Transmisiones en Vivo',
+            gracias: 'Gracias — Inscripción recibida'
         },
         pages: {
             laEscuelita: {
@@ -118,7 +123,11 @@ const translations = {
                 card1Title: 'Aprendizaje divertido',
                 card1Text: 'Cada clase está pensada para que los más pequeños aprendan con entusiasmo y confianza.',
                 card2Title: 'Valores y compañerismo',
-                card2Text: 'Promovemos el respeto, la disciplina y el trabajo en equipo desde el inicio.'
+                card2Text: 'Promovemos el respeto, la disciplina y el trabajo en equipo desde el inicio.',
+                card3Title: 'Crecimiento integral',
+                card3Text: 'Fomentamos el desarrollo físico, emocional y social de cada niño y niña.',
+                card4Title: 'Actividades recreativas',
+                card4Text: 'Ofrecemos diversas actividades que permiten a los niños y niñas disfrutar y socializar.'
             },
             contacto: {
                 heroTitle: 'Contacto',
@@ -157,6 +166,7 @@ const translations = {
             videos: {
                 heroTitle: 'Videos del Club',
                 heroText: 'Observa los mejores momentos de nuestros entrenamientos y presentaciones.',
+                sectionTitle: 'Nuestros Videos',
                 caption: 'Video de la presentación del club.'
             }
         }
@@ -209,7 +219,7 @@ const translations = {
             inicio: 'Home',
             laEscuelita: 'The Little School',
             inscripciones: 'Registrations',
-            horarios: 'Check our schedules',
+            horarios: 'Class Schedule',
             deportistas: 'Athletes',
             entrenadora: 'Coach',
             galeria: 'Gallery',
@@ -226,7 +236,12 @@ const translations = {
             deportistas: 'Ayekantún - Athletes',
             entrenadora: 'Ayekantún - Coach',
             galeria: 'Ayekantún - Gallery',
-            videos: 'Ayekantún - Videos'
+            videos: 'Ayekantún - Videos',
+            laEscuelita: 'Ayekantún - The Little School',
+            horarios: 'Ayekantún - Schedule',
+            inscripciones: 'Ayekantún - Registration',
+            transmisiones: 'Ayekantún - Live Streams',
+            gracias: 'Thank You — Registration Received'
         },
         pages: {
             laEscuelita: {
@@ -237,7 +252,11 @@ const translations = {
                 card1Title: 'Fun learning',
                 card1Text: 'Each class is designed so that the youngest can learn with enthusiasm and confidence.',
                 card2Title: 'Values and teamwork',
-                card2Text: 'We promote respect, discipline and teamwork from the beginning.'
+                card2Text: 'We promote respect, discipline and teamwork from the beginning.',
+                card3Title: 'Overall development',
+                card3Text: 'We encourage the physical, emotional and social development of every child.',
+                card4Title: 'Recreational activities',
+                card4Text: 'We offer a variety of activities for children to have fun and socialize.'
             },
             contacto: {
                 heroTitle: 'Contact',
@@ -276,11 +295,297 @@ const translations = {
             videos: {
                 heroTitle: 'Club Videos',
                 heroText: 'Watch the best moments from our training sessions and performances.',
+                sectionTitle: 'Our Videos',
                 caption: 'Video of the club presentation.'
             }
         }
     }
 };
+
+var staticTextTranslations = {
+    'Inicio ▾': 'Home ▾',
+    'La Escuelita ▾': 'The Little School ▾',
+    'Inicio': 'Home',
+    'Historia': 'History',
+    'Nuestra Misión': 'Our Mission',
+    'Nuestra Visión': 'Our Vision',
+    'Información': 'Information',
+    'Inscripciones': 'Registrations',
+    'Conoce nuestros horarios': 'Class Schedule',
+    'Deportistas': 'Athletes',
+    'Entrenadora': 'Coach',
+    'Galería': 'Gallery',
+    'Videos': 'Videos',
+    '🔴 En Vivo': '🔴 Live',
+    'Transmisión en vivo': '🔴 Live',
+    'Contacto': 'Contact',
+    'Inscríbete': 'Register',
+    'Quilpué · Desde 2017': 'Quilpué · Since 2017',
+    'Escuela de patinaje artístico: un club formativo y competitivo donde las niñas y niños crecen con disciplina, respeto y pasión.': 'An artistic skating school: a development and competition club where children grow through discipline, respect and passion.',
+    'Quiero inscribirme': 'I want to register',
+    'Conócenos': 'Get to know us',
+    'Año de fundación': 'Year founded',
+    'Campeonatos disputados': 'Competitions entered',
+    'Todas': 'All',
+    'Edades y niveles': 'Ages and levels',
+    'Gran comunidad': 'A great community',
+    'Nuestra historia': 'Our history',
+    'Nacimos en Quilpué, patinando': 'We were born skating in Quilpué',
+    'El Club de Patinaje Artístico Ayekantún nació en enero de 2017. Desde entonces nos hemos consolidado como un referente formativo, participando en campeonatos nacionales con importantes resultados.': 'The Ayekantún Artistic Skating Club was founded in January 2017. Since then, we have become a leading development club, taking part in national competitions and achieving excellent results.',
+    'Somos un espacio seguro, inclusivo y formativo, donde se desarrollan habilidades deportivas y valores como el respeto, el trabajo en equipo y la perseverancia.': 'We are a safe, inclusive learning space where athletes develop their skills and values such as respect, teamwork and perseverance.',
+    'Lo que nos mueve': 'What drives us',
+    'Misión y visión': 'Mission and vision',
+    'Misión': 'Mission',
+    'Formar deportistas y personas íntegras a través del patinaje artístico, en un ambiente de respeto, disciplina, compañerismo y pasión.': 'To develop well-rounded athletes and people through artistic skating in an environment of respect, discipline, camaraderie and passion.',
+    'Visión': 'Vision',
+    'Ser un club reconocido por la excelencia en la formación de deportistas y contribuir al crecimiento del patinaje en la Región de Valparaíso.': 'To be a club recognized for excellence in athlete development and to contribute to the growth of skating in the Valparaíso Region.',
+    'Un espacio de aprendizaje, alegría y crecimiento para niñas y niños que dan sus primeros pasos sobre ruedas.': 'A place for learning, joy and growth for children taking their first steps on skates.',
+    'Momentos': 'Moments',
+    'Nuestro canal oficial': 'Our official channel',
+    'Mantente informada': 'Stay up to date',
+    'Aquí compartimos campeonatos, competencias, reuniones, calendario de actividades, cambios de horario, logros de nuestras deportistas y comunicados importantes. Síguenos en ': 'We share championships, competitions, meetings, activity calendars, schedule changes, athletes’ achievements and important announcements here. Follow us on ',
+    ' y WhatsApp para no perderte nada.': ' and WhatsApp so you do not miss a thing.',
+    'Soporte': 'Support',
+    'Publicidad · Pulsso': 'Advertisement · Pulsso',
+    '¿Lista para patinar con nosotras?': 'Ready to skate with us?',
+    'Escríbenos y te contamos horarios, inscripciones y todo lo que necesitas saber. También publicamos novedades en nuestras redes.': 'Write to us and we will tell you about schedules, registration and everything else you need to know. We also share updates on our social media.',
+    'Escribir por WhatsApp': 'Message us on WhatsApp',
+    'Correo': 'Email',
+    '© 2026 Ayekantún · Escuela de Patinaje Artístico · Quilpué, Región de Valparaíso, Chile': '© 2026 Ayekantún · Artistic Skating School · Quilpué, Valparaíso Region, Chile',
+    'Horarios': 'Schedule',
+    'Estos son nuestros horarios habituales para las clases de la escuelita.': 'These are the usual class times for our skating school.',
+    'Lunes y miércoles: 4:00 PM - 6:00 PM': 'Monday and Wednesday: 4:00 PM - 6:00 PM',
+    'Martes y jueves: 6:00 PM - 8:00 PM': 'Tuesday and Thursday: 6:00 PM - 8:00 PM',
+    'Viernes: 4:00 PM - 6:00 PM': 'Friday: 4:00 PM - 6:00 PM',
+    'Si quieres confirmar un turno o consultar disponibilidad, contáctanos directamente.': 'To confirm a time slot or check availability, contact us directly.',
+    '← Volver a La Escuelita': '← Back to The Little School',
+    'Las inscripciones están abiertas para quienes quieran formar parte de nuestra escuela de patinaje.': 'Registration is open to anyone who would like to join our skating school.',
+    'La motivación de este formulario es recopilar información básica de contacto y detalles sobre la edad y nivel de interés de los aspirantes. Esto nos permitirá organizar mejor las clases y asegurarnos de que cada participante reciba la atención adecuada según su nivel y necesidades.': 'This form collects basic contact information, age and skating level so we can organize classes and ensure each participant receives the right support for their needs.',
+    'Al enviar este formulario, nos pondremos en contacto contigo para confirmar tu inscripción y proporcionarte más detalles sobre los horarios y requisitos.': 'After you submit this form, we will contact you to confirm your registration and provide more information about schedules and requirements.',
+    '¿Qué necesitas?': 'What do you need?',
+    'Completar tus datos de contacto.': 'Fill in your contact details.',
+    'Indicar edad y nivel de interés.': 'Provide your age and skill level of interest.',
+    'Nombre completo Alumno/a': 'Student’s full name',
+    'Nombre apoderado': 'Parent or guardian name',
+    'Correo electrónico': 'Email address',
+    'Teléfono': 'Phone',
+    'Edad': 'Age',
+    'Disciplina de interés': 'Activity of interest',
+    '-- Selecciona (opcional) --': '-- Select (optional) --',
+    'Patinaje artístico': 'Artistic skating',
+    'Urbano/Recreativo': 'Urban/Recreational',
+    'Nivel': 'Skill level',
+    '-- Selecciona tu nivel --': '-- Select your level --',
+    'Básico': 'Beginner',
+    'Intermedio': 'Intermediate',
+    'Mensaje': 'Message',
+    'Enviar solicitud': 'Submit registration',
+    'Esta solicitud se enviará directamente a patinaje.ayekantun@gmail.com mediante un servicio seguro.': 'This form will be securely sent to patinaje.ayekantun@gmail.com.',
+    'Nombre:': 'Name:',
+    'WhatsApp:': 'WhatsApp:',
+    'Gracias — Inscripción recibida': 'Thank You — Registration Received',
+    '¡Gracias! — Inscripción recibida': 'Thank you! — Registration received',
+    'Hemos recibido tu solicitud de inscripción en Ayekantún. Revisa tu correo electrónico; te contactaremos en un plazo máximo de 48 horas para confirmar la inscripción y los horarios.': 'We have received your registration request for Ayekantún. Please check your email; we will contact you within 48 hours to confirm your registration and class schedule.',
+    'Si no recibes respuesta, escríbenos a': 'If you do not hear from us, email us at',
+    'o por WhatsApp al': 'or message us on WhatsApp at',
+    'Volver a Inscripciones': 'Back to Registration',
+    'EN VIVO': 'LIVE',
+    'Transmisiones en Vivo': 'Live Streams',
+    'Disfruta de nuestras competencias y eventos destacados en tiempo real, desde cualquier dispositivo.': 'Watch our competitions and featured events live from any device.',
+    'Competencia en directo': 'Live competition',
+    'Sigue la acción en tiempo real y acompaña a nuestros deportistas.': 'Follow the action in real time and cheer on our athletes.',
+    'Si no conoces el': 'If you do not know the',
+    ', indícame y te ayudo a obtenerlo.': ', let me know and I will help you find it.',
+    'Próximas Transmisiones': 'Upcoming Streams',
+    'Open Internacional de Patinaje': 'International Skating Open',
+    'Fecha:': 'Date:',
+    'Hora:': 'Time:',
+    '18 de agosto de 2026': 'August 18, 2026',
+    '25 de agosto de 2026': 'August 25, 2026',
+    '01 de septiembre de 2026': 'September 1, 2026',
+    'Competencia Juvenil': 'Youth Competition',
+    'Clínica de Patinaje Artístico': 'Artistic Skating Clinic',
+    'Transmisiones Anteriores': 'Past Streams',
+    'Final de la semana': 'Weekly Final',
+    'Competencia destacada del mes pasado.': 'A featured competition from last month.',
+    'Ver repetición': 'Watch replay',
+    'Reto de técnica': 'Technique Challenge',
+    'Momento clave del entrenamiento y evaluación.': 'A key moment from training and evaluation.',
+    'Nuestras Deportistas': 'Our Athletes',
+    'Nuestro Equipo': 'Our Team',
+    'En Ayekantún creemos que cada deportista representa el esfuerzo, la disciplina, el respeto y el compañerismo. Cada entrenamiento y competencia es una oportunidad para crecer tanto en lo deportivo como en lo personal.': 'At Ayekantún, we believe every athlete represents effort, discipline, respect and camaraderie. Every practice and competition is an opportunity to grow both athletically and personally.',
+    'Leo es una apasionada del patinaje artístico, destacando por su creatividad y precisión en cada presentación.': 'Leo is passionate about artistic skating and stands out for her creativity and precision in every performance.',
+    'Fio Con una técnica impecable y un espíritu competitivo, Fio inspira a sus compañeros a dar lo mejor de sí en cada entrenamiento.': 'With flawless technique and a competitive spirit, Fio inspires her teammates to give their best in every practice.',
+    'Mya es conocida por su dedicación y pasión por el patinaje, lo que la ha llevado a participar en su primera competencia, obteniendo reconocimientos por su talento y esfuerzo.': 'Mya is known for her dedication and passion for skating. She recently competed for the first time and was recognized for her talent and hard work.',
+    'Domi es conocida por su elegancia y gracia en la pista, combinando técnica y expresión artística en cada rutina.': 'Domi is known for her elegance and grace on the rink, combining technique and artistic expression in every routine.',
+    'Pia es conocida por su enfoque en la mejora continua, esforzándose por superar sus límites y alcanzar nuevas metas en el patinaje.': 'Pia is focused on continuous improvement, always striving to push her limits and reach new goals in skating.',
+    'Florencia es una deportista dedicada que combina su amor por el patinaje con un fuerte sentido de la disciplina y el trabajo en equipo.': 'Florencia is a dedicated athlete who combines her love of skating with a strong sense of discipline and teamwork.',
+    'Seli es una joven promesa del patinaje artístico, destacando por su creatividad y pasión en cada presentación.': 'Seli is a promising young artistic skater who stands out for her creativity and passion in every performance.',
+    'Isi es conocida por su enfoque en la mejora continua, esforzándose por superar sus límites y alcanzar nuevas metas en el patinaje.': 'Isi is focused on continuous improvement, always striving to push her limits and reach new goals in skating.',
+    'Colomba es conocida por su elegancia y gracia en la pista, combinando técnica y expresión artística en cada rutina.': 'Colomba is known for her elegance and grace on the rink, combining technique and artistic expression in every routine.',
+    'Jose es una deportista dedicada que combina su amor por el patinaje con un fuerte sentido de la disciplina y el trabajo en equipo.': 'Jose is a dedicated athlete who combines her love of skating with a strong sense of discipline and teamwork.',
+    'Anto es reconocida por su dedicación y constancia, mostrando un compromiso inquebrantable con la excelencia en el patinaje.': 'Anto is recognized for her dedication and consistency, showing an unwavering commitment to excellence in skating.',
+    'Elo es reconocida por su dedicación y constancia, mostrando un compromiso inquebrantable con la excelencia en el patinaje.': 'Elo is recognized for her dedication and consistency, showing an unwavering commitment to excellence in skating.',
+    'Profesional y Apasionada': 'Professional and Passionate',
+    'Formadora de nuevas generaciones de patinadores y patinadoras.': 'Trainer of the next generation of skaters.',
+    'Trabajo en Equipo': 'Teamwork',
+    'Cada entrenamiento está diseñado para crecer en técnica y confianza.': 'Every practice is designed to build skill and confidence.',
+    'La entrenadora guía a cada patinador y patinadora en su desarrollo personal y deportivo.': 'The coach guides each skater in their personal and athletic development.',
+    'Su enfoque es fomentar la disciplina, la perseverancia y el amor por el patinaje.': 'Her approach encourages discipline, perseverance and a love of skating.',
+    'Explora nuestros mejores momentos en pista y competencia.': 'Explore our best moments on the rink and in competition.',
+    'Video Destacado': 'Featured Video',
+    'Últimos Videos': 'Latest Videos',
+    'Cargando videos...': 'Loading videos...',
+    'Error: No se encontró el canal. Verifica el Channel ID o la API Key.': 'Error: Channel not found. Check the channel ID or API key.',
+    'No hay videos disponibles.': 'No videos available.',
+    '⚠️ Error al cargar los videos. Verifica tu API Key y que esté correctamente configurada.': '⚠️ Error loading videos. Check that your API key is configured correctly.',
+    'Aprendizaje divertido': 'Fun learning',
+    'Valores y compañerismo': 'Values and teamwork',
+    'Crecimiento integral': 'Overall development',
+    'Actividades recreativas': 'Recreational activities',
+    'Cada clase está pensada para que los más pequeños aprendan con entusiasmo y confianza.': 'Each class is designed to help young children learn with enthusiasm and confidence.',
+    'Promovemos el respeto, la disciplina y el trabajo en equipo desde el inicio.': 'We promote respect, discipline and teamwork from the beginning.',
+    'Fomentamos el desarrollo físico, emocional y social de cada niño y niña.': 'We encourage every child’s physical, emotional and social development.',
+    'Ofrecemos diversas actividades que permiten a los niños y niñas disfrutar y socializar.': 'We offer a variety of activities for children to have fun and socialize.',
+    'Información de contacto': 'Contact information',
+    'Si deseas más información sobre nuestras clases, inscripciones o actividades, escríbenos y te responderemos pronto.': 'If you would like more information about our classes, registration or activities, write to us and we will get back to you soon.',
+    'También puedes seguirnos en nuestras redes sociales para mantenerte al día con nuestras últimas novedades.': 'You can also follow us on social media to keep up with our latest news.',
+    'Ubicación': 'Location',
+    'Puedes encontrarnos en los siguientes lugares:': 'You can find us at the following locations:',
+    'Dirección:': 'Address:',
+    'Liceo Politecnico Marga Marga, Calle Cuatro Pinos 2159, Quilpué, Región de Valparaíso': 'Liceo Politecnico Marga Marga, Calle Cuatro Pinos 2159, Quilpué, Valparaíso Region',
+    'Estadio Municipal Villa Olímpica - Paicaví 0127, Quilpué, Región de Valparaíso': 'Villa Olímpica Municipal Stadium - Paicaví 0127, Quilpué, Valparaíso Region',
+    'Multicancha La Perlina, Del Nogal 1700, Quilpué, Región de Valparaíso': 'La Perlina Multi-use Court, Del Nogal 1700, Quilpué, Valparaíso Region',
+    'Formulario de Contacto': 'Contact Form',
+    'Completa el siguiente formulario y nos pondremos en contacto contigo pronto:': 'Complete the form below and we will contact you soon:',
+    'Correo Electrónico:': 'Email:',
+    'Comentarios:': 'Comments:',
+    'Enviar': 'Send',
+    'Limpiar': 'Clear',
+    'Galería de Ayekantún': 'Ayekantún Gallery',
+    'Dar like': 'Like',
+    'Nuestros Videos': 'Our Videos',
+    'Video de la presentación del club.': 'Video of the club performance.',
+    'Ayekantún - Escuela de Patinaje Artístico': 'Ayekantún - Artistic Skating School',
+    'Quilpué, Región de Valparaíso, Chile': 'Quilpué, Valparaíso Region, Chile',
+    'Abrir menú': 'Open menu',
+    'Submenú Inicio': 'Home submenu',
+    'Submenú La Escuelita': 'The Little School submenu',
+    'Cerrar': 'Close',
+    'Subir arriba': 'Back to top',
+    'Bajar abajo': 'Scroll to bottom',
+    'Abrir Pulsso': 'Open Pulsso',
+    'Publicidad Pulsso': 'Pulsso advertisement',
+    'Abrir YouTube': 'Open YouTube',
+    'Abrir Instagram': 'Open Instagram',
+    'Abrir WhatsApp': 'Open WhatsApp',
+    'Logo Ayekantún Patinaje Artístico': 'Ayekantún Artistic Skating logo',
+    'Logo Ayekantún': 'Ayekantún logo',
+    'Entrenadora Ayekantún': 'Ayekantún coach',
+    'Entrenamiento Ayekantún': 'Ayekantún training',
+    'Transmisión en vivo de Ayekantún': 'Ayekantún live stream',
+    'Video destacado - Ayekantún': 'Featured video - Ayekantún',
+    'Gala Ayekantún': 'Ayekantún gala',
+    'Aprendizaje divertido': 'Fun learning',
+    'Valores y compañerismo': 'Values and teamwork',
+    'Crecimiento integral': 'Overall development',
+    'Actividades recreativas': 'Recreational activities',
+    'Clase de patinaje artístico': 'Artistic skating class',
+    'Alumnas en la pista de patinaje': 'Skaters on the rink',
+    'Presentación de patinaje en Villa Alemana': 'Skating performance in Villa Alemana',
+    'Entrenamiento de patinaje': 'Skating practice',
+    'Patinaje en pista': 'Skating on the rink',
+    'Patinaje artístico en competencia': 'Artistic skating competition',
+    'Reproducir música': 'Play music',
+    'Pausar música': 'Pause music',
+    'Reproductor de música': 'Music player',
+    'Tu nombre': 'Your name',
+    'Nombre del apoderado': 'Parent or guardian name',
+    'tu@email.com': 'you@email.com',
+    'Tu teléfono': 'Your phone number',
+    'Ej. 10': 'e.g. 10',
+    'Cuéntanos tu interés por inscribirte': 'Tell us why you would like to register'
+};
+
+var originalTextNodes = new WeakMap();
+var originalAttributes = new WeakMap();
+
+function normalizeTranslationText(value) {
+    return value.replace(/\s+/g, ' ').trim();
+}
+
+function translateSpanishDate(value) {
+    var match = value.match(/^(\d{1,2}) de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre) de (\d{4})$/i);
+    if (!match) return null;
+
+    var months = {
+        enero: 'January',
+        febrero: 'February',
+        marzo: 'March',
+        abril: 'April',
+        mayo: 'May',
+        junio: 'June',
+        julio: 'July',
+        agosto: 'August',
+        septiembre: 'September',
+        octubre: 'October',
+        noviembre: 'November',
+        diciembre: 'December'
+    };
+    return months[match[2].toLowerCase()] + ' ' + Number(match[1]) + ', ' + match[3];
+}
+
+function applyStaticTranslations(lang) {
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+        var parent = node.parentElement;
+        if (!parent || parent.closest('script,style,.lang-toggle,.theme-toggle')) continue;
+        var translatedElement = parent.closest('[data-i18n]');
+        if (translatedElement && getTranslationValue(translations[lang], translatedElement.getAttribute('data-i18n'))) continue;
+
+        var state = originalTextNodes.get(node);
+        if (!state || node.nodeValue !== state.applied) {
+            state = { source: node.nodeValue, applied: node.nodeValue };
+        }
+        var source = state.source;
+        var normalizedSource = normalizeTranslationText(source);
+        var translation = lang === 'en'
+            ? staticTextTranslations[normalizedSource] || translateSpanishDate(normalizedSource)
+            : null;
+        var value = translation === undefined || translation === null
+            ? source
+            : source.replace(normalizeTranslationText(source), translation);
+        if (node.nodeValue !== value) node.nodeValue = value;
+        state.applied = value;
+        originalTextNodes.set(node, state);
+    }
+
+    document.querySelectorAll('[title],[aria-label],[alt],[placeholder]').forEach(function (el) {
+        if (el.matches('.lang-toggle,.theme-toggle')) return;
+        ['title', 'aria-label', 'alt', 'placeholder'].forEach(function (attribute) {
+            if (!el.hasAttribute(attribute)) return;
+            var state = originalAttributes.get(el);
+            if (!state) {
+                state = {};
+                originalAttributes.set(el, state);
+            }
+            if (state[attribute] === undefined || el.getAttribute(attribute) !== state[attribute].applied) {
+                state[attribute] = {
+                    source: el.getAttribute(attribute),
+                    applied: el.getAttribute(attribute)
+                };
+            }
+            var original = state[attribute].source;
+            var translated = lang === 'en'
+                ? staticTextTranslations[normalizeTranslationText(original)]
+                : null;
+            var value = translated || original;
+            if (el.getAttribute(attribute) !== value) el.setAttribute(attribute, value);
+            state[attribute].applied = value;
+        });
+    });
+}
 
 function getStoredPreference(key, fallback) {
     try {
@@ -305,7 +610,10 @@ function applyTheme(theme) {
     var button = document.querySelector('.theme-toggle');
     if (button) {
         button.innerHTML = theme === 'light' ? '🌙' : '☀️';
-        button.setAttribute('aria-label', theme === 'light' ? 'Cambiar a oscuro' : 'Cambiar a claro');
+        var isEnglish = document.documentElement.lang === 'en';
+        button.setAttribute('aria-label', theme === 'light'
+            ? (isEnglish ? 'Switch to dark mode' : 'Cambiar a oscuro')
+            : (isEnglish ? 'Switch to light mode' : 'Cambiar a claro'));
     }
 }
 
@@ -324,26 +632,13 @@ function applyLanguage(lang) {
         button.textContent = lang === 'en' ? '🇺🇸' : '🇨🇱';
         button.setAttribute('aria-label', lang === 'en' ? 'Cambiar a español' : 'Cambiar a inglés');
     }
-
-    var navMap = translations[lang].nav;
-    document.querySelectorAll('.site-nav .nav-links a, .site-nav .nav-links button').forEach(function (el) {
-        var text = (el.textContent || '').trim();
-        var normalized = text
-            .normalize('NFD')
-            .replace(/[\u0300-\u036f]/g, '')
-            .replace(/[▾▸▼▶⬇⬆]/g, '')
-            .trim()
-            .toLowerCase();
-
-        var key = normalized;
-        if (normalized === 'nuestra mision' || normalized === 'our mission') key = 'mision';
-        else if (normalized === 'nuestra vision' || normalized === 'our vision') key = 'vision';
-        else if (normalized === 'informacion' || normalized === 'information') key = 'informacion';
-
-        if (navMap[key]) {
-            el.textContent = navMap[key];
-        }
-    });
+    var themeButton = document.querySelector('.theme-toggle');
+    if (themeButton) {
+        var isLightTheme = document.body.getAttribute('data-theme') === 'light';
+        themeButton.setAttribute('aria-label', isLightTheme
+            ? (lang === 'en' ? 'Switch to dark mode' : 'Cambiar a oscuro')
+            : (lang === 'en' ? 'Switch to light mode' : 'Cambiar a claro'));
+    }
 
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
         var value = getTranslationValue(translations[lang], el.getAttribute('data-i18n'));
@@ -369,6 +664,12 @@ function applyLanguage(lang) {
     else if (pathname.indexOf('entrenadora') !== -1) pageKey = 'entrenadora';
     else if (pathname.indexOf('galeria') !== -1) pageKey = 'galeria';
     else if (pathname.indexOf('videos') !== -1) pageKey = 'videos';
+    else if (pathname.indexOf('la-esculita') !== -1) pageKey = 'laEscuelita';
+    else if (pathname.indexOf('horarios') !== -1) pageKey = 'horarios';
+    else if (pathname.indexOf('inscripciones') !== -1) pageKey = 'inscripciones';
+    else if (pathname.indexOf('transmisiones') !== -1) pageKey = 'transmisiones';
+    else if (pathname.indexOf('gracias') !== -1) pageKey = 'gracias';
+    applyStaticTranslations(lang);
     document.title = translations[lang].pageTitles[pageKey] || translations[lang].pageTitles.home;
 }
 
@@ -480,7 +781,7 @@ function initMusicPlayers() {
 
 function initSite() {
     document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') cerrarImagen();
+        if (e.key === 'Escape' && typeof cerrarImagen === 'function') cerrarImagen();
     });
 
     initMusicPlayers();
@@ -492,7 +793,8 @@ function initSite() {
 
     var themeToggle = document.querySelector('.theme-toggle');
     var langToggle = document.querySelector('.lang-toggle');
-    var initialTheme = getStoredPreference('theme', 'dark');
+    var isHomePage = /(^|\/)index\.html?$/.test(window.location.pathname.toLowerCase());
+    var initialTheme = getStoredPreference('theme', isHomePage ? 'light' : 'dark');
     var initialLang = getStoredPreference('lang', 'es');
 
     applyTheme(initialTheme);
@@ -511,6 +813,16 @@ function initSite() {
             applyLanguage(nextLang);
         });
     }
+
+    var translationObserver = new MutationObserver(function () {
+        applyStaticTranslations(document.documentElement.lang || 'es');
+    });
+    translationObserver.observe(document.body, {
+        subtree: true,
+        childList: true,
+        attributes: true,
+        attributeFilter: ['title', 'aria-label', 'alt', 'placeholder']
+    });
 
     // Menu toggle
     var toggles = document.querySelectorAll('.nav-toggle');
