@@ -649,6 +649,19 @@ footer a {
     font-weight: 500;
 }
 
+.page-footer .footer-network a[href*="youtube.com"],
+.page-footer .footer-network a[href*="instagram.com"] {
+    color: #fff !important;
+}
+
+.page-footer .footer-network a[href*="youtube.com"] {
+    background: #ff0033 !important;
+}
+
+.page-footer .footer-network a[href*="instagram.com"] {
+    background: linear-gradient(135deg, #f58529, #dd2a7b 35%, #8134af 68%, #515bd4) !important;
+}
+
 .float-buttons {
     position: fixed;
     right: 18px;
@@ -694,6 +707,11 @@ footer a {
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 10px 26px rgba(0, 0, 0, .35);
+}
+
+.wa .fa-whatsapp,
+.float-btn--whatsapp .fa-whatsapp {
+    color: #fff !important;
 }
 
 @media (max-width: 1100px) {

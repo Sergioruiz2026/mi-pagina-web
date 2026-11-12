@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ayekantún – Escuela de Patinaje Artístico</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 :root{--bg:#faf7f7;--surface:#fff;--text:#141414;--muted:#5c5555;--brand:#111;--accent:#d6001c;--gold:#111;--line:#eadede;color-scheme:light;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -55,7 +56,13 @@ h2{font-size:clamp(1.9rem,5vw,2.8rem)}
 .cta p{opacity:.9;max-width:520px;margin:0 auto 26px}
 footer{padding:40px 0 90px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
 footer a{color:var(--brand);font-weight:500}
+.social-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:0 0 16px}
+.social-links a{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--text);font-weight:500;transition:transform .2s,box-shadow .2s}
+.social-links a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.12)}
+.social-links .fa-youtube{color:#ff0033}
+.social-links .fa-instagram{color:#c13584}
 .wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 8px 22px rgba(0,0,0,.3);z-index:30}
+.wa:hover{color:#fff;transform:translateY(-2px)}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.on{opacity:1;transform:none}
 nav>.wrap>ul{gap:16px;font-size:.88rem}
 .has-sub{position:relative;padding:18px 0}
@@ -65,9 +72,11 @@ nav>.wrap>ul{gap:16px;font-size:.88rem}
 .sub a:hover{background:var(--bg)}
 .tg{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;font-size:1.3rem;width:42px;height:42px;cursor:pointer}
 .card a{color:var(--accent);font-weight:500}
-.ad{display:block;margin-top:20px;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#0a0a0a,#b00018);color:#fff;text-align:center}
-.ad img{display:block;width:100%;max-height:260px;object-fit:cover}
-.ad span{display:block;padding:14px;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+.ad{display:grid;grid-template-columns:152px minmax(0,1fr);align-items:center;gap:18px;width:min(100%,480px);margin:24px auto 0;padding:12px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#001b29;color:#fff;text-align:left;box-shadow:0 10px 28px rgba(0,0,0,.12);transition:transform .2s,box-shadow .2s}
+.ad:hover{color:#fff;transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.18)}
+.ad img{display:block;width:152px;height:152px;object-fit:contain;border-radius:12px}
+.ad span{display:block;padding:12px;font-size:.88rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:480px){.ad{grid-template-columns:112px minmax(0,1fr);gap:10px;padding:10px}.ad img{width:112px;height:112px}.ad span{padding:8px;font-size:.78rem}}
 @media(max-width:1100px){.tg{display:block}nav .btn{display:none}nav>.wrap>ul{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 20px 16px;max-height:80vh;overflow:auto}nav.open>.wrap>ul{display:flex}nav ul a{display:block;padding:10px 0}.has-sub{padding:0}.sub{display:flex;position:static;border:0;box-shadow:none;background:transparent;padding:0 0 0 14px;min-width:0}}
 @media(max-width:760px){.split{grid-template-columns:1fr}section{padding:56px 0}}
 </style>
@@ -125,7 +134,7 @@ nav>.wrap>ul{gap:16px;font-size:.88rem}
 <div class="card rv"><div class="ic">📣</div><h3>Mantente informada</h3><p>Aquí compartimos campeonatos, competencias, reuniones, calendario de actividades, cambios de horario, logros de nuestras deportistas y comunicados importantes. Síguenos en <a href="https://www.instagram.com/patinaje.ayekantun">Instagram</a> y WhatsApp para no perderte nada.</p></div>
 <div class="card rv"><div class="ic">🛟</div><h3>Soporte</h3><p><b>Sergio Ruiz</b><br><a href="mailto:sergio.ruiz.espinoza2026@gmail.com">sergio.ruiz.espinoza2026@gmail.com</a><br><a href="https://wa.me/56997131557">+56 9 97131557</a></p></div>
 </div>
-<a class="ad rv" href="https://sergioruiz2026.github.io/pulsso/"><img src="https://sergioruiz2026.github.io/mi-pagina-web/fotos%20para%20pagina%20web/pulsso.jpeg" alt="Publicidad Pulsso" onerror="this.remove()"><span>Publicidad · Pulsso</span></a>
+<a class="ad rv" href="https://sergioruiz2026.github.io/pulsso/"><img src="fotos%20para%20pagina%20web/pulsso.jpeg" alt="Logo Pulsso"><span>Publicidad · Pulsso</span></a>
 </div></section>
 
 <section id="contacto" style="padding-top:0"><div class="wrap"><div class="cta rv">
@@ -135,11 +144,12 @@ nav>.wrap>ul{gap:16px;font-size:.88rem}
 </div></div></section>
 
 <footer><div class="wrap">
-<p><a href="https://www.instagram.com/patinaje.ayekantun">Instagram</a> · <a href="https://www.youtube.com/channel/UCs8JTNBykzcqsRhGCOMl6Gg">YouTube</a> · <a href="mailto:sergio.ruiz.espinoza2026@gmail.com">Correo</a></p>
+<div class="social-links"><a href="https://www.instagram.com/patinaje.ayekantun" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span>Instagram</span></a><a href="https://www.youtube.com/channel/UCs8JTNBykzcqsRhGCOMl6Gg" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i><span>YouTube</span></a></div>
+<p><a href="mailto:sergio.ruiz.espinoza2026@gmail.com">Correo</a></p>
 <p>© 2026 Ayekantún · Escuela de Patinaje Artístico · Quilpué, Región de Valparaíso, Chile</p>
 </div></footer>
 
-<a class="wa" href="https://wa.me/56997131557" aria-label="WhatsApp">💬</a>
+<a class="wa" href="https://wa.me/56997131557" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
 <script>
 var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.15});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
