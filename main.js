@@ -380,7 +380,7 @@ var staticTextTranslations = {
     'Intermedio': 'Intermediate',
     'Mensaje': 'Message',
     'Enviar solicitud': 'Submit registration',
-    'Esta solicitud se enviará directamente a patinaje.ayekantun@gmail.com mediante un servicio seguro.': 'This form will be securely sent to patinaje.ayekantun@gmail.com.',
+    'Esta solicitud se enviará directamente a ruiz.2006@hotmail.com mediante un servicio seguro.': 'This form will be securely sent to ruiz.2006@hotmail.com.',
     'Nombre:': 'Name:',
     'WhatsApp:': 'WhatsApp:',
     'Gracias — Inscripción recibida': 'Thank You — Registration Received',
