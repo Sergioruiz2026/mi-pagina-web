@@ -327,6 +327,12 @@ em{color:var(--accent);font-style:normal;font-weight:700}
 }
 
 .video-card {
+    display: block;
+    width: 100%;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    text-decoration: none;
     background: var(--surface-card);
     border-radius: 12px;
     overflow: hidden;
@@ -334,6 +340,11 @@ em{color:var(--accent);font-style:normal;font-weight:700}
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border-soft);
     cursor: pointer;
+}
+
+.video-card:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
 }
 
 .video-card:hover {

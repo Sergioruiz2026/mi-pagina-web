@@ -507,7 +507,7 @@ app.use("/uploads", express.static(UPLOAD_DIR, {
   setHeaders: (res) => res.set("X-Content-Type-Options", "nosniff")
 }));
 
-const publicJs = new Set(["main.js", "script.js", "cms-client.js", "admin.js"]);
+const publicJs = new Set(["main.js", "script.js", "cms-client.js", "admin.js", "back-to-top.js"]);
 app.use((req, res, next) => {
   if (req.method !== "GET" && req.method !== "HEAD") return next();
   const relative = decodeURIComponent(req.path).replace(/^\/+/, "");

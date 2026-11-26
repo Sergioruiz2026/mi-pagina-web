@@ -60,7 +60,7 @@
         <!-- Sección de YouTube: Video destacado -->
         <div class="video-featured">
             <h3 data-cms="videos.featuredTitle">Video Destacado</h3>
-            <iframe id="featured-iframe" width="560" height="315" data-cms-src="videos.featuredUrl" src="https://www.youtube.com/embed/m3SA0aKc-Os" title="Video destacado - Ayekantún" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="featured-iframe" width="560" height="315" data-cms-src="videos.featuredUrl" src="https://www.youtube.com/embed/m3SA0aKc-Os" title="Video destacado - Ayekantún" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
 
         <!-- Últimos 12 videos -->
@@ -139,6 +139,7 @@
                 iframe.title = title;
                 iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
                 iframe.allowFullscreen = true;
+                iframe.referrerPolicy = 'strict-origin-when-cross-origin';
                 
                 modalPlayer.innerHTML = '';
                 modalPlayer.appendChild(iframe);
@@ -157,6 +158,12 @@
             modalClose.addEventListener('click', closeVideoModal);
             modal.addEventListener('click', function(e) {
                 if (e.target === modal) closeVideoModal();
+            });
+            container.addEventListener('click', function(e) {
+                const card = e.target.closest('a.video-card');
+                if (!card || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                e.preventDefault();
+                openVideoModal(card.dataset.videoId, card.dataset.videoTitle);
             });
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') closeVideoModal();
@@ -235,8 +242,8 @@
                         console.log(`Video ${i+1}: ${v.snippet.title} - Duración: ${formatDuration(v.duration)}s`);
                     });
 
-                    // 5. Generar HTML con grid de videos
-                    const html = videos.map(video => {
+                    // 5. Generar tarjetas accesibles para el grid de videos
+                    const cards = videos.map(video => {
                         const videoId = video.contentDetails.videoId;
                         const title = video.snippet.title;
                         const thumbnail = video.snippet.thumbnails.medium.url;
@@ -247,24 +254,48 @@
                         const duration = video.duration;
                         const durationStr = formatDuration(duration);
 
-                        return `
-                            <div class="video-card" onclick="window.openVideoModal('${videoId}', '${title.replace(/'/g, "\\'")}')">
-                                <div class="video-thumbnail">
-                                    <img src="${thumbnail}" alt="${title}" loading="lazy">
-                                    <div class="play-button">
-                                        ▶
-                                    </div>
-                                    <span class="video-duration">${durationStr}</span>
-                                </div>
-                                <div class="video-info">
-                                    <h4>${title}</h4>
-                                    <p class="video-date">${dateStr}</p>
-                                </div>
-                            </div>
-                        `;
-                    }).join('');
+                        const card = document.createElement('a');
+                        card.className = 'video-card';
+                        card.href = `https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}`;
+                        card.dataset.videoId = videoId;
+                        card.dataset.videoTitle = title;
+                        card.setAttribute('aria-label', `Reproducir ${title}`);
 
-                    container.innerHTML = html;
+                        const thumbnailContainer = document.createElement('div');
+                        thumbnailContainer.className = 'video-thumbnail';
+
+                        const image = document.createElement('img');
+                        image.src = thumbnail;
+                        image.alt = `Reproducir ${title}`;
+                        image.loading = 'lazy';
+
+                        const playButton = document.createElement('span');
+                        playButton.className = 'play-button';
+                        playButton.setAttribute('aria-hidden', 'true');
+                        playButton.textContent = '▶';
+
+                        const durationLabel = document.createElement('span');
+                        durationLabel.className = 'video-duration';
+                        durationLabel.textContent = durationStr;
+
+                        thumbnailContainer.append(image, playButton, durationLabel);
+
+                        const info = document.createElement('div');
+                        info.className = 'video-info';
+
+                        const heading = document.createElement('h4');
+                        heading.textContent = title;
+
+                        const date = document.createElement('p');
+                        date.className = 'video-date';
+                        date.textContent = dateStr;
+
+                        info.append(heading, date);
+                        card.append(thumbnailContainer, info);
+                        return card;
+                    });
+
+                    container.replaceChildren(...cards);
 
                 } catch(error){
                     console.error('Error cargando videos:', error);
@@ -323,5 +354,6 @@
         <button class="float-btn float-btn--instagram" onclick="window.open('https://www.instagram.com/patinaje.ayekantun', '_blank')" aria-label="Abrir Instagram"><i class="fa-brands fa-instagram"></i></button>
     </div>
 <script src="cms-client.js" defer></script>
+<script src="back-to-top.js" defer></script>
 </body>
 </html>
