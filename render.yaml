@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: ayekantun-site-cms
+    runtime: node
+    region: ohio
+    plan: 0.5c-512mb
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/site
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: TRUST_PROXY
+        value: "1"
+      - key: CMS_DATA_DIR
+        value: /var/data
+      - key: CMS_UPLOAD_DIR
+        value: /var/data/uploads
+    disk:
+      name: ayekantun-cms-data
+      mountPath: /var/data
+      sizeGB: 1

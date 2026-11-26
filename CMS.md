@@ -55,4 +55,15 @@ Los valores se guardan en `content`. Los elementos con `data-cms` y `data-cms-im
 
 ## Publicación
 
-GitHub Pages solo sirve archivos estáticos y no puede ejecutar Express ni guardar cambios en SQLite. Para que el panel funcione, publica este proyecto en un servicio que ejecute Node.js y tenga almacenamiento persistente para `data/` y `uploads/` (puedes definir `CMS_DATA_DIR` y `CMS_UPLOAD_DIR` si el proveedor monta volúmenes en otras rutas). Configura las variables del `.env` en el panel seguro del proveedor, ejecuta `npm install` y `npm start`, y conecta el dominio al servidor. No subas `.env`, `data/site.db` ni archivos privados al repositorio.
+GitHub Pages solo sirve archivos estáticos y no puede ejecutar Express ni guardar cambios en SQLite. Este proyecto incluye `render.yaml` para desplegar el sitio y el CMS como un servicio Node.js en Render, con un disco persistente de 1 GB montado en `/var/data`. El disco guarda `site.db` y los archivos subidos; el servidor y el disco se facturan mensualmente. Según los precios consultados al preparar esta configuración, el servicio de 0.5 CPU/512 MB cuesta aproximadamente US$7/mes y el disco US$0.25/mes por GB; confirma el total vigente en Render antes de desplegar.
+
+Para desplegar:
+
+1. Confirma que los cambios que quieres publicar estén en GitHub. No subas `.env`, `data/site.db` ni archivos privados.
+2. En Render, crea un **Blueprint** y conecta el repositorio. Render detectará `render.yaml`; revisa el plan y el costo antes de aplicar.
+3. Después del primer despliegue, abre el **Shell** del servicio y crea la cuenta administrativa con `npm run create-admin -- tu-usuario`. Usa una contraseña nueva de al menos 12 caracteres.
+4. Entra a `https://<nombre-del-servicio>.onrender.com/admin`.
+
+El disco remoto comienza vacío: el servidor carga los textos e imágenes de ejemplo incluidos en el proyecto, pero no copia automáticamente la base de datos, la cuenta ni los archivos subidos de esta computadora. Vuelve a crear la cuenta y replica en el panel los cambios locales que quieras publicar. No reutilices la contraseña local ni la incluyas en GitHub.
+
+Render entrega una URL nueva `onrender.com` y sirve allí tanto el sitio público como el panel para que compartan la misma API. El sitio que ya está publicado en GitHub Pages no se actualiza con estos cambios; para usar el dominio actual con el CMS habrá que apuntarlo a Render después de verificar el despliegue.
