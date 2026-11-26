@@ -4,3 +4,10 @@ fotos y videos/videos/
 *.mov
 *.avi
 *.mkv
+node_modules/
+.env
+data/*.db
+data/*.db-shm
+data/*.db-wal
+uploads/*
+!uploads/.gitkeep

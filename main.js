@@ -656,7 +656,7 @@ function applyStaticTranslations(lang) {
     var node;
     while ((node = walker.nextNode())) {
         var parent = node.parentElement;
-        if (!parent || parent.closest('script,style,.lang-toggle,.theme-toggle')) continue;
+        if (!parent || parent.closest('script,style,.theme-toggle')) continue;
         var translatedElement = parent.closest('[data-i18n]');
         if (translatedElement && getTranslationValue(translations[lang], translatedElement.getAttribute('data-i18n'))) continue;
 
@@ -678,7 +678,7 @@ function applyStaticTranslations(lang) {
     }
 
     document.querySelectorAll('[title],[aria-label],[alt],[placeholder]').forEach(function (el) {
-        if (el.matches('.lang-toggle,.theme-toggle')) return;
+        if (el.matches('.theme-toggle')) return;
         ['title', 'aria-label', 'alt', 'placeholder'].forEach(function (attribute) {
             if (!el.hasAttribute(attribute)) return;
             var state = originalAttributes.get(el);
@@ -741,13 +741,7 @@ function getTranslationValue(data, key) {
 
 function applyLanguage(lang) {
     document.documentElement.lang = lang;
-    setStoredPreference('lang', lang);
 
-    var button = document.querySelector('.lang-toggle');
-    if (button) {
-        button.textContent = lang === 'en' ? '🇺🇸' : '🇨🇱';
-        button.setAttribute('aria-label', lang === 'en' ? 'Cambiar a español' : 'Cambiar a inglés');
-    }
     var themeButton = document.querySelector('.theme-toggle');
     if (themeButton) {
         var isLightTheme = document.body.getAttribute('data-theme') === 'light';
@@ -757,6 +751,7 @@ function applyLanguage(lang) {
     }
 
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        if (el.hasAttribute('data-cms')) return;
         var value = getTranslationValue(translations[lang], el.getAttribute('data-i18n'));
         if (value) {
             el.textContent = value;
@@ -816,13 +811,15 @@ function initMusicPlayers() {
         }
 
         var track = trackList[index % trackList.length];
+        var athleteNumber = Number(card.dataset.athleteIndex) || index + 1;
+        var athleteName = card.querySelector('h3');
         var playerMarkup = [
             '<div class="tarjeta-player" role="group" aria-label="Reproductor de música">',
             '  <div class="tarjeta-player__meta">',
             '    <span class="tarjeta-player__label">Escucha</span>',
-            '    <span class="tarjeta-player__title">' + track.title + '</span>',
+            '    <span class="tarjeta-player__title" data-cms="athletes.card' + athleteNumber + 'Name">' + (athleteName ? athleteName.textContent : track.title) + '</span>',
             '  </div>',
-            '  <audio preload="none" src="' + track.src + '"></audio>',
+            '  <audio preload="none" data-cms-audio="athletes.card' + athleteNumber + 'Music" src="' + track.src + '"></audio>',
             '  <div class="tarjeta-player__controls">',
             '    <button class="tarjeta-player__play" type="button" aria-label="Reproducir música">▶</button>',
             '    <div class="tarjeta-player__bar" aria-hidden="true">',
@@ -908,17 +905,15 @@ function initSite() {
 
     var navInner = document.querySelector('.site-nav .nav-inner');
     if (navInner && !navInner.querySelector('.nav-controls')) {
-        navInner.insertAdjacentHTML('beforeend', '<div class="nav-controls"><button class="theme-toggle" type="button" aria-label="Cambiar tema">🌙</button><button class="lang-toggle" type="button" aria-label="Cambiar idioma">ES</button></div>');
+        navInner.insertAdjacentHTML('beforeend', '<div class="nav-controls"><button class="theme-toggle" type="button" aria-label="Cambiar tema">🌙</button></div>');
     }
 
     var themeToggle = document.querySelector('.theme-toggle');
-    var langToggle = document.querySelector('.lang-toggle');
     var isHomePage = /(^|\/)index\.html?$/.test(window.location.pathname.toLowerCase());
     var initialTheme = getStoredPreference('theme', isHomePage ? 'light' : 'dark');
-    var initialLang = getStoredPreference('lang', 'es');
 
     applyTheme(initialTheme);
-    applyLanguage(initialLang);
+    applyLanguage('es');
 
     if (themeToggle) {
         themeToggle.addEventListener('click', function () {
@@ -927,12 +922,6 @@ function initSite() {
         });
     }
 
-    if (langToggle) {
-        langToggle.addEventListener('click', function () {
-            var nextLang = document.documentElement.lang === 'en' ? 'es' : 'en';
-            applyLanguage(nextLang);
-        });
-    }
     var translationObserver = new MutationObserver(function () {
         applyStaticTranslations(document.documentElement.lang || 'es');
     });
@@ -1008,6 +997,8 @@ function initSite() {
         });
     });
 }
+
+window.initMusicPlayers = initMusicPlayers;
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initSite);

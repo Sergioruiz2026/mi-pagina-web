@@ -54,11 +54,11 @@
     </section>
 
     <section class="contenido">
-        <h2 data-i18n="pages.contacto.heading">Información de contacto</h2>
-        <p data-i18n="pages.contacto.intro1">
+        <h2 data-cms="contact.title" data-i18n="pages.contacto.heading">Información de contacto</h2>
+        <p data-cms="contact.intro1" data-i18n="pages.contacto.intro1">
             Si deseas más información sobre nuestras clases, inscripciones o actividades, escríbenos y te responderemos pronto.
         </p>
-        <p data-i18n="pages.contacto.intro2">
+        <p data-cms="contact.intro2" data-i18n="pages.contacto.intro2">
             También puedes seguirnos en nuestras redes sociales para mantenerte al día con nuestras últimas novedades.
         </p>
         <ul class="contacto-lista">
@@ -66,17 +66,17 @@
             <li><strong>Email:</strong> <a href="mailto:ayekantunescuelapatinaje@gmail.com">ayekantunescuelapatinaje@gmail.com</a></li>
             <li><strong>Instagram:</strong> <a href="https://www.instagram.com/patinaje.ayekantun">Ayekantún Patinaje</a></li>
         </ul>
-        <h3 data-i18n="pages.contacto.locationTitle">Ubicación</h3>
-        <p data-i18n="pages.contacto.locationText">Puedes encontrarnos en los siguientes lugares:</p>
+        <h3 data-cms="contact.locationTitle" data-i18n="pages.contacto.locationTitle">Ubicación</h3>
+        <p data-cms="contact.locationText" data-i18n="pages.contacto.locationText">Puedes encontrarnos en los siguientes lugares:</p>
         <ul class="contacto-lista" id="direcciones-lista">
-            <li class="direccion-item" data-lat="-33.0486" data-lng="-71.3194"><strong>Dirección:</strong> <a href="https://www.google.com/maps?q=Liceo+Politecnico+Marga+Marga,+Calle+Cuatro+Pinos+2159,+Quilpué,+Región+de+Valparaíso" target="_blank">Liceo Politecnico Marga Marga, Calle Cuatro Pinos 2159, Quilpué, Región de Valparaíso</a></li>
-            <li class="direccion-item" data-lat="-33.0458" data-lng="-71.3183"><strong>Dirección:</strong> <a href="https://www.google.com/maps?q=Estadio+Municipal+Villa+Olímpica+-+Paicaví+0127,+Quilpué,+Valparaíso,+Quilpué,+Región+de+Valparaíso" target="_blank">Estadio Municipal Villa Olímpica - Paicaví 0127, Quilpué, Región de Valparaíso</a></li>
-            <li class="direccion-item" data-lat="-33.0471" data-lng="-71.3157"><strong>Dirección:</strong> <a href="https://www.google.com/maps?q=Multicancha+La+Perlina,+Del+Nogal+1700,+Quilpué,+Región+de+Valparaíso" target="_blank">Multicancha La Perlina, Del Nogal 1700, Quilpué, Región de Valparaíso</a></li>
+            <li class="direccion-item" data-lat="-33.0486" data-lng="-71.3194"><strong>Dirección:</strong> <a data-cms="contact.venue1" href="https://www.google.com/maps?q=Liceo+Politecnico+Marga+Marga,+Calle+Cuatro+Pinos+2159,+Quilpué,+Región+de+Valparaíso" target="_blank">Liceo Politecnico Marga Marga, Calle Cuatro Pinos 2159, Quilpué, Región de Valparaíso</a></li>
+            <li class="direccion-item" data-lat="-33.0458" data-lng="-71.3183"><strong>Dirección:</strong> <a data-cms="contact.venue2" href="https://www.google.com/maps?q=Estadio+Municipal+Villa+Olímpica+-+Paicaví+0127,+Quilpué,+Valparaíso,+Quilpué,+Región+de+Valparaíso" target="_blank">Estadio Municipal Villa Olímpica - Paicaví 0127, Quilpué, Región de Valparaíso</a></li>
+            <li class="direccion-item" data-lat="-33.0471" data-lng="-71.3157"><strong>Dirección:</strong> <a data-cms="contact.venue3" href="https://www.google.com/maps?q=Multicancha+La+Perlina,+Del+Nogal+1700,+Quilpué,+Región+de+Valparaíso" target="_blank">Multicancha La Perlina, Del Nogal 1700, Quilpué, Región de Valparaíso</a></li>
         </ul>
         <div id="mapa-ubicacion" class="map-container"></div>
         
-        <h3 data-i18n="pages.contacto.formTitle">Formulario de Contacto</h3>
-        <p data-i18n="pages.contacto.formText">Completa el siguiente formulario y nos pondremos en contacto contigo pronto:</p>
+        <h3 data-cms="contact.formTitle" data-i18n="pages.contacto.formTitle">Formulario de Contacto</h3>
+        <p data-cms="contact.formText" data-i18n="pages.contacto.formText">Completa el siguiente formulario y nos pondremos en contacto contigo pronto:</p>
         <form id="formulario-contacto" class="contact-form" method="POST">
             <div>
                 <label for="nombre" data-i18n="pages.contacto.name">Nombre:</label>
@@ -213,5 +213,6 @@
         <button class="float-btn float-btn--whatsapp" onclick="window.open('https://wa.me/56991252341', '_blank')" aria-label="Abrir WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
         <button class="float-btn float-btn--instagram" onclick="window.open('https://www.instagram.com/patinaje.ayekantun', '_blank')" aria-label="Abrir Instagram"><i class="fa-brands fa-instagram"></i></button>
     </div>
+<script src="cms-client.js" defer></script>
 </body>
 </html>

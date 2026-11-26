@@ -50,17 +50,17 @@
     </nav>
 
     <section class="hero">
-        <h2 data-i18n="pages.videos.heroTitle">Videos del Club</h2>
-        <p data-i18n="pages.videos.heroText">Observa los mejores momentos de nuestros entrenamientos y presentaciones.</p>
+        <h2 data-cms="videos.heroTitle" data-i18n="pages.videos.heroTitle">Videos del Club</h2>
+        <p data-cms="videos.heroText" data-i18n="pages.videos.heroText">Observa los mejores momentos de nuestros entrenamientos y presentaciones.</p>
     </section>
 
     <section class="contenido">
-        <h2 data-i18n="pages.videos.sectionTitle">Nuestros Videos</h2>
+        <h2 data-cms="videos.sectionTitle" data-i18n="pages.videos.sectionTitle">Nuestros Videos</h2>
 
         <!-- Sección de YouTube: Video destacado -->
         <div class="video-featured">
-            <h3>Video Destacado</h3>
-            <iframe id="featured-iframe" width="560" height="315" src="https://www.youtube.com/embed/m3SA0aKc-Os" title="Video destacado - Ayekantún" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3 data-cms="videos.featuredTitle">Video Destacado</h3>
+            <iframe id="featured-iframe" width="560" height="315" data-cms-src="videos.featuredUrl" src="https://www.youtube.com/embed/m3SA0aKc-Os" title="Video destacado - Ayekantún" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <!-- Últimos 12 videos -->
@@ -322,5 +322,6 @@
         <button class="float-btn float-btn--whatsapp" onclick="window.open('https://wa.me/56991252341', '_blank')" aria-label="Abrir WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
         <button class="float-btn float-btn--instagram" onclick="window.open('https://www.instagram.com/patinaje.ayekantun', '_blank')" aria-label="Abrir Instagram"><i class="fa-brands fa-instagram"></i></button>
     </div>
+<script src="cms-client.js" defer></script>
 </body>
 </html>

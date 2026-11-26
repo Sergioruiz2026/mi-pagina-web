@@ -46,44 +46,44 @@
     </nav>
 
     <section class="hero">
-        <h2 data-i18n="pages.laEscuelita.heroTitle">La Escuelita</h2>
-        <p data-i18n="pages.laEscuelita.heroText">Un espacio de formación, alegría y crecimiento para niñas y niños.</p>
+        <h2 data-cms="school.heroTitle" data-i18n="pages.laEscuelita.heroTitle">La Escuelita</h2>
+        <p data-cms="school.heroText" data-i18n="pages.laEscuelita.heroText">Un espacio de formación, alegría y crecimiento para niñas y niños.</p>
     </section>
 
     <section class="contenido">
-        <h2 data-i18n="pages.laEscuelita.sectionTitle">¿Qué es La Escuelita?</h2>
-        <p data-i18n="pages.laEscuelita.intro">
+        <h2 data-cms="school.sectionTitle" data-i18n="pages.laEscuelita.sectionTitle">¿Qué es La Escuelita?</h2>
+        <p data-cms="school.intro" data-i18n="pages.laEscuelita.intro">
             La Escuelita es un espacio cercano donde las niñas y niños pueden aprender, moverse, expresarse y crecer con seguridad.
             Aquí se combina la disciplina del patinaje con la diversión, el compañerismo y el desarrollo personal.
         </p>
 
-        <div class="galeria">
+        <div class="galeria" id="school-activities">
             <div class="foto">
-                <img src="fotos%20para%20pagina%20web/escuelita1.jpg" alt="Aprendizaje divertido" onclick="abrirImagen(this.src, this.alt)">
+                <img data-cms-image="media.school1" src="fotos%20para%20pagina%20web/escuelita1.jpg" alt="Aprendizaje divertido" onclick="abrirImagen(this.src, this.alt)">
                 <div class="foto-texto">
-                    <h3 data-i18n="pages.laEscuelita.card1Title">Aprendizaje divertido</h3>
-                    <p data-i18n="pages.laEscuelita.card1Text">Cada clase está pensada para que los más pequeños aprendan con entusiasmo y confianza.</p>
+                    <h3 data-cms="school.card1Title" data-i18n="pages.laEscuelita.card1Title">Aprendizaje divertido</h3>
+                    <p data-cms="school.card1Text" data-i18n="pages.laEscuelita.card1Text">Cada clase está pensada para que los más pequeños aprendan con entusiasmo y confianza.</p>
                 </div>
             </div>
             <div class="foto">
-                <img src="fotos%20para%20pagina%20web/escuelita2.jpg" alt="Valores y compañerismo" onclick="abrirImagen(this.src, this.alt)">
+                <img data-cms-image="media.school2" src="fotos%20para%20pagina%20web/escuelita2.jpg" alt="Valores y compañerismo" onclick="abrirImagen(this.src, this.alt)">
                 <div class="foto-texto">
-                    <h3 data-i18n="pages.laEscuelita.card2Title">Valores y compañerismo</h3>
-                    <p data-i18n="pages.laEscuelita.card2Text">Promovemos el respeto, la disciplina y el trabajo en equipo desde el inicio.</p>
+                    <h3 data-cms="school.card2Title" data-i18n="pages.laEscuelita.card2Title">Valores y compañerismo</h3>
+                    <p data-cms="school.card2Text" data-i18n="pages.laEscuelita.card2Text">Promovemos el respeto, la disciplina y el trabajo en equipo desde el inicio.</p>
                 </div>
             </div>
             <div class="foto">
-                <img src="fotos%20para%20pagina%20web/escuelita3.jpg" alt="Crecimiento integral" onclick="abrirImagen(this.src, this.alt)">
+                <img data-cms-image="media.school3" src="fotos%20para%20pagina%20web/escuelita3.jpg" alt="Crecimiento integral" onclick="abrirImagen(this.src, this.alt)">
                 <div class="foto-texto">
-                    <h3 data-i18n="pages.laEscuelita.card3Title">Crecimiento integral</h3>
-                    <p data-i18n="pages.laEscuelita.card3Text">Fomentamos el desarrollo físico, emocional y social de cada niño y niña.</p>
+                    <h3 data-cms="school.card3Title" data-i18n="pages.laEscuelita.card3Title">Crecimiento integral</h3>
+                    <p data-cms="school.card3Text" data-i18n="pages.laEscuelita.card3Text">Fomentamos el desarrollo físico, emocional y social de cada niño y niña.</p>
                 </div>
             </div>
             <div class="foto">
-                <img src="fotos%20para%20pagina%20web/escuelita4.jpg" alt="Actividades recreativas" onclick="abrirImagen(this.src, this.alt)">
+                <img data-cms-image="media.school4" src="fotos%20para%20pagina%20web/escuelita4.jpg" alt="Actividades recreativas" onclick="abrirImagen(this.src, this.alt)">
                 <div class="foto-texto">
-                    <h3 data-i18n="pages.laEscuelita.card4Title">Actividades recreativas</h3>
-                    <p data-i18n="pages.laEscuelita.card4Text">Ofrecemos diversas actividades que permiten a los niños y niñas disfrutar y socializar.</p>
+                    <h3 data-cms="school.card4Title" data-i18n="pages.laEscuelita.card4Title">Actividades recreativas</h3>
+                    <p data-cms="school.card4Text" data-i18n="pages.laEscuelita.card4Text">Ofrecemos diversas actividades que permiten a los niños y niñas disfrutar y socializar.</p>
                 </div>
             </div>  
         </div>
@@ -130,5 +130,6 @@
     </div>
 
     <script src="main.js" defer></script>
+<script src="cms-client.js" defer></script>
 </body>
 </html>

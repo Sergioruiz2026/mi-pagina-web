@@ -47,20 +47,21 @@
     </nav>
 
     <section class="contenido" style="max-width: 720px; margin: 32px auto; padding: 24px; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
-        <h2 style="margin-bottom: 10px;">Horarios</h2>
-        <p style="margin-bottom: 16px;">Estos son nuestros horarios habituales para las clases de la escuelita.</p>
+        <h2 data-cms="schedule.title" style="margin-bottom: 10px;">Horarios</h2>
+        <p data-cms="schedule.intro" style="margin-bottom: 16px;">Estos son nuestros horarios habituales para las clases de la escuelita.</p>
         <div style="background: #080808; border-left: 4px solid #15803d; padding: 14px 16px; border-radius: 10px; margin-bottom: 12px;">
-            <ul style="margin: 0 0 0 18px;">
-                <li>Lunes y miércoles: 4:00 PM - 6:00 PM</li>
-                <li>Martes y jueves: 6:00 PM - 8:00 PM</li>
-                <li>Viernes: 4:00 PM - 6:00 PM</li>
+            <ul id="schedule-list" style="margin: 0 0 0 18px;">
+                <li data-cms="schedule.monday">Lunes y miércoles: 4:00 PM - 6:00 PM</li>
+                <li data-cms="schedule.tuesday">Martes y jueves: 6:00 PM - 8:00 PM</li>
+                <li data-cms="schedule.friday">Viernes: 4:00 PM - 6:00 PM</li>
             </ul>
         </div>
-        <p>Si quieres confirmar un turno o consultar disponibilidad, contáctanos directamente.</p>
+        <p data-cms="schedule.contact">Si quieres confirmar un turno o consultar disponibilidad, contáctanos directamente.</p>
         <p><a href="la-esculita.html">← Volver a La Escuelita</a></p>
     </section>
 
     <a class="wa" href="https://wa.me/56991252341" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
     <script src="main.js" defer></script>
+<script src="cms-client.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Administración · Ayekantún</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="index.html">Ayekantún <span>Administración</span></a>
+      <button id="logout" class="button button-quiet" type="button" hidden>Cerrar sesión</button>
+    </header>
+
+    <section id="login-view" class="login-card" aria-labelledby="login-title">
+      <p class="eyebrow">Acceso privado</p>
+      <h1 id="login-title">Bienvenida al panel</h1>
+      <p class="intro">Ingresa con la cuenta de administración para actualizar el sitio.</p>
+      <form id="login-form">
+        <label>Usuario<input name="username" autocomplete="username" required maxlength="100"></label>
+        <label>Contraseña<input name="password" type="password" autocomplete="current-password" required maxlength="200"></label>
+        <button class="button" type="submit">Ingresar</button>
+      </form>
+      <p id="login-message" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="editor-view" hidden>
+      <div class="welcome">
+        <div><p class="eyebrow">Panel de contenido</p><h1>Tu sitio, siempre actualizado</h1></div>
+        <a class="button button-quiet" href="index.html" target="_blank" rel="noopener">Ver sitio</a>
+      </div>
+      <nav class="admin-nav" aria-label="Secciones del administrador">
+        <a href="#home-panel">Inicio</a>
+        <a href="#school-panel">La Escuelita</a>
+        <a href="#enrollment-panel">Inscripciones</a>
+        <a href="#athletes-panel">Deportistas y música</a>
+        <a href="#coach-panel">Entrenadora</a>
+        <a href="#gallery-panel">Galería</a>
+        <a href="#videos-panel">Videos y en vivo</a>
+        <a href="#schedule-panel">Horarios</a>
+        <a href="#contact-panel">Contacto</a>
+        <a href="#media-panel">Fotos</a>
+        <a href="#music-panel">Música de coreografías</a>
+      </nav>
+      <p id="editor-message" class="toast" role="status" aria-live="polite"></p>
+
+      <form id="content-form">
+        <section class="panel" id="home-panel">
+          <div class="panel-heading"><span class="step">01</span><div><h2>Inicio y servicios</h2><p>Actualiza los textos principales de la página de inicio.</p></div></div>
+          <div id="home-fields" class="field-grid"></div>
+          <button class="button button-quiet add-item" type="button" data-add-record="homePhoto">Agregar foto al inicio</button>
+        </section>
+        <section class="panel" id="school-panel">
+          <div class="panel-heading"><span class="step">02</span><div><h2>La Escuelita</h2><p>Edita la presentación, las actividades y sus descripciones.</p></div></div>
+          <div id="school-fields" class="field-grid"></div>
+          <button class="button button-quiet add-item" type="button" data-add-record="school">Agregar actividad</button>
+        </section>
+        <section class="panel" id="enrollment-panel">
+          <div class="panel-heading"><span class="step">03</span><div><h2>Inscripciones</h2><p>Edita la información que las familias ven en esta página.</p></div></div>
+          <div id="page-fields" class="field-grid"></div>
+        </section>
+        <section class="panel" id="athletes-panel">
+          <div class="panel-heading"><span class="step">04</span><div><h2>Deportistas</h2><p>Edita los nombres, las descripciones, las fotos y la música de cada coreografía.</p></div></div>
+          <div class="music-box" id="music-panel">
+            <h3>Música de coreografías</h3>
+            <p class="muted">Cada deportista tiene su propia canción. Puedes cambiarla con un enlace, subir una pista MP3/OGG, escuchar una vista previa o quitarla. Guarda los cambios para publicarlos.</p>
+            <div id="athlete-music-fields" class="music-grid"></div>
+          </div>
+          <div id="athlete-fields" class="field-grid top-gap"></div>
+          <button class="button button-quiet add-item" type="button" data-add-record="athlete">Agregar deportista</button>
+        </section>
+        <section class="panel" id="coach-panel">
+          <div class="panel-heading"><span class="step">05</span><div><h2>Entrenadora</h2><p>Actualiza los textos de presentación de la entrenadora.</p></div></div>
+          <div id="coach-fields" class="field-grid"></div>
+          <button class="button button-quiet add-item" type="button" data-add-record="coach">Agregar sección a la entrenadora</button>
+        </section>
+        <section class="panel" id="gallery-panel">
+          <div class="panel-heading"><span class="step">06</span><div><h2>Galería</h2><p>Actualiza el encabezado y la descripción de la galería.</p></div></div>
+          <div id="gallery-fields" class="field-grid"></div>
+          <button class="button button-quiet add-item" type="button" data-add-record="gallery">Agregar foto a la galería</button>
+        </section>
+        <section class="panel" id="videos-panel">
+          <div class="panel-heading"><span class="step">07</span><div><h2>Videos y transmisiones</h2><p>Gestiona los títulos, enlaces de YouTube y eventos publicados.</p></div></div>
+          <div id="video-fields" class="field-grid"></div>
+          <div id="live-fields" class="field-grid top-gap"></div>
+          <div class="add-item-row">
+            <button class="button button-quiet add-item" type="button" data-add-record="event">Agregar evento</button>
+            <button class="button button-quiet add-item" type="button" data-add-record="replay">Agregar repetición</button>
+          </div>
+        </section>
+        <section class="panel" id="schedule-panel">
+          <div class="panel-heading"><span class="step">08</span><div><h2>Horarios</h2><p>Edita los horarios habituales de las clases.</p></div></div>
+          <div id="schedule-fields" class="field-grid"></div>
+          <button class="button button-quiet add-item" type="button" data-add-record="schedule">Agregar horario</button>
+        </section>
+        <section class="panel" id="contact-panel">
+          <div class="panel-heading"><span class="step">09</span><div><h2>Contacto</h2><p>Actualiza los datos, las redes sociales y las ubicaciones.</p></div></div>
+          <div id="contact-fields" class="field-grid"></div>
+          <div id="location-fields" class="field-grid top-gap"></div>
+          <button class="button button-quiet add-item" type="button" data-add-record="venue">Agregar dirección</button>
+          <h3 class="subheading">Página de agradecimiento</h3>
+          <div id="thanks-fields" class="field-grid"></div>
+        </section>
+        <section class="panel" id="media-panel">
+          <div class="panel-heading"><span class="step">10</span><div><h2>Fotos</h2><p>Sube imágenes y revisa la vista previa antes de guardar.</p></div></div>
+          <div id="image-fields" class="media-grid"></div>
+          <p class="muted">Las fotos nuevas se agregan desde «Agregar actividad», «Agregar deportista» o «Agregar foto a la galería» en su sección correspondiente.</p>
+        </section>
+        <div class="save-bar"><p>Los cambios se publican al guardar.</p><button class="button" type="submit">Guardar cambios</button></div>
+      </form>
+
+      <section class="panel library" id="library-panel">
+        <div class="panel-heading"><span class="step">11</span><div><h2>Archivos subidos</h2><p>Administra las imágenes y pistas que has cargado.</p></div></div>
+        <div id="media-library" class="library-list"></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
