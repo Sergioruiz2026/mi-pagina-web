@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayekantún - Escuela de Patinaje Artístico</title>
+    <title>Ayekantún - Club de Patinaje Artístico</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-improved.css">
 </head>
@@ -45,7 +45,7 @@
                         <path id="arcPath" d="M10,200 A400,400 0 0,1 690,200" />
                     </defs>
                     <text>
-                        <textPath href="#arcPath" startOffset="50%" text-anchor="middle">Escuela de Patinaje Artístico</textPath>
+                        <textPath href="#arcPath" startOffset="50%" text-anchor="middle">Club de Patinaje Artístico</textPath>
                     </text>
                 </svg>
             </div>
@@ -57,7 +57,7 @@
     <section id="historia" class="contenido">
         <h2>Nuestra Historia</h2>
         <p>
-            El Club de Patinaje Artístico Ayekantún nació en enero de 2017 en la comuna de Quilpué con el propósito de crear un espacio donde niñas, niños y jóvenes pudieran desarrollarse a través del deporte, formando no solo deportistas, sino también personas comprometidas, disciplinadas y apasionadas por el patinaje artístico. Durante estos años nos hemos consolidado como un referente en la formación de patinadoras y patinadores, siendo la cuna de destacados deportistas que han representado con orgullo a nuestra comuna, región y país en importantes competencias. A lo largo de nuestra trayectoria hemos participado en campeonatos organizados por la Federación, la Liga Interregional, la Liga del Pacífico y, actualmente, la Liga Nación Roller, obteniendo importantes resultados y acumulando valiosas experiencias deportivas. Nos llena de orgullo ser el único club de patinaje artístico de Quilpué y mantener vigente este hermoso deporte en nuestra comuna, promoviendo la actividad física, la vida saludable y el desarrollo integral de nuestros deportistas. Cada entrenamiento, competencia y actividad representa nuestro compromiso con la comunidad y con la formación de nuevas generaciones de patinadores. Porque en Ayekantún creemos que el patinaje es mucho más que un deporte: es una escuela de valores, esfuerzo, compañerismo y superación. 
+            El Club de Patinaje Artístico Ayekantún nació en enero de 2017 en la comuna de Quilpué con el propósito de crear un espacio donde niñas, niños y jóvenes pudieran desarrollarse a través del deporte, formando no solo deportistas, sino también personas comprometidas, disciplinadas y apasionadas por el patinaje artístico. Durante estos años nos hemos consolidado como un referente en la formación de patinadoras y patinadores, siendo la cuna de destacados deportistas que han representado con orgullo a nuestra comuna, región y país en importantes competencias. A lo largo de nuestra trayectoria hemos participado en campeonatos organizados por la Federación, la Liga Interregional, la Liga del Pacífico y, actualmente, la Liga Nación Roller, obteniendo importantes resultados y acumulando valiosas experiencias deportivas. Nos llena de orgullo ser el único club de patinaje artístico de Quilpué y mantener vigente este hermoso deporte en nuestra comuna, promoviendo la actividad física, la vida saludable y el desarrollo integral de nuestros deportistas. Cada entrenamiento, competencia y actividad representa nuestro compromiso con la comunidad y con la formación de nuevas generaciones de patinadores. Porque en Ayekantún creemos que el patinaje es mucho más que un deporte: es un espacio de valores, esfuerzo, compañerismo y superación. 
         </p>
     </section>
 

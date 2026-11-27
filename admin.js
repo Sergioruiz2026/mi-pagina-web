@@ -85,14 +85,14 @@
     ]).flat()
   ];
   const contactFields = [
-    ["site.name", "Nombre de la escuela"],
+    ["site.name", "Nombre del club"],
     ["site.email", "Correo electrónico"],
     ["site.phone", "Teléfono visible"],
     ["site.whatsapp", "WhatsApp (código de país y número, solo dígitos)"],
     ["site.address", "Dirección"],
     ["site.instagram", "Enlace de Instagram"],
     ["site.youtube", "Enlace de YouTube"],
-    ["site.footer", "Descripción de la escuela"],
+    ["site.footer", "Descripción del club"],
     ["site.footerCopyright", "Texto de derechos de autor", "wide"]
   ];
   const locationFields = () => [

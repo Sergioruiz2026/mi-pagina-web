@@ -45,7 +45,7 @@ const translations = {
     es: {
         themeLabel: 'Cambiar tema',
         langLabel: 'Cambiar idioma',
-        logoArc: 'Escuela de Patinaje Artístico',
+        logoArc: 'Club de Patinaje Artístico',
         heroSubtitle: 'Club formativo y competitivo',
         homeTitle: 'Conoce más sobre Ayekantún',
         footer: {
@@ -54,7 +54,7 @@ const translations = {
             emailLabel: 'Correo:',
             whatsappLabel: 'WhatsApp:',
             socialTitle: 'Síguenos en Nuestras Redes',
-            copyright: '© 2017 Ayekantún - Escuela de Patinaje Artístico. Todos los derechos reservados.',
+            copyright: '© 2017 Ayekantún - Club de Patinaje Artístico. Todos los derechos reservados.',
             location: 'Quilpué, Región de Valparaíso, Chile'
         },
         cards: {
@@ -102,7 +102,7 @@ const translations = {
             informacion: 'Información'
         },
         pageTitles: {
-            home: 'Ayekantún - Escuela de Patinaje Artístico',
+            home: 'Ayekantún - Club de Patinaje Artístico',
             contacto: 'Ayekantún - Contacto',
             deportistas: 'Ayekantún - Deportistas',
             entrenadora: 'Ayekantún - Entrenadora',
@@ -321,7 +321,7 @@ var staticTextTranslations = {
     'Contacto': 'Contact',
     'Inscríbete': 'Register',
     'Quilpué · Desde 2017': 'Quilpué · Since 2017',
-    'Escuela de patinaje artístico: un club formativo y competitivo donde las niñas y niños crecen con disciplina, respeto y pasión.': 'An artistic skating school: a development and competition club where children grow through discipline, respect and passion.',
+    'Club de patinaje artístico: un club formativo y competitivo donde las niñas y niños crecen con disciplina, respeto y pasión.': 'Artistic skating club: a development and competition club where children grow through discipline, respect and passion.',
     'Quiero inscribirme': 'I want to register',
     'Conócenos': 'Get to know us',
     'Año de fundación': 'Year founded',
@@ -351,7 +351,7 @@ var staticTextTranslations = {
     'Escríbenos y te contamos horarios, inscripciones y todo lo que necesitas saber. También publicamos novedades en nuestras redes.': 'Write to us and we will tell you about schedules, registration and everything else you need to know. We also share updates on our social media.',
     'Escribir por WhatsApp': 'Message us on WhatsApp',
     'Correo': 'Email',
-    '© 2026 Ayekantún · Escuela de Patinaje Artístico · Quilpué, Región de Valparaíso, Chile': '© 2026 Ayekantún · Artistic Skating School · Quilpué, Valparaíso Region, Chile',
+    '© 2026 Ayekantún · Club de Patinaje Artístico · Quilpué, Región de Valparaíso, Chile': '© 2026 Ayekantún · Artistic Skating Club · Quilpué, Valparaíso Region, Chile',
     'Horarios': 'Schedule',
     'Estos son nuestros horarios habituales para las clases de la escuelita.': 'These are the usual class times for our skating school.',
     'Lunes y miércoles: 4:00 PM - 6:00 PM': 'Monday and Wednesday: 4:00 PM - 6:00 PM',
@@ -359,7 +359,7 @@ var staticTextTranslations = {
     'Viernes: 4:00 PM - 6:00 PM': 'Friday: 4:00 PM - 6:00 PM',
     'Si quieres confirmar un turno o consultar disponibilidad, contáctanos directamente.': 'To confirm a time slot or check availability, contact us directly.',
     '← Volver a La Escuelita': '← Back to The Little School',
-    'Las inscripciones están abiertas para quienes quieran formar parte de nuestra escuela de patinaje.': 'Registration is open to anyone who would like to join our skating school.',
+    'Las inscripciones están abiertas para quienes quieran formar parte de nuestro club de patinaje.': 'Registration is open to anyone who would like to join our skating club.',
     'La motivación de este formulario es recopilar información básica de contacto y detalles sobre la edad y nivel de interés de los aspirantes. Esto nos permitirá organizar mejor las clases y asegurarnos de que cada participante reciba la atención adecuada según su nivel y necesidades.': 'This form collects basic contact information, age and skating level so we can organize classes and ensure each participant receives the right support for their needs.',
     'Al enviar este formulario, nos pondremos en contacto contigo para confirmar tu inscripción y proporcionarte más detalles sobre los horarios y requisitos.': 'After you submit this form, we will contact you to confirm your registration and provide more information about schedules and requirements.',
     '¿Qué necesitas?': 'What do you need?',
@@ -466,7 +466,7 @@ var staticTextTranslations = {
     'Dar like': 'Like',
     'Nuestros Videos': 'Our Videos',
     'Video de la presentación del club.': 'Video of the club performance.',
-    'Ayekantún - Escuela de Patinaje Artístico': 'Ayekantún - Artistic Skating School',
+    'Ayekantún - Club de Patinaje Artístico': 'Ayekantún - Artistic Skating Club',
     'Quilpué, Región de Valparaíso, Chile': 'Quilpué, Valparaíso Region, Chile',
     'Abrir menú': 'Open menu',
     'Submenú Inicio': 'Home submenu',
